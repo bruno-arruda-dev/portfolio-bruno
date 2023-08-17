@@ -1,0 +1,32 @@
+@import '@/styles/Global.module.scss';
+
+.logo {
+    font-size: 2rem;
+    color: $dark-text;
+
+    .arrm {
+        font-weight: bold;
+        color: $st-detail;
+    }
+
+    .dot {
+        display: inline-block;
+        animation: dot 5s linear;
+        transform-origin: bottom center;
+    }
+
+    @keyframes dot {
+        0%  {
+            transform: scale(10);
+        }
+        5% {
+            transform: scale(0);
+        }
+        95% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+}

@@ -1,0 +1,5 @@
+@import '@/styles/Global.module.scss';
+
+.buttons {
+    @extend .centralize;
+}

@@ -1,0 +1,27 @@
+@import '@/styles/Global.module.scss';
+
+.left_main_page {
+    @extend .centralize;
+    width: 50%;
+    height: 100%;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        width: 80%;
+        height: 500px;
+
+        h1 {
+            font-size: 2.5rem;
+            color: $dark-text;
+        }
+
+        p {
+            margin: 1rem 0;
+            font-size: 1.5rem;
+            color: $dark-text;
+        }
+    }
+}

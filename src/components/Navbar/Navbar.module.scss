@@ -1,0 +1,12 @@
+@import '@/styles/Global.module.scss';
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: $navbar-height;
+    padding: .5rem;
+    background-color: $dark-bg;
+    color: $dark-text;
+}

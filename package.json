@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-bruno",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/font": "^13.4.16",
+    "@types/node": "20.5.0",
+    "@types/react": "18.2.20",
+    "@types/react-dom": "18.2.7",
+    "next": "13.4.16",
+    "next-google-fonts": "^2.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-type-animation": "^3.1.0",
+    "sass": "^1.65.1",
+    "typescript": "5.1.6"
+  }
+}

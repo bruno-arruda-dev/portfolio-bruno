@@ -1,0 +1,35 @@
+// Background colors
+$dark-bg: #071b37;
+$light-bg: #e1e1e1;
+
+
+// Text colors
+$dark-text: $light-bg;
+$light-text: $dark-bg;
+
+// Detail colors
+$st-detail: #4caeff;
+
+// Image configurations
+.container-image {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.med-image {
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+// Other configurations
+.centralize {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+$default-radius: 10px;
+
+$navbar-height: 55px;
