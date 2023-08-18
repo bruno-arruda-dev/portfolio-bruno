@@ -1,17 +1,16 @@
 @import '@/styles/Global.module.scss';
 
 .about {
+    position: relative;
     display: flex;
     width: 100%;
     min-height: 100vh;
+    min-height: calc(100vh - $navbar-height);
     background-color: $dark-bg;
     color: $dark-text;
     
     .timeline_container {
-        display: flex;
-        flex-direction: column;
         width: 100%;
-        height: 100%;
 
         .timeline {
             border-radius: 0 0 50px 50px;
@@ -19,9 +18,9 @@
             left: 50%;
             transform: translateX(-50%);
             height: 100%;
-            width: 5px;
+            width: $about-timeline-width;
             position: absolute;
-            background-color: rgba(0, 0, 0, 0.222);
+            background-color: $about-timeline-color;
         }
     }
 }

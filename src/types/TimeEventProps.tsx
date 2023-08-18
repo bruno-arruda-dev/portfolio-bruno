@@ -1,6 +1,6 @@
 export interface ITimeEventProps {
-    position: 'left' | 'right',
+    type?: 'learn',
     title: string;
     period: string;
-    description: string;
+    descriptions?: string;
 }

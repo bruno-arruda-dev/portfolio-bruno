@@ -1,25 +1,27 @@
 import styles from '@/components/TimeEvent/TimeEvent.module.scss';
 import { ITimeEventProps } from '@/types/TimeEventProps';
+import { BiSolidBook } from 'react-icons/bi';
+import { PiGearSixFill } from 'react-icons/pi';
 
-const TimeEvent = ({ position, title, period, description }: ITimeEventProps) => {
+const TimeEvent = ({ type, title, period, descriptions }: ITimeEventProps) => {
 
-    if (position === 'left') {
+    if (type === 'learn') {
         return (
-            <div className={styles.timeEvent}>
+
+            <div className={`${styles[`timeEvent_left`]}`}>
 
                 <div className={styles.time_event}>
 
-                    <div className={styles.mark} />
+                    <div className={styles.mark}><BiSolidBook /></div>
 
                     <div className={`${styles['content']} ${styles['left']}`}>
                         <h4>{title}</h4>
-                        <p>{period}</p>
+                        <p className={styles.period}>{period}</p>
                     </div>
 
                     <div className={`${styles['content']} ${styles['right']}`}>
-                        <p>{description}</p>
+                        {descriptions}
                     </div>
-
                 </div>
 
             </div>
@@ -27,21 +29,21 @@ const TimeEvent = ({ position, title, period, description }: ITimeEventProps) =>
 
     } else {
         return (
-            <div className={styles.timeEvent}>
+
+            <div className={`${styles[`timeEvent_right`]}`}>
 
                 <div className={styles.time_event}>
 
-                    <div className={styles.mark} />
-
-                    <div className={`${styles['content']} ${styles['left']}`}>
-                        <p>{description}</p>
-                    </div>
+                    <div className={styles.mark}><PiGearSixFill /></div>
 
                     <div className={`${styles['content']} ${styles['right']}`}>
-                        <h4>{title}</h4>
-                        <p>{period}</p>
+                        {descriptions}
                     </div>
 
+                    <div className={`${styles['content']} ${styles['left']}`}>
+                        <h4>{title}</h4>
+                        <p className={styles.period}>{period}</p>
+                    </div>
                 </div>
 
             </div>
