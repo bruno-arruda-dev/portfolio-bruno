@@ -1,0 +1,78 @@
+@import '@/styles/Global.module.scss';
+
+// TEMA DARK
+.hireContainer {
+    width: auto;
+    height: 50px;
+    @extend .centralize;
+    color: $dark-text;
+    
+    .hire {
+        margin: 1rem;
+        width: 200px;
+        height: 43px;
+        border-radius: $default-radius;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        border: 2px solid $st-detail;
+        border-radius: $default-radius;
+        background-color: $st-detail;
+
+        p {
+            position: relative;
+            transform: translateY(-35%);
+            z-index: 9999;
+        }
+
+        &:after {
+            transition: all .2s ease-out;
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: '';
+            height: 100%;
+            width: 0px;
+            background-color: $dark-bg;
+            border-radius: $default-radius;
+        }
+        
+        &:hover::after {
+            width: 100%;
+        }
+    }
+    
+    .social {
+        margin-right: 1rem;
+        @extend .centralize;
+        cursor: pointer;
+        height: 43px;
+        width: 43px;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+        border: 2px solid $st-detail;
+        
+        
+        &:after {
+            transition: all .2s ease-out;
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: '';
+            height: 100%;
+            width: 0px;
+            background-color: $st-detail;
+            border-radius: 50%;
+        }
+        
+        &:hover::after {
+            width: 100%;
+        }
+        
+        svg {
+            position: absolute;
+            z-index: 9999;
+        }
+    }
+}
