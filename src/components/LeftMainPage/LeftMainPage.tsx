@@ -1,4 +1,3 @@
-'use client'
 import styles from '@/components/LeftMainPage/LeftMainPage.module.scss';
 import { TypeAnimation } from 'react-type-animation';
 import Hire from './HireButtons/Hire';
