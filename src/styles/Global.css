@@ -3,14 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-  }
-  
-  a {
+}
+
+a {
     text-decoration: none;
     color: #e1e1e1;
-  }
-
-  .layout {
-    min-width: 100vw;
-    min-height: 100vh;
-  }
+}

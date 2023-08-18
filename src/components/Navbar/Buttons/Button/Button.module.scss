@@ -31,16 +31,16 @@
         
             .top_trace {
                 top: 10%;
-                transform: translate(10px, -10px);
-                transition: all .2s ease-in-out, .2s;
-                opacity: 0;
+                transform: translate(18px, 14px);
+                transition: all .1s ease-in-out, .1s;
+                // opacity: 0;
             }
         
             .bot_trace {
                 bottom: 10%;
                 transform: translate(10px, 10px);
                 transition: all .2s ease-in-out, .2s;
-                opacity: 0;
+                // opacity: 0;
             }
         }
 
@@ -58,16 +58,16 @@
         
             .top_trace {
                 top: 10%;
-                transform: translate(-10px, -10px);
-                transition: all .2s ease-in-out, .2s, .2s;
-                opacity: 0;
+                transform: translate(-60px, 14px);
+                transition: all .2s ease-in-out, .2s;
+                // opacity: 0;
             }
         
             .bot_trace {
                 bottom: 10%;
-                transform: translate(-10px, 10px);
-                transition: all .2s ease-in-out, .2s, .2s;
-                opacity: 0;
+                transform: translate(-55px, 10px);
+                transition: all .1s ease-in-out, .1s;
+                // opacity: 0;
             }
         }
 

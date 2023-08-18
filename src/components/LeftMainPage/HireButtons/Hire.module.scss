@@ -68,6 +68,7 @@
         
         &:hover::after {
             width: 100%;
+            box-shadow: 0 0 5px 5px $st-detail;
         }
         
         svg {

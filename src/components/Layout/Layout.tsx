@@ -1,4 +1,3 @@
-import './Layout.css'
 import React, { ReactNode } from 'react'
 import Navbar from '../Navbar/Navbar'
 

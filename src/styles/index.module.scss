@@ -1,10 +1,10 @@
 @import '@/styles/Global.module.scss';
 
-.main {
+.index {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     height: calc(100vh - $navbar-height);
     background-color: $dark-bg;
 }

@@ -1,0 +1,62 @@
+@import '@/styles/Global.module.scss';
+
+.about {
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: $dark-bg;
+    color: $dark-text;
+    
+    .timeline_container {
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+
+        .timeline {
+            border-radius: 0 0 50px 50px;
+            top: -$navbar-height;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100%;
+            width: 5px;
+            position: absolute;
+            background-color: $st-detail;
+        }
+        
+        .time_event {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            width: 100%;
+            margin: 0 0 1rem 0;
+            
+            .mark {
+                top: 50%;
+                right: 50%;
+                transform: translate(50%, -50%);
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background-color: $st-detail;
+                border-radius: 50%;
+            }
+            
+            .content {
+                height: fit-content;
+                text-indent: 1rem;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                position: static;
+                width: 45%;
+            }
+
+            .left {
+                text-align: right;
+            }
+
+        }
+    }
+}
