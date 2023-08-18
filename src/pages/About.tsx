@@ -1,5 +1,6 @@
 import styles from '@/styles/About.module.scss';
 import Layout from "@/components/Layout/Layout";
+import TimeEvent from '@/components/TimeEvent/TimeEvent';
 
 const About = () => {
     return (
@@ -9,69 +10,19 @@ const About = () => {
 
                     <div className={styles.timeline} />
 
-                    <div className={styles.time_event}>
-                        <div className={styles.mark} />
-                        <div className={`${styles['content']} ${styles['left']}`}>
-                            <h3>Alura</h3>
-                        </div>
-                        <div className={`${styles['content']} ${styles['right']}`}>
-                            <p>Cursos de REACT</p>
-                            <p>Cursos de REACT</p>
-                            <p>Cursos de REACT</p>
-                        </div>
-                    </div>
-                    <div className={styles.time_event}>
-                        <div className={styles.mark} />
-                        <div className={`${styles['content']} ${styles['left']}`}>
+                    <TimeEvent
+                        position='left'
+                        title='Teste de Título'
+                        period='2020 a 2023'
+                        description='Este é um teste de título para testar a funcionalidade de um componente REACT que deverá aparecer em uma timeline genérica.'
+                    />
 
-                        </div>
-                        <div className={`${styles['content']} ${styles['right']}`}>
-                            <h3>Alura</h3>
-                            <p>Cursos de REACT</p>
-                            <p>Cursos de REACT</p>
-                            <p>Cursos de REACT</p>
-                        </div>
-                    </div>
-                    <div className={styles.time_event}>
-                        <div className={styles.mark} />
-                        <div className={`${styles['content']} ${styles['left']}`}>
-
-                        </div>
-                        <div className={`${styles['content']} ${styles['right']}`}>
-                            <h3>Alura</h3>
-                            <p>Cursos de REACT</p>
-                            <p>Cursos de REACT</p>
-                            <p>Cursos de REACT</p>
-                        </div>
-                    </div>
-                    <div className={styles.time_event}>
-                        <div className={styles.mark} />
-                        <div className={`${styles['content']} ${styles['left']}`}>
-
-                        </div>
-                        <div className={`${styles['content']} ${styles['right']}`}>
-                            <h3>Alura</h3>
-                            <p>Cursos de REACT</p>
-                            <p>Cursos de REACT</p>
-                            <p>Cursos de REACT</p>
-                        </div>
-                    </div>
-                    <div className={styles.time_event}>
-                        <div className={styles.mark} />
-                        <div className={`${styles['content']} ${styles['left']}`}>
-
-                        </div>
-                        <div className={`${styles['content']} ${styles['right']}`}>
-                            <h3>Alura</h3>
-                            <p>Cursos de REACT</p>
-                            <p>Cursos de REACT</p>
-                            <p>Cursos de REACT</p>
-                            <p>Cursos de REACT</p>
-                            <p>Cursos de REACT</p>
-                            <p>Cursos de REACT</p>
-                            <p>Cursos de REACT</p>
-                        </div>
-                    </div>
+                    <TimeEvent
+                        position='right'
+                        title='Teste de Título 2'
+                        period='2020 a 2023'
+                        description='outro teste de títulooooooo'
+                    />
 
                 </div>
             </main>
