@@ -4,7 +4,7 @@
     
     a {
         font-size: 1.3rem;
-        transition: all .1s ease-in-out;
+        transition: all .3s ease-in-out;
         color: $dark-text;
         @extend .centralize;
 
@@ -22,7 +22,7 @@
 
             .trace {
                 position: absolute;
-                width: 100%;
+                width: 4px;
                 height: 4px;
                 border-radius: 50px;
                 background-color: $st-detail;
@@ -31,16 +31,16 @@
         
             .top_trace {
                 top: 10%;
-                transform: translate(18px, 14px);
-                transition: all .1s ease-in-out, .1s;
+                transform: translate(-2px, 2px);
+                transition: all .3s ease-in-out, .3s;
                 // opacity: 0;
             }
         
             .bot_trace {
                 bottom: 10%;
-                transform: translate(10px, 10px);
+                transform: translate(-2px, -2px);
                 transition: all .2s ease-in-out, .2s;
-                // opacity: 0;
+                opacity: 0;
             }
         }
 
@@ -58,21 +58,25 @@
         
             .top_trace {
                 top: 10%;
-                transform: translate(-60px, 14px);
+                transform: translate(2px, 2px);
                 transition: all .2s ease-in-out, .2s;
-                // opacity: 0;
+                opacity: 0;
             }
         
             .bot_trace {
                 bottom: 10%;
-                transform: translate(-55px, 10px);
-                transition: all .1s ease-in-out, .1s;
-                // opacity: 0;
+                transform: translate(-70px, -2px);
+                transition: all .3s ease-in-out, .3s;
+                opacity: 0;
             }
         }
 
         &:hover {
             color: $st-detail;
+        }
+
+        &:hover .left .trace {
+            width: 100%;
         }
 
         &:hover .left .top_trace {
