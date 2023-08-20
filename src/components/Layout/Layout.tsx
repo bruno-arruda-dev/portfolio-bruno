@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react'
 import Navbar from '../Navbar/Navbar'
+import ProjectModal from '../ProjectModal/ProjectModal';
 
 interface LayoutProps {
   children: ReactNode;
@@ -7,10 +8,11 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className='layout'>
-      <Navbar />
-      <div className="content">{children}</div>
-    </div>
+      <div className='layout'>
+        <Navbar />
+        
+        <div className="content">{children}</div>
+      </div>
   )
 }
 

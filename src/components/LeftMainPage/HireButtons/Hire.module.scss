@@ -22,7 +22,7 @@
         p {
             position: relative;
             transform: translateY(-35%);
-            z-index: 9999;
+            z-index: 999;
         }
 
         &:after {
@@ -73,7 +73,7 @@
         
         svg {
             position: absolute;
-            z-index: 9999;
+            z-index: 999;
         }
     }
 }

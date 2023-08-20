@@ -1,6 +1,7 @@
 import styles from '@/styles/About.module.scss';
 import Layout from "@/components/Layout/Layout";
 import TimeEvent from '@/components/TimeEvent/TimeEvent';
+import ProjectModal from '@/components/ProjectModal/ProjectModal';
 
 const About = () => {
     return (

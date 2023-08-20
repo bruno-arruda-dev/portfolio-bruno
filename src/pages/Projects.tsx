@@ -4,6 +4,7 @@ import allProjects from '@/helpers/allProjects';
 import ProjectCard from '@/components/ProjectCard/ProjectCard';
 
 const Projects = () => {
+
     return(
         <Layout>
             <main className={styles.projects}>
