@@ -5,7 +5,7 @@ import ProjectModal from '@/components/ProjectModal/ProjectModal';
 
 const About = () => {
     return (
-        <Layout>
+        <Layout title='Bruno Arruda: Sobre mim'>
             <main className={styles.about}>
                 <div className={styles.timeline_container}>
 

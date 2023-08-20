@@ -6,7 +6,7 @@ import styles from '@/styles/index.module.scss';
 
 const index = () => {
     return (
-        <Layout>
+        <Layout title='Bruno Arruda: Bem vindo ao meu portfólio!'>
             <main className={styles.index}>
                 <LeftMainPage />
                 <RightMainPage />
