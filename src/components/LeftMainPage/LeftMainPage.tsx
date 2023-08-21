@@ -13,11 +13,9 @@ const LeftMainPage = () => {
 
                 <TypeAnimation
                     sequence={[
-                        'Acredito que com amor...', 1000,
                         'Acredito que com dedicação...', 1500,
                         'Acredito que com disciplina...', 900,
                         'Acredito que com resiliência...', 1200,
-                        'Acredito que com foco...', 1000,
                         'Acredito que é possível programar grandes mudanças na vida das pessoas!'
                     ]}
                     wrapper="p"
