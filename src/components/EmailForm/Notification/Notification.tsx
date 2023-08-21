@@ -3,7 +3,7 @@ import INotificationProps from '@/types/NotificationProps';
 
 const Notification = ({type, text}: INotificationProps) => {
     return(
-        <div className={`${styles['isVisible']} ${styles['notification_' + type]}`}>
+        <div className={`${styles['notification']} ${styles['notification_' + type]}`}>
             <p>{text}</p>
             <div />
         </div>
