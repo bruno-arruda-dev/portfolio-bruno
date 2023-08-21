@@ -1,25 +1,48 @@
 @import '@/styles/Global.Module.scss';
 
-.projectModal {
+.activatedModal {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
     color: black;
+    backdrop-filter: blur(2px);
     position: absolute;
     top: 0;
     left: 0;
     z-index: 9999;
-    display: none;
 
     .modalContent {
         position: relative;
         width: 95%;
+        max-width: 600px;
         height: 95%;
         background-color: $light-bg;
         color: $light-text;
         z-index: 9999;
         border-radius: $default-radius;
+
+        button {
+            cursor: pointer;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            border: none;
+            background-color: white;
+            border-radius: 50px;
+
+            svg {
+                fill: #ff3300;
+                width: 100%;
+                height: 100%;
+            }
+        }
     }
+}
+
+.disabledModal {
+    display: none;
 }

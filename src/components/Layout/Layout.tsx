@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react'
+import ProjectModal from '@/components/ProjectModal/ProjectModal';
 import Navbar from '../Navbar/Navbar'
 import Head from 'next/head'
 
@@ -10,23 +11,17 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ title, children }) => {
   return (
 
-    <div className='layout'>
+    <>
 
       <Head>
-        <title>
-          {title}
-        </title>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" ></link>
+        <title>{title}</title>
       </Head>
 
+      <ProjectModal />
       <Navbar />
-
       {children}
 
-    </div>
+    </>
   )
 }
 

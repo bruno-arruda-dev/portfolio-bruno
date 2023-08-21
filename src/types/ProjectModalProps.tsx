@@ -4,7 +4,7 @@ export interface IProjectModalProps {
     modalRepo?: string,
     modalHomepage?: string,
     modalImage?: string,
-    activeModal: boolean,
+    activeModal: string,
     handleUpdateModalContent: (name: string, description: string, repo?: string, homepage?: string, image?: string) => void,
     handleCloseModal: () => void,
 }
