@@ -1,7 +1,18 @@
 @import '@/styles/Global.module.scss';
 
 .contact {
+    color: $dark-text;
     @extend .centralize;
     min-height: calc(100vh - $navbar-height);
     background-color: $dark-bg;
+
+    .contactContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 50%;
+        height: 250px;
+        padding: 1rem;
+    }
 }

@@ -9,7 +9,7 @@ interface Campos {
 }
 
 const EmailForm = () => {
-    const [isVisible, setIsVisible] = useState(false);
+    const [isVisible, setIsVisible] = useState('isNotVisible');
 
     const [campos, setCampos] = useState<Campos>({
         nome: '',
@@ -25,23 +25,25 @@ const EmailForm = () => {
         }));
     }
 
-    async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-        event.preventDefault();
-        setIsVisible(true);
-        console.log('Antes do timeout')
-        
-        await setTimeout(() => {
-            setIsVisible(false);
-        }, 5000);
-        
-        console.log('depois' + isVisible);
+    function handleSubmit(event: FormEvent<HTMLFormElement>) {
+
+        if (campos.email === "" || campos.mensagem === "" || campos.nome === "") {
+            event.preventDefault();
+            setIsVisible('fail');
+        } else {
+            setIsVisible('success');
+        }
+
+        setTimeout(() => {
+            setIsVisible('isNotVisible');
+            console.log('Componente de notificação desmontado.')
+        }, 6000);
     }
 
     return (
         <>
-        {
-            isVisible && <Notification type='success' text='Email enviado' />
-        }
+            {isVisible === 'fail' && <Notification type='fail' text='Email não foi enviado.' />}
+            {isVisible === 'success' && <Notification type='success' text='Email enviado com sucesso!' />}
             <form className={styles.emailForm} onSubmit={handleSubmit}>
                 <label htmlFor="email">E-mail</label>
                 <input type="text" id="email" name="email" placeholder="E-mail de destino.." onChange={handleInputChange} />

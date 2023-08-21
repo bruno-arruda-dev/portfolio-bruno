@@ -1,0 +1,44 @@
+@import '@/styles/Global.module.scss';
+
+// TEMA DARK
+.socialMediaButtons {
+    width: auto;
+    height: 50px;
+    @extend .centralize;
+    color: $dark-text;
+    
+    .social {
+        margin-right: 1rem;
+        @extend .centralize;
+        cursor: pointer;
+        height: 43px;
+        width: 43px;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+        border: 2px solid $st-detail;
+        
+        
+        &:after {
+            transition: all .2s ease-out;
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: '';
+            height: 100%;
+            width: 0px;
+            background-color: $st-detail;
+            border-radius: 50%;
+        }
+        
+        &:hover::after {
+            width: 100%;
+            box-shadow: 0 0 5px 5px $st-detail;
+        }
+        
+        svg {
+            position: absolute;
+            z-index: 999;
+        }
+    }
+}
