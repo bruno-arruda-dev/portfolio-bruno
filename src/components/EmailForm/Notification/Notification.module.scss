@@ -1,0 +1,75 @@
+@import '@/styles/Global.module.scss';
+
+.isVisible {
+    max-width: 600px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    z-index: 999;
+    border-radius: $default-radius;
+
+    div {
+        position: fixed;
+        width: 100%;
+        height: 4px;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.notification_success {
+    background-color: #53bc58;
+    color: rgb(0, 88, 0);
+    animation: notification 5s ease;
+
+    div {
+        background-color: green;
+        animation: progressBar 5s ease;
+    }
+}
+
+.notification_fail {
+    background-color: #ff8f8f;
+    color: #730000;
+    animation: notification 5s ease;
+
+    div {
+        background-color: #730000;
+        animation: progressBar 5s ease;
+    }
+}
+
+// ANIMAÇÕES DA NOTIFICAÇÃO
+@keyframes notification {
+    0% {
+        height: 1px;
+        width: 1%;
+    }
+
+    5%, 95% {
+        width: 50%;
+        height: fit-content;
+    }
+
+    100% {
+        height: 0;
+        width: 0;
+    }
+}
+
+@keyframes progressBar {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+    
+}

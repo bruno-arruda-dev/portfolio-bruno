@@ -1,0 +1,7 @@
+@import '@/styles/Global.module.scss';
+
+.contact {
+    @extend .centralize;
+    min-height: calc(100vh - $navbar-height);
+    background-color: $dark-bg;
+}
