@@ -22,7 +22,7 @@
 
             .trace {
                 position: absolute;
-                width: 4px;
+                width: 10px;
                 height: 4px;
                 border-radius: 50px;
                 background-color: $st-detail;
@@ -31,14 +31,14 @@
         
             .top_trace {
                 top: 10%;
-                transform: translate(-2px, 2px);
+                transform: translate(10px, 10px);
                 transition: all .3s ease-in-out, .3s;
-                // opacity: 0;
+                opacity: 0;
             }
         
             .bot_trace {
                 bottom: 10%;
-                transform: translate(-2px, -2px);
+                transform: translate(10px, 10px);
                 transition: all .2s ease-in-out, .2s;
                 opacity: 0;
             }
@@ -58,14 +58,14 @@
         
             .top_trace {
                 top: 10%;
-                transform: translate(2px, 2px);
+                transform: translate(10px, 10px);
                 transition: all .2s ease-in-out, .2s;
                 opacity: 0;
             }
         
             .bot_trace {
                 bottom: 10%;
-                transform: translate(-70px, -2px);
+                transform: translate(10px, 10px);
                 transition: all .3s ease-in-out, .3s;
                 opacity: 0;
             }
@@ -81,31 +81,25 @@
 
         &:hover .left .top_trace {
             transform: translateY(20%);
-            transform: rotate(-45deg);
+            transform: rotate(45deg);
             opacity: 1;
         }
 
         &:hover .left .bot_trace {
             transform: translateY(20%);
-            transform: rotate(45deg);
+            transform: rotate(-45deg);
             opacity: 1;
         }
 
         &:hover .right .top_trace {
             transform: translateY(20%);
-            transform: rotate(45deg);
-            opacity: 1;
-        }
-
-        &:hover .right .mid_trace {
-            transform: translateX(-100px);
-            transform: rotate(-75deg);
+            transform: rotate(-45deg);
             opacity: 1;
         }
 
         &:hover .right .bot_trace {
             transform: translateY(20%);
-            transform: rotate(-45deg);
+            transform: rotate(45deg);
             opacity: 1;
         }
     }
