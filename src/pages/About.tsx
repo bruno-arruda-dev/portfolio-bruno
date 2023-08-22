@@ -12,36 +12,38 @@ const About = () => {
                     <div className={styles.timeline} />
 
                     <TimeEvent
-                        type='learn'
+                        type='study'
                         title='Alura'
                         period='2023 até os dias atuais'
-                        descriptions='Cursos de Next, Scrum, TypeScript e outros foram realizados na plataforma.'
+                        descriptions={['Opção de estudo 1', 'Opção de estudo 2']}
                     />
 
                     <TimeEvent
-                        title='Secretaria da Indústria e Comércio'
+                        type='work'
+                        title='Alura'
                         period='2023 até os dias atuais'
-                        descriptions='Colaborador responsável por auxiliar na atualizaçao do portal.'
+                        descriptions={['Opção de trabalho 1', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2']}
                     />
 
                     <TimeEvent
-                        type='learn'
-                        title='Devmedia'
+                        type='work'
+                        title='Alura'
                         period='2023 até os dias atuais'
-                        descriptions='Um monte de curso com diplima.'
+                        descriptions={['Opção de trabalho 1', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2']}
                     />
 
                     <TimeEvent
-                        title='Teste de emprego'
-                        period='2022 a 2023'
-                        descriptions='Teste de componente do tipo emprego.'
+                        type='study'
+                        title='Alura'
+                        period='2023 até os dias atuais'
+                        descriptions={['Opção de trabalho 1', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2']}
                     />
 
                     <TimeEvent
-                        type='learn'
-                        title='Udemy'
-                        period='2020 a 2023'
-                        descriptions='Teste de componente do tipo estudos.'
+                        type='work'
+                        title='Alura'
+                        period='2023 até os dias atuais'
+                        descriptions={['Opção de trabalho 1', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2']}
                     />
 
                 </div>

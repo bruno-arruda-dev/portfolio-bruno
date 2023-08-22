@@ -5,51 +5,31 @@ import { PiGearSixFill } from 'react-icons/pi';
 
 const TimeEvent = ({ type, title, period, descriptions }: ITimeEventProps) => {
 
-    if (type === 'learn') {
-        return (
-
-            <div className={`${styles[`timeEvent_left`]}`}>
-
-                <div className={styles.time_event}>
-
-                    <div className={styles.mark}><BiSolidBook /></div>
-
-                    <div className={`${styles['content']} ${styles['left']}`}>
-                        <h4>{title}</h4>
-                        <p className={styles.period}>{period}</p>
-                    </div>
-
-                    <div className={`${styles['content']} ${styles['right']}`}>
-                        {descriptions}
-                    </div>
-                </div>
-
+    return (
+        <div className={`${styles['eventContainer']} ${styles['eventContainer_' + type]}`}>
+            <div className={styles.studyInfo}>
+                <h2>{title}</h2>
+                <p>{period}</p>
+                <ul>
+                    {descriptions?.map((description, index)=>(
+                        <li>{description}</li>
+                    ))}
+                </ul>
             </div>
-        )
-
-    } else {
-        return (
-
-            <div className={`${styles[`timeEvent_right`]}`}>
-
-                <div className={styles.time_event}>
-
-                    <div className={styles.mark}><PiGearSixFill /></div>
-
-                    <div className={`${styles['content']} ${styles['right']}`}>
-                        {descriptions}
-                    </div>
-
-                    <div className={`${styles['content']} ${styles['left']}`}>
-                        <h4>{title}</h4>
-                        <p className={styles.period}>{period}</p>
-                    </div>
-                </div>
-
+            <div className={styles.iconContainer}>
+                {type === 'study'? <BiSolidBook/> : <PiGearSixFill />} 
             </div>
-
-        )
-    }
+            <div className={styles.workInfo}>
+                <h2>{title}</h2>
+                <p>{period}</p>
+                <ul>
+                    {descriptions?.map((description, index)=>(
+                        <li>{description}</li>
+                    ))}
+                </ul>
+            </div>
+        </div>
+    )
 }
 
 export default TimeEvent;

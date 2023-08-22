@@ -1,114 +1,63 @@
 @import '@/styles/Global.module.scss';
 
-.timeEvent_left {
-    position: relative;
+.eventContainer {
+    @extend .centralize;
     width: 100%;
-    height: 10vh;
-    margin: 0 0 1rem 0;
-    
-    .mark {
-        @extend .centralize;
-        top: 50%;
-        right: 50%;
-        transform: translate(50%, -50%);
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        background-color: $dark-bg;
-        border-radius: 50%;
-        border: $about-timeline-width solid $dark-bg;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
 
-        svg {
-            fill: $st-detail;
-            width: 100%;
-            height: 100%;
-        }
-    }
-    
-    .content {
-        position: absolute;
-        top: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 47%;
-        height: 100%;
-
-        h4 {
-            font-weight: bold;
-        }
-
-        .period {
-            margin: 1rem 0;
-            font-size: .8rem;
-            color: rgb(79, 79, 79);
-        }
+    p {
+        margin: .5rem 0;
+        font-weight: bold;
+        font-size: 0.8rem;
+        color: rgb(114, 114, 114);
     }
 
-    .left {
-        left: 0;
+    .studyInfo {
+        width: 45%;
+        height: fit-content;
         text-align: right;
+        padding: 2rem;
+        background-color: #ffffff0e;
+        border-radius: 50px;
+
+        ul {
+            text-align: left
+        }
     }
     
-    .right {
-        right: 0;
-        text-align: left;
+    .iconContainer {
+        @extend .centralize;
+        font-size: 3rem;
+        width: 10%;
+        height: fit-content;
+        background-color: $dark-bg;
+        z-index: 1;
+    }
+    
+    .workInfo {
+        display: inline-block;
+        width: 45%;
+        height: fit-content;
+        padding: 2rem;
+        background-color: #ffffff0e;
+        border-radius: 50px;
     }
 
 }
 
-.timeEvent_right {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    width: 100%;
-    height: 10vh;
-    margin: 10% 0;
+// Wheen container is for study
+.eventContainer_study {
+
+    .workInfo {
+        visibility: hidden;
+    }
+}
+
+// Wheen container is for work
+.eventContainer_work {
     
-    .mark {
-        @extend .centralize;
-        top: 50%;
-        right: 50%;
-        transform: translate(50%, -50%);
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        background-color: $dark-bg;
-        border-radius: 50%;
-        border: $about-timeline-width solid $dark-bg;
-
-        svg {
-            fill: $st-detail;
-            width: 100%;
-            height: 100%;
-        }
+    .studyInfo {
+        visibility: hidden;
     }
-    
-    .content {
-        position: absolute;
-        top: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 47%;
-        height: 100%;
-
-        .period {
-            margin: 1rem 0;
-            font-size: .8rem;
-            color: rgb(79, 79, 79);
-        }
-    }
-
-    .left {
-        right: 0;
-        text-align: left;
-    }
-    
-    .right {
-        left: 0;
-        text-align: right;
-    }
-
 }

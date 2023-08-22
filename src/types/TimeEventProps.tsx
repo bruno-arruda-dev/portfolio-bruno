@@ -1,6 +1,6 @@
 export interface ITimeEventProps {
-    type?: 'learn',
+    type: 'study' | 'work',
     title: string;
     period: string;
-    descriptions?: string;
+    descriptions?: string[];
 }

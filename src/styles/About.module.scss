@@ -1,13 +1,14 @@
 @import '@/styles/Global.module.scss';
 
 .about {
-    position: relative;
     display: flex;
+    position: relative;
     width: 100%;
     min-height: 100vh;
     min-height: calc(100vh - $navbar-height);
     background-color: $dark-bg;
     color: $dark-text;
+    padding-top: 5rem;
     
     .timeline_container {
         width: 100%;
@@ -23,4 +24,5 @@
             background-color: $about-timeline-color;
         }
     }
+
 }
