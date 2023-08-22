@@ -34,21 +34,9 @@
 
             .timeline {
                 left: 33px;
+                top: $navbar-height;
                 transform: none;
             }
         }
     }
 }
-
-// @media  (max-width: 550px) {
-//     .about {
-
-//         .timeline_container {
-
-//             .timeline {
-//                 left: 6%;
-//                 transform: none;
-//             }
-//         }
-//     }
-// }
