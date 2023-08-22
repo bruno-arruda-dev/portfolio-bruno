@@ -1,10 +1,15 @@
 @import '@/styles/Global.module.scss';
 
 .index {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend .centralize;
     width: 100%;
     height: calc(100vh - $navbar-height);
     background-color: $dark-bg;
+}
+
+@media (max-width: 850px) {
+    .index {
+        flex-direction: column;
+        height: fit-content;
+    }
 }

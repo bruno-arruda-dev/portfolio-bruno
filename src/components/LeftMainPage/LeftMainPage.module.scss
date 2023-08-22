@@ -2,7 +2,7 @@
 
 .left_main_page {
     @extend .centralize;
-    width: 50%;
+    width: 650px;
     height: 100%;
     
     .content {
@@ -10,7 +10,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
-        width: 80%;
+        width: 100%;
         height: 300px;
 
         h1 {
@@ -22,6 +22,41 @@
             margin: 1rem 0;
             font-size: 1.5rem;
             color: $dark-text;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .left_main_page {
+        width: 100%;
+
+        .content {
+            padding: 2rem;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: 535px) {
+    .left_main_page {
+
+        .content {
+            text-align: left;
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 445px) {
+    .left_main_page {
+
+        .content {
+            h1 {
+                font-size: 1.5rem;
+            }
         }
     }
 }
