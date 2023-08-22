@@ -26,3 +26,29 @@
     }
 
 }
+
+@media  (max-width: 720px) {
+    .about {
+
+        .timeline_container {
+
+            .timeline {
+                left: 33px;
+                transform: none;
+            }
+        }
+    }
+}
+
+// @media  (max-width: 550px) {
+//     .about {
+
+//         .timeline_container {
+
+//             .timeline {
+//                 left: 6%;
+//                 transform: none;
+//             }
+//         }
+//     }
+// }

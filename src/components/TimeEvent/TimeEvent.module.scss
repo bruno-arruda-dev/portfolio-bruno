@@ -61,3 +61,23 @@
         visibility: hidden;
     }
 }
+
+@media (max-width: 720px) {
+    .eventContainer {
+        justify-content: flex-start;
+        padding: .5rem;
+
+        .studyInfo {
+            display: none;
+        }
+
+        .iconContainer {
+            width: 50px;
+        }
+
+        .workInfo {
+            visibility: visible;
+            width: 100%;
+        }
+    }
+}
