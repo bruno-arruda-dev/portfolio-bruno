@@ -1,6 +1,7 @@
 @import '@/styles/Global.module.scss';
 
 .navbar {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
