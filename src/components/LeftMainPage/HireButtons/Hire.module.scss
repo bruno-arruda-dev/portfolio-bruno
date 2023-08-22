@@ -77,3 +77,19 @@
         }
     }
 }
+
+@media (max-width: 410px) {
+    .hireContainer {
+        width: 100vw;
+    }
+}
+
+@media (max-width: 378px) {
+    .hireContainer {
+        width: 100vw;
+
+        .hire p {
+            font-size: 1rem;
+        }
+    }
+}

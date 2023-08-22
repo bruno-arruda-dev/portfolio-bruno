@@ -30,6 +30,7 @@
 @media (max-width: 850px) {
     .left_main_page {
         width: 100%;
+        height: 50%;
 
         .content {
             padding: 2rem;
@@ -40,12 +41,15 @@
 
 @media (max-width: 535px) {
     .left_main_page {
-
         .content {
             text-align: left;
 
             h1 {
                 font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
             }
         }
     }
