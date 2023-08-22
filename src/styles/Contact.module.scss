@@ -4,6 +4,7 @@
     width: 100%;
     color: $dark-text;
     @extend .centralize;
+    flex-wrap: wrap;
     min-height: calc(100vh - $navbar-height);
     background-color: $dark-bg;
 
@@ -16,5 +17,16 @@
         width: 50%;
         height: 250px;
         padding: 1rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .contact {
+        flex-direction: column;
+
+        .contactContainer {
+            width: 80%;
+            justify-content: space-around;
+        }
     }
 }
