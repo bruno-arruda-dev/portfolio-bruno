@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode } from 'react';
 import ProjectModal from '@/components/ProjectModal/ProjectModal';
-import Navbar from '../Navbar/Navbar'
-import Head from 'next/head'
+import Navbar from '../Navbar/Navbar';
+import Head from 'next/head';
 
 interface LayoutProps {
   title: string,
