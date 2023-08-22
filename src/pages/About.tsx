@@ -42,7 +42,7 @@ const About = () => {
                         type='work'
                         title='Alura'
                         period='2023 até os dias atuais'
-                        descriptions={['Opção de trabalho 1', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2']}
+                        descriptions={['Opção de trabalho 1', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2']}
                     />
 
                 </div>

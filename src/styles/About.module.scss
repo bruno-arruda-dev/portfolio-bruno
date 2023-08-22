@@ -4,8 +4,7 @@
     display: flex;
     position: relative;
     width: 100%;
-    min-height: 100vh;
-    min-height: calc(100vh - $navbar-height);
+    height: calc(100vh - $navbar-height);
     background-color: $dark-bg;
     color: $dark-text;
     padding-top: 5rem;
@@ -29,13 +28,14 @@
 
 @media  (max-width: 720px) {
     .about {
-
+        height: 100%;
         .timeline_container {
 
             .timeline {
                 left: 33px;
                 top: $navbar-height;
                 transform: none;
+                height: calc(100% - $navbar-height);
             }
         }
     }
