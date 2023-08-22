@@ -1,5 +1,65 @@
 @import '@/styles/Global.module.scss';
 
+.input {
+    display: none;
+}
+
 .buttons {
     @extend .centralize;
+
+    
+}
+
+@media (max-width: 650px) {
+    .sandwitchContainer {
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: fit-content;
+        height: fit-content;
+        z-index: 999;
+
+        .trace {
+            cursor: pointer;
+            background-color: white;
+            width: 35px;
+            height: 3px;
+            margin: 5px;
+            border-radius: $default-radius;
+        }
+
+        input:checked~.buttons {
+            background-color: red;
+        }
+    }
+
+    .buttons {
+        flex-direction: column;
+        height: 100%;
+        width: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 998;
+        background-color: $dark-bg;
+        transition: all .5s ease;
+
+        &.isChecked {
+            width: 100%;
+            animation:  openSandwitch .5s ease;
+        }
+    }
+}
+
+@keyframes openSandwitch {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
