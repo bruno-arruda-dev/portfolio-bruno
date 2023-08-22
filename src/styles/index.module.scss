@@ -3,13 +3,12 @@
 .index {
     @extend .centralize;
     width: 100%;
-    height: calc(100vh - $navbar-height);
+    height: 90vh;
     background-color: $dark-bg;
 }
 
 @media (max-width: 850px) {
     .index {
         flex-direction: column;
-        height: fit-content;
     }
 }
