@@ -6,13 +6,12 @@
     height: 50px;
     @extend .centralize;
     color: $dark-text;
-    
+
     .hire {
-        margin: 1rem;
-        width: 200px;
+        margin: .5rem;
+        max-width: 200px;
         height: 43px;
         border-radius: $default-radius;
-        text-align: center;
         cursor: pointer;
         position: relative;
         border: 2px solid $st-detail;
@@ -36,12 +35,12 @@
             background-color: $dark-bg;
             border-radius: $default-radius;
         }
-        
+
         &:hover::after {
             width: 100%;
         }
     }
-    
+
     .social {
         margin-right: 1rem;
         @extend .centralize;
@@ -52,8 +51,8 @@
         position: relative;
         overflow: hidden;
         border: 2px solid $st-detail;
-        
-        
+
+
         &:after {
             transition: all .2s ease-out;
             position: absolute;
@@ -65,12 +64,12 @@
             background-color: $st-detail;
             border-radius: 50%;
         }
-        
+
         &:hover::after {
             width: 100%;
             box-shadow: 0 0 5px 5px $st-detail;
         }
-        
+
         svg {
             position: absolute;
             z-index: 999;
@@ -81,15 +80,5 @@
 @media (max-width: 410px) {
     .hireContainer {
         width: 100vw;
-    }
-}
-
-@media (max-width: 378px) {
-    .hireContainer {
-        width: 100vw;
-
-        .hire p {
-            font-size: 1rem;
-        }
     }
 }

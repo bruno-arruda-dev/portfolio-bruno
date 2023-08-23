@@ -11,7 +11,8 @@ const LeftMainPage = () => {
 
                 <h1>Olá, meu nome é Bruno</h1>
 
-                <TypeAnimation
+                <TypeAnimation 
+                    className={styles.writer}
                     sequence={[
                         'Acredito que com dedicação...', 1500,
                         'Acredito que com disciplina...', 900,
