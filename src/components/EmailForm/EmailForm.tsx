@@ -42,20 +42,25 @@ const EmailForm = () => {
 
     return (
         <>
+
             {isVisible === 'fail' && <Notification type='fail' text='Email não foi enviado.' />}
             {isVisible === 'success' && <Notification type='success' text='Email enviado com sucesso!' />}
-            <form className={styles.emailForm} onSubmit={handleSubmit}>
-                <label htmlFor="email">E-mail</label>
-                <input type="text" id="email" name="email" placeholder="E-mail de destino.." onChange={handleInputChange} />
 
-                <label htmlFor="nome">Nome</label>
-                <input type="text" id="nome" name="nome" placeholder="Nome da pessoa.." onChange={handleInputChange} />
+            <div className={styles.emailForm}>
+                <form className={styles.formContainer} onSubmit={handleSubmit}>
+                    <label htmlFor="email">E-mail</label>
+                    <input type="text" id="email" name="email" placeholder="E-mail de destino.." onChange={handleInputChange} />
 
-                <label htmlFor="mensagem">Mensagem</label>
-                <textarea id="mensagem" name="mensagem" placeholder="Escreva algo.." className="textArea" onChange={handleInputChange}></textarea>
+                    <label htmlFor="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Nome da pessoa.." onChange={handleInputChange} />
 
-                <input type="submit" value="Enviar" onClick={() => handleSubmit} />
-            </form>
+                    <label htmlFor="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Escreva algo.." className="textArea" onChange={handleInputChange}></textarea>
+
+                    <input type="submit" value="Enviar" onClick={() => handleSubmit} />
+                </form>
+            </div>
+            
         </>
     )
 }

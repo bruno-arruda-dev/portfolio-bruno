@@ -3,30 +3,39 @@
 .contact {
     width: 100%;
     color: $dark-text;
-    @extend .centralize;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     min-height: calc(100vh - $navbar-height);
     background-color: $dark-bg;
 
     .contactContainer {
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
         width: 50%;
-        height: 250px;
-        padding: 1rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        
+        .hireMessageContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            text-align: left;
+            height: 250px;
+            padding: 1rem;
+        }
     }
 }
 
 @media (max-width: 650px) {
     .contact {
+        padding: 1rem;
+        justify-content: flex-start;
         flex-direction: column;
 
         .contactContainer {
-            width: 80%;
-            justify-content: space-around;
+            width: 100%;
         }
     }
 }

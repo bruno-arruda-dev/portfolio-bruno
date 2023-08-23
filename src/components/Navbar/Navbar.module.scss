@@ -6,8 +6,14 @@
     align-items: center;
     justify-content: space-between;
     min-height: 30px;
-    height: 10vh;
+    height: $navbar-height;
     padding: .5rem;
     background-color: $dark-bg;
     color: $dark-text;
+}
+
+@media (min-width: 1600px) {
+    .navbar {
+        justify-content: center;
+    }
 }

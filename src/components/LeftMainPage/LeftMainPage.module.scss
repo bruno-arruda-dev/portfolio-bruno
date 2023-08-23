@@ -1,8 +1,10 @@
 @import '@/styles/Global.module.scss';
 
 .left_main_page {
-    @extend .centralize;
-    width: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
     height: 100%;
     
     .content {
@@ -11,7 +13,7 @@
         align-items: center;
         justify-content: space-between;
         margin: 0 1rem;
-        width: 100%;
+        width: fit-content;
         height: 300px;
 
         h1 {

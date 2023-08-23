@@ -15,12 +15,13 @@
 
     .studyInfo {
         width: 45%;
+        max-width: 600px;
         height: fit-content;
         text-align: right;
         padding: 2rem;
         background-color: #ffffff0e;
         border-radius: 50px;
-
+        
         ul {
             text-align: left
         }
@@ -29,7 +30,7 @@
     .iconContainer {
         @extend .centralize;
         font-size: 3rem;
-        width: 10%;
+        width: 50px;
         height: fit-content;
         background-color: $dark-bg;
         z-index: 1;
@@ -38,6 +39,7 @@
     .workInfo {
         display: inline-block;
         width: 45%;
+        max-width: 600px;
         height: fit-content;
         padding: 2rem;
         background-color: #ffffff0e;
