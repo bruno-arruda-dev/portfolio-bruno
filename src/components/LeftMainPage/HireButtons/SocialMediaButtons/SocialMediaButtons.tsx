@@ -1,6 +1,7 @@
 import styles from '@/components/LeftMainPage/HireButtons/SocialMediaButtons/SocialMediaButtons.module.scss';
 import { BsWhatsapp } from 'react-icons/bs';
 import { FiLinkedin, FiGithub } from 'react-icons/fi';
+import { BsPersonVcard } from 'react-icons/bs';
 
 const SocialMediaButtons = () => {
 
@@ -8,21 +9,28 @@ const SocialMediaButtons = () => {
         <div className={styles.socialMediaButtons}>
             <a
                 className={styles.social} target='_blank' rel='noopener noreferer'
-                href='https://wa.me/5562998281602?text=Ol%C3%A1+Bruno%21+Dei+uma+olhada+no+seu+portf%C3%B3lio+e+vim+conversar+com+voc%C3%AA.'
+                href='/helpers/cv/CV-Bruno.pdf'
             >
-                <BsWhatsapp />
+                <BsPersonVcard />
             </a>
-            <a 
+            <a
                 className={styles.social} target='_blank' rel='noopener noreferer'
-                href='https://www.linkedin.com/in/bruno-arruda-dev/' 
+                href='https://www.linkedin.com/in/bruno-arruda-dev/'
             >
                 <FiLinkedin />
             </a>
-            <a 
+            <a
                 className={styles.social} target='_blank' rel='noopener noreferer'
-                href='https://github.com/bruno-arruda-dev' 
+                href='https://github.com/bruno-arruda-dev'
             >
                 <FiGithub />
+            </a>
+
+            <a
+                className={styles.social} target='_blank' rel='noopener noreferer'
+                href='https://wa.me/5562998281602?text=Ol%C3%A1+Bruno%21+Dei+uma+olhada+no+seu+portf%C3%B3lio+e+vim+conversar+com+voc%C3%AA.'
+            >
+                <BsWhatsapp />
             </a>
         </div>
     );
