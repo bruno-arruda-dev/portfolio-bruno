@@ -1,7 +1,8 @@
 import { useContext } from 'react';
 import styles from '@/components/ProjectModal/ProjectModal.module.scss';
 import { ProjectModalContext } from '@/context/ProjectModalContext';
-import {RiCloseCircleFill} from 'react-icons/ri';
+import { RiCloseCircleFill } from 'react-icons/ri';
+import ProjectCardFooter from '../ProjectCard/ProjectCardFooter/ProjectCardFooter';
 
 const ProjectModal = () => {
     const { modalName, modalDescription, modalRepo, modalHomepage, modalImage, handleCloseModal, activeModal } = useContext(ProjectModalContext);
@@ -13,10 +14,19 @@ const ProjectModal = () => {
 
     return (
         <div className={`${styles[activeModal]}`}>
-            
+
             <div className={styles.modalContent}>
+
                 <button onClick={handleActiveModal}><RiCloseCircleFill /></button>
-                {modalName} - {modalDescription} - {modalRepo} - {modalHomepage} - {modalImage}
+                
+                <h2>{modalName}</h2>
+                
+                <div className={styles.imageContainer} style={{ backgroundImage: `url('${modalImage}')` }} />
+
+                <p>{modalDescription}</p>
+
+                <ProjectCardFooter repo={modalRepo} homepage={modalHomepage} />
+
             </div>
 
         </div>
