@@ -1,6 +1,5 @@
 // Background colors
 $dark-bg: #071b37;
-$gradient-bg: linear-gradient(90deg, rgba(7,23,45,1) 0%, rgb(10, 67, 147) 50%, rgba(4,25,55,1) 100%);
 $light-bg: #e1e1e1;
 
 
@@ -10,6 +9,9 @@ $light-text: $dark-bg;
 
 // Detail colors
 $st-detail: #4caeff;
+
+// Gradient
+$gradient-bg: linear-gradient(90deg, $dark-bg 0%, #235883 50%, $dark-bg 100%);
 
 // Image configurations
 .container-image {
