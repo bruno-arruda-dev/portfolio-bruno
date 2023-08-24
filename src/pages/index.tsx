@@ -1,4 +1,3 @@
-
 import Layout from '@/components/Layout/Layout';
 import LeftMainPage from '@/components/LeftMainPage/LeftMainPage';
 import RightMainPage from '@/components/RightMainPage/RightMainPage';
