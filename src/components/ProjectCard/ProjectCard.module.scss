@@ -27,15 +27,24 @@
         margin: .5rem;
     }
 
-    p {
-        margin: 0 .5rem;
-        text-align: left;
+    .textContainer {
+        overflow: hidden;
+        width: 100%;
+        height: 30%;
+        
+        p {
+            text-overflow: ellipsis;
+            margin: 0 .5rem;
+            text-align: left;
+        }
     }
+
 
     &:hover {
         transform: scale(1.005);
     }
 }
+
 @media (max-width: 662px) {
     .projectCard {
         width: 90%;

@@ -37,7 +37,7 @@ export const ProjectModalProvider = ({children}: {children: React.ReactNode;}): 
         
         setTimeout(() => {
             setActiveModal('hideModal'); // Desativa a exibição do mobal.
-        }, 1000)
+        }, 300)
 
     }
 

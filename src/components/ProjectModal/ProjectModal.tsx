@@ -15,15 +15,14 @@ const ProjectModal = () => {
     return (
         <div className={`${styles[activeModal]}`}>
 
-            <div className={styles.modalContent}>
+            <div className={styles.modalContainer}>
 
-                <button onClick={handleActiveModal}><RiCloseCircleFill /></button>
-                
-                <h2>{modalName}</h2>
-                
-                <div className={styles.imageContainer} style={{ backgroundImage: `url('${modalImage}')` }} />
-
-                <p>{modalDescription}</p>
+                <div className={styles.modalContent}>
+                    <button onClick={handleActiveModal}><RiCloseCircleFill /></button>
+                    <h2>{modalName}</h2>
+                    <div className={styles.imageContainer} style={{ backgroundImage: `url('${modalImage}')` }} />
+                    <p>{modalDescription}</p>
+                </div>
 
                 <ProjectCardFooter repo={modalRepo} homepage={modalHomepage} />
 

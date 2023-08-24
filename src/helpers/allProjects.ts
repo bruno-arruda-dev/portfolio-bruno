@@ -6,7 +6,7 @@ const allProjects = [
     },
     {
         name: "Projeto número 2",
-        description: 'Projeto número um, criado para testar um card em um portfólio',
+        description: 'Projeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em Projeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioum portfólio',
         repo: 'https://www.google.com/',
         homepage: 'https://www.google.com/',
         image: './images/allProjects/p2.png'
