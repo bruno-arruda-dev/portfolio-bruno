@@ -22,7 +22,7 @@
         }
 
         .writer {
-            margin: 1rem 0;
+            margin: 1.5rem .5rem;
             font-size: 1.5rem;
             color: $dark-text;
         }
@@ -51,9 +51,8 @@
                 font-size: 2rem;
             }
 
-            p {
+            .writer {
                 font-size: .8rem;
-                margin-left: .5rem;
             }
         }
     }

@@ -6,8 +6,9 @@
     height: 50px;
     @extend .centralize;
     color: $dark-text;
-
+    
     .hire {
+        padding: .2rem;
         margin: .5rem;
         max-width: 200px;
         height: 43px;
@@ -81,6 +82,12 @@
 
 @media (max-width: 410px) {
     .hireContainer {
-        width: 100vw;
+        width: 100%;
+
+        .hire {
+            p {
+                font-size: .8rem;
+            }
+        }
     }
 }
