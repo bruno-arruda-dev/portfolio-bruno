@@ -21,7 +21,9 @@ const Contact = () => {
                             repeat={0}
                             cursor={true}
                         />
+
                         <SocialMediaButtons />
+                        
                     </div>
                 </div>
 
