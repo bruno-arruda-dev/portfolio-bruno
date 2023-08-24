@@ -31,7 +31,7 @@
 @media (max-width: 850px) {
     .left_main_page {
         width: 100%;
-        height: 50%;
+        height: calc(50% - $navbar-height);
 
         .content {
             align-items: center;
