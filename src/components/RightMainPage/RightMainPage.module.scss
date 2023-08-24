@@ -14,8 +14,40 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+        filter: drop-shadow(20px 20px 20px $st-detail);
+        animation: slideIn 2s linear forwards,
+                    movingLights $bg-animation,
+                    moveDeveloper 8s infinite ease-in-out;
+    }
+}
 
-        animation: slideIn 2s linear forwards;
+@keyframes movingLights {
+    0% {
+        filter: drop-shadow(20px 20px 20px $st-detail);
+    }
+
+    50% {
+        filter: drop-shadow(3px 3px 3px $st-detail);
+        
+    }
+    
+    100% {
+        filter: drop-shadow(20px 20px 20px $st-detail);
+    }
+}
+
+@keyframes moveDeveloper {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        
+    }
+    
+    100% {
+        transform: translateY(0);
     }
 }
 
