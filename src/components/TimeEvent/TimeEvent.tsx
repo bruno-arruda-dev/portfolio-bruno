@@ -1,7 +1,7 @@
 import styles from '@/components/TimeEvent/TimeEvent.module.scss';
 import { ITimeEventProps } from '@/types/TimeEventProps';
-import { BiSolidBook } from 'react-icons/bi';
-import { PiGearSixFill } from 'react-icons/pi';
+import { GiWhiteBook } from 'react-icons/gi';
+import { BsFillHouseGearFill } from 'react-icons/bs';
 
 const TimeEvent = ({ type, title, period, descriptions }: ITimeEventProps) => {
 
@@ -17,7 +17,7 @@ const TimeEvent = ({ type, title, period, descriptions }: ITimeEventProps) => {
                 </ul>
             </div>
             <div className={styles.iconContainer}>
-                {type === 'study'? <BiSolidBook/> : <PiGearSixFill />} 
+                {type === 'study'? <GiWhiteBook /> : <BsFillHouseGearFill />} 
             </div>
             <div className={styles.workInfo}>
                 <h2>{title}</h2>
