@@ -37,3 +37,17 @@ $navbar-height: 10vh;
 
 $about-timeline-width: 2px;
 $about-timeline-color: #ffffff6a;
+
+$bg-animation: 10s infinite;
+
+@keyframes bgAnimate {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 150%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}

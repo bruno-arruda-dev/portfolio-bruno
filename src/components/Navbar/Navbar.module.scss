@@ -9,6 +9,7 @@
     height: $navbar-height;
     padding: .5rem;
     background: $gradient-bg;
+    animation: bgAnimate $bg-animation;
     color: $dark-text;
 }
 

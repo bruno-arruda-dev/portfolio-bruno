@@ -9,6 +9,7 @@
     flex-wrap: wrap;
     min-height: calc(100vh - $navbar-height);
     background: $gradient-bg;
+    animation: bgAnimate $bg-animation;
 
     .contactContainer {
         width: 50%;

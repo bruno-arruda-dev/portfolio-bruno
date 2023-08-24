@@ -9,4 +9,5 @@
     width: 100%;
     min-height: calc(100vh - $navbar-height);
     background: $gradient-bg;
+    animation: bgAnimate $bg-animation;
 }
