@@ -1,6 +1,7 @@
 @import '@/styles/Global.module.scss';
 
 .left_main_page {
+    min-height: 300px;
     display: flex;
     align-items: center;
     justify-content: flex-end;

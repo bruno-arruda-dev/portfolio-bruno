@@ -4,6 +4,7 @@
     @extend .centralize;
     width: 100%;
     height: 90vh;
+    min-height: 600px;
     background: $gradient-bg;
     animation: bgAnimate $bg-animation;
 }
