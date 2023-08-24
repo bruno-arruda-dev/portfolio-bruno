@@ -14,7 +14,7 @@ export const ProjectModalContext = createContext<IProjectModalProps>({
 })
 
 export const ProjectModalProvider = ({children}: {children: React.ReactNode;}): JSX.Element => {
-    const [activeModal, setActiveModal] = useState('disabledModal');
+    const [activeModal, setActiveModal] = useState('hideModal');
     const [modalName, setModalName] = useState('');
     const [modalDescription, setModalDescription] = useState('');
     const [modalRepo, setModalRepo] = useState('');
@@ -32,8 +32,13 @@ export const ProjectModalProvider = ({children}: {children: React.ReactNode;}): 
     }
 
     const handleCloseModal = () => {
-        setActiveModal('disabledModal');
+        setActiveModal('disabledModal'); // Usado para exibir animação ao fechar modal.
         console.log(`Clicou para fechar o modal ${activeModal}`);
+        
+        setTimeout(() => {
+            setActiveModal('hideModal'); // Desativa a exibição do mobal.
+        }, 1000)
+
     }
 
     return (
