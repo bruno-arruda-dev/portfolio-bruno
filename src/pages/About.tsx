@@ -22,7 +22,7 @@ const About = () => {
                         type='work'
                         title='Secretaria de Estado de Indústria, Comércio e Serviços'
                         period='2023 até os dias atuais'
-                        descriptions={['Colaboro para a manutenção do portal oficial: https://www.industriaecomercio.go.gov.br/']}
+                        descriptions={['Desenvolvedor Frontend', 'Chefia de Gabinete', 'Colaboro para a manutenção do portal oficial: industriaecomercio.go.gov.br/']}
                     />
 
                     <TimeEvent

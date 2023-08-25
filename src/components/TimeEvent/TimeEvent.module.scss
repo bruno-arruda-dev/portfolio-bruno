@@ -14,6 +14,7 @@
     }
 
     .studyInfo {
+        overflow: hidden;
         width: 45%;
         max-width: 600px;
         height: fit-content;
@@ -43,6 +44,7 @@
     }
     
     .workInfo {
+        overflow: hidden;
         display: inline-block;
         width: 45%;
         max-width: 600px;
