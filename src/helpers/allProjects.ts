@@ -1,22 +1,27 @@
 const allProjects = [
     {
-        name: "Projeto número 1",
-        description: 'Projeto número um, criado para testar um card em um portfólio',
-        image: './images/allProjects/p1.png'
+        name: "Este portfólio",
+        descriptions: [
+            'A necessidade de atualizar meu antigo portfólio resultou no desenvolvimento deste, o qual serviu para verificar minha evoluçao como programador quando comparado ao anterior.', 
+            'Além disso, este é o meu primeiro projeto desenvolvido utilizando NextJS, com o qual pude aprender bastante sobre os conceitos básicos deste framework.'],
+        image: './images/allProjects/portfolio.png',
+        stacks: ['next', 'typescript', 'sass', 'html', 'css']
     },
     {
         name: "Projeto número 2",
-        description: 'Projeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em Projeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioProjeto número um, criado para testar um card em um portfólioum portfólio',
+        descriptions: ['1', '2'],
         repo: 'https://www.google.com/',
         homepage: 'https://www.google.com/',
-        image: './images/allProjects/p2.png'
+        image: './images/allProjects/p2.png',
+        stacks: ['next', 'typescript', 'sass']
     },
     {
         name: "Projeto número 3",
-        description: 'Projeto número um, criado para testar um card em um portfólio',
+        descriptions: ['Projeto número um, criado para testar um card em um portfólio'],
         repo: 'https://www.google.com/',
         homepage: 'https://www.google.com/',
-        image: './images/allProjects/p3.png'
+        image: './images/allProjects/p3.png',
+        stacks: ['next', 'typescript', 'sass']
     }
 ]
 

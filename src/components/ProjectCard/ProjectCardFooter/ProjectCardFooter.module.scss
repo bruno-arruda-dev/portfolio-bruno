@@ -1,31 +1,78 @@
 @import '@/styles/Global.module.scss';
 
 .projectCardFooter {
+    padding-top: 1rem;
+    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    border-radius: 0 0 $default-radius $default-radius;
-    width: 80%;
-    height: 50px;
+    justify-content: center;
 
-    .active svg {
-        width: 30px;
-        height: 30px;
-        fill: $dark-bg;
-        cursor: pointer;
-        transition: all .2s ease-out;
-
-        &:hover {
-            transform: scale(1.1);
-            fill: $st-detail;
+    .actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 0 0 $default-radius $default-radius;
+        width: 80%;
+        height: 50px;
+    
+        .active svg {
+            width: 30px;
+            height: 30px;
+            fill: $dark-bg;
+            cursor: pointer;
+            transition: all .2s ease-out;
+    
+            &:hover {
+                transform: scale(1.1);
+                fill: $st-detail;
+            }
+        }
+    
+        .disabled svg {
+            width: 30px;
+            height: 30px;
+            fill: #8e8e8e;
         }
     }
 
-    .disabled svg {
-        width: 30px;
-        height: 30px;
-        fill: #8e8e8e;
-    }
+    .stacks {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        
+        .stack {
+            padding: 0 .5rem;
+            font-size: .7rem;
+            border-radius: $default-radius;
+            font-weight: 500;
+            text-transform: capitalize;
+            border: 1px solid #ffffff;
+            background-color: $st-detail;
+            color: $dark-text;
+        }
 
+        .typescript {
+            background-color: #007acc;
+        }
+
+        .next {
+            background-color: #000000;
+        }
+
+        .sass {
+            background-color: #cf649a;
+        }
+
+        .html {
+            background-color: #e34c26;
+        }
+
+        .css {
+            background-color: #264de4;
+        }
+    }
 
 }

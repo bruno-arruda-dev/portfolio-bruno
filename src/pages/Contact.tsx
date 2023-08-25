@@ -13,11 +13,11 @@ const Contact = () => {
                     <div className={styles.hireMessageContainer}>
                         <TypeAnimation
                             sequence={[
-                                'Por favor, entre em contato caso queira me contratar, ou dar sugestões. \n Muito Obrigado!', 500,
+                                'Se você tem críticas, sugestões, quer me contratar ou trocar uma idéia, por favor, entre em contato!\n\nMuito Obrigado!', 500,
                             ]}
                             wrapper="p"
-                            speed={50}
-                            style={{ display: 'block' }}
+                            speed={80}
+                            style={{ whiteSpace: 'pre-line', display: 'block' }}
                             repeat={0}
                             cursor={true}
                         />

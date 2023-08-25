@@ -13,9 +13,10 @@ const Projects = () => {
                         <ProjectCard 
                             image={project.image}
                             name={project.name}
-                            description={project.description}
+                            descriptions={project.descriptions}
                             repo={project.repo}
                             homepage={project.homepage}
+                            stacks={project.stacks}
                         />
                     ))
                 }

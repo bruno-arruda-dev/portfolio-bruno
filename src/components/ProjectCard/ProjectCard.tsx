@@ -4,26 +4,32 @@ import { IProjectCardProps } from '@/types/ProjectCardProps';
 import ProjectCardFooter from './ProjectCardFooter/ProjectCardFooter';
 import { ProjectModalContext } from '@/context/ProjectModalContext';
 
-const ProjectCard = ({ image, name, description, repo, homepage }: IProjectCardProps) => {
+const ProjectCard = ({ image, name, descriptions, repo, homepage, stacks }: IProjectCardProps) => {
     const { handleUpdateModalContent } = useContext(ProjectModalContext);
 
     const sendToProjectModal = () => {
         console.log(`Modal atual: ${name}`);
-        handleUpdateModalContent(name, description, repo, homepage, image);
+        handleUpdateModalContent(name, descriptions, repo, homepage, image, stacks);
     }
 
     return (
         <div className={styles.projectCard} onClick={sendToProjectModal}>
 
             <div className={styles.img} style={{ backgroundImage: `url('${image}')` }} />
+            
             <h3>{name}</h3>
             <div className={styles.textContainer}>
-                <p>{description}</p>
+                {
+                    descriptions.map((description, index) => (
+                        <p>{description}</p>
+                    ))
+                }
             </div>
 
             <ProjectCardFooter
                 repo={repo}
                 homepage={homepage}
+                stacks={stacks}
             />
 
         </div>

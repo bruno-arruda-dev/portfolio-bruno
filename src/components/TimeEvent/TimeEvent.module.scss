@@ -28,16 +28,16 @@
     }
     
     .iconContainer {
-        background-color: $st-detail;
-        border-radius: 50%;
+        // background-color: $st-detail;
+        // border-radius: 50%;
         @extend .centralize;
-        font-size: 3rem;
+        font-size: 2.5rem;
         width: 50px;
         height: fit-content;
         z-index: 1;
 
         svg {
-            filter: drop-shadow(5px 5px 5px $dark-bg);
+            filter: drop-shadow(0    0 10px $st-detail);
             animation: moveIcon 8s ease-in-out infinite;
         }
     }

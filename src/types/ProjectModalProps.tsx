@@ -1,10 +1,11 @@
 export interface IProjectModalProps {
     modalName: string,
-    modalDescription: string,
+    modalDescriptions: string[],
     modalRepo?: string,
     modalHomepage?: string,
     modalImage?: string,
+    modalStacks: string[],
     activeModal: string,
-    handleUpdateModalContent: (name: string, description: string, repo?: string, homepage?: string, image?: string) => void,
+    handleUpdateModalContent: (name: string, descriptions: string[], repo?: string, homepage?: string, image?: string, stacks?: string[]) => void,
     handleCloseModal: () => void,
 }

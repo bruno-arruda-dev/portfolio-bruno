@@ -5,7 +5,7 @@ import { RiCloseCircleFill } from 'react-icons/ri';
 import ProjectCardFooter from '../ProjectCard/ProjectCardFooter/ProjectCardFooter';
 
 const ProjectModal = () => {
-    const { modalName, modalDescription, modalRepo, modalHomepage, modalImage, handleCloseModal, activeModal } = useContext(ProjectModalContext);
+    const { modalName, modalDescriptions, modalRepo, modalHomepage, modalImage, modalStacks, handleCloseModal, activeModal } = useContext(ProjectModalContext);
 
     const handleActiveModal = () => {
         handleCloseModal();
@@ -21,10 +21,12 @@ const ProjectModal = () => {
                     <button onClick={handleActiveModal}><RiCloseCircleFill /></button>
                     <h2>{modalName}</h2>
                     <div className={styles.imageContainer} style={{ backgroundImage: `url('${modalImage}')` }} />
-                    <p>{modalDescription}</p>
+                    {modalDescriptions.map((description, index) => (
+                        <p>{description}</p>
+                    ))}
                 </div>
 
-                <ProjectCardFooter repo={modalRepo} homepage={modalHomepage} />
+                <ProjectCardFooter repo={modalRepo} homepage={modalHomepage} stacks={modalStacks} />
 
             </div>
 

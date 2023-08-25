@@ -23,7 +23,7 @@ const Buttons = () => {
             </div>
 
             <nav className={`${styles.buttons} ${styles[isChecked]}`}>
-                <Button text='Sobre' href='/About' />
+                <Button text='Trajetória' href='/About' />
                 <Button text='Projetos' href='/Projects' />
                 <Button text='Contato' href='/Contact' />
             </nav>

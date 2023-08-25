@@ -4,10 +4,11 @@ import { IProjectModalProps } from "@/types/ProjectModalProps";
 export const ProjectModalContext = createContext<IProjectModalProps>({
     // INITIAL STATES VALUES
     modalName: '', 
-    modalDescription: '', 
+    modalDescriptions: [], 
     modalRepo: '', 
     modalHomepage: '', 
     modalImage: '', 
+    modalStacks: [],
     activeModal: '', 
     handleUpdateModalContent: () => {}, 
     handleCloseModal: () => {}
@@ -16,17 +17,20 @@ export const ProjectModalContext = createContext<IProjectModalProps>({
 export const ProjectModalProvider = ({children}: {children: React.ReactNode;}): JSX.Element => {
     const [activeModal, setActiveModal] = useState('hideModal');
     const [modalName, setModalName] = useState('');
-    const [modalDescription, setModalDescription] = useState('');
+    const [modalDescriptions, setModalDescriptions] = useState<string[]>([]);
     const [modalRepo, setModalRepo] = useState('');
     const [modalHomepage, setModalHomepage] = useState('');
     const [modalImage, setModalImage] = useState('');
+    const [modalStacks, setModalStacks] = useState<string[]>([]);
 
-    const handleUpdateModalContent = (name: string, description: string, repo?: string, homepage?: string, image?: string) => {
+    const handleUpdateModalContent = (name: string, descriptions: string[], repo?: string, homepage?: string, image?: string, stacks?: string[]) => {
         setModalName(name);
-        setModalDescription(description);
+        setModalDescriptions(descriptions);
         repo ? setModalRepo(repo) : setModalRepo('');
         homepage ? setModalHomepage(homepage) : setModalHomepage('');
         image ? setModalImage(image) : setModalImage('');
+        stacks? setModalStacks(stacks) : setModalStacks([]);
+        console.log(`Atualizou as stacks ${modalStacks}`)
         setActiveModal('activatedModal');
         console.log(`Atualizou o modal no contexto: ${name}`);
     }
@@ -42,7 +46,7 @@ export const ProjectModalProvider = ({children}: {children: React.ReactNode;}): 
     }
 
     return (
-        <ProjectModalContext.Provider value={{ modalName, modalDescription, modalRepo, modalHomepage, modalImage, activeModal, handleUpdateModalContent, handleCloseModal }}>
+        <ProjectModalContext.Provider value={{ modalName, modalDescriptions, modalRepo, modalHomepage, modalImage, modalStacks, activeModal, handleUpdateModalContent, handleCloseModal }}>
             {children}
         </ProjectModalContext.Provider>
     );

@@ -6,7 +6,7 @@ const Hire = () => {
     return (
         <div className={styles.hireContainer}>
             <a className={styles.hire} href='/About'>
-                <p>Conheça-me</p>
+                <p>Trajetória</p>
             </a>
             <SocialMediaButtons />
         </div>

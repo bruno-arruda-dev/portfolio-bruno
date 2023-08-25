@@ -3,18 +3,29 @@ import { IProjectCardFooterProps } from '@/types/ProjectCardFooterProps';
 import { FaGithubAlt } from 'react-icons/fa';
 import { ImHome } from 'react-icons/im';
 
-const ProjectCardFooter = ({ repo, homepage }: IProjectCardFooterProps) => {
+const ProjectCardFooter = ({ repo, homepage, stacks }: IProjectCardFooterProps) => {
 
     return (
         <div className={styles.projectCardFooter}>
 
-            <a className={repo ? `${styles['active']}` : `${styles['disabled']}`} href={repo}>
-                <FaGithubAlt />
-            </a>
+            <div className={styles.stacks}>
+                {
+                    stacks?.map((stack, index) => (
+                        <div className={`${styles['stack']} ${styles[stack]}`}>
+                            {stack}
+                        </div>
+                    ))
+                }
+            </div>
 
-            <a className={homepage ? `${styles['active']}` : `${styles['disabled']}`} href={homepage}>
-                <ImHome />
-            </a>
+            <div className={styles.actions}>
+                <a className={repo ? `${styles['active']}` : `${styles['disabled']}`} href={repo}>
+                    <FaGithubAlt />
+                </a>
+                <a className={homepage ? `${styles['active']}` : `${styles['disabled']}`} href={homepage}>
+                    <ImHome />
+                </a>
+            </div>
 
         </div>
     )
