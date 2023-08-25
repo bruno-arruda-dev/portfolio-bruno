@@ -27,18 +27,18 @@ const LeftMainPage = () => {
 
             <div className={styles.content}>
 
-                <h1>Olá, meu nome é Bruno</h1>
+                <h1>Olá, meu nome é Bruno, {idade}</h1>
 
                 <TypeAnimation
                     className={styles.writer}
                     sequence={[
-                        `Brasileiro, moro em Goiânia. Hoje aos ${idade} anos, sou apaixonado por desenvolvimento web. Em meus projetos gosto de utilizar NextJS, TypeScript e SASS, sempre curioso com novas tecnologias.\n\nAcredito que com foco...`, 100,
-                        `Brasileiro, moro em Goiânia. Hoje aos ${idade} anos, sou apaixonado por desenvolvimento web. Em meus projetos gosto de utilizar NextJS, TypeScript e SASS, sempre curioso com novas tecnologias.\n\nAcredito que com resiliência...`, 1000,
-                        `Brasileiro, moro em Goiânia. Hoje aos ${idade} anos, sou apaixonado por desenvolvimento web. Em meus projetos gosto de utilizar NextJS, TypeScript e SASS, sempre curioso com novas tecnologias.\n\nAcredito que com disciplina...`, 1500,
-                        `Brasileiro, moro em Goiânia. Hoje aos ${idade} anos, sou apaixonado por desenvolvimento web. Em meus projetos gosto de utilizar NextJS, TypeScript e SASS, sempre curioso com novas tecnologias.\n\nAcredito que é possível programar grandes mudanças na vida das pessoas!`
+                        `Apaixonado por desenvolvimento web, gosto de usar NextJS, TypeScript e SASS, sempre curioso com novas tecnologias.\nAcredito que com foco...`, 1500,
+                        `Apaixonado por desenvolvimento web, gosto de usar NextJS, TypeScript e SASS, sempre curioso com novas tecnologias.\nAcredito que com resiliência...`, 1500,
+                        `Apaixonado por desenvolvimento web, gosto de usar NextJS, TypeScript e SASS, sempre curioso com novas tecnologias.\nAcredito que com disciplina...`, 1500,
+                        `Apaixonado por desenvolvimento web, gosto de usar NextJS, TypeScript e SASS, sempre curioso com novas tecnologias.\nAcredito que é possível programar grandes mudanças na vida das pessoas!\n\nBrasil, Goiânia.`
                     ]}
                     wrapper="p"
-                    speed={90}
+                    speed={80}
                     style={{whiteSpace: 'pre-line', display: 'block' }}
                     repeat={0}
                     cursor={true}
