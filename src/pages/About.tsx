@@ -12,37 +12,44 @@ const About = () => {
 
                     <TimeEvent
                         type='study'
-                        title='Alura'
-                        period='2023 até os dias atuais'
-                        descriptions={['Opção de estudo 1', 'Opção de estudo 2']}
+                        title='Universidade Paulista - UNIP'
+                        period='2020 até os dias atuais'
+                        descriptions={['Análise e Desenvolvimento de Sistemas.',
+                            'Formaçao prevista para Dez. 2023.']}
                     />
 
                     <TimeEvent
                         type='work'
-                        title='Alura'
+                        title='Secretaria de Estado de Indústria, Comércio e Serviços'
                         period='2023 até os dias atuais'
-                        descriptions={['Opção de trabalho 1', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2']}
-                    />
-
-                    <TimeEvent
-                        type='work'
-                        title='Alura'
-                        period='2023 até os dias atuais'
-                        descriptions={['Opção de trabalho 1', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2']}
+                        descriptions={['Colaboro para a manutenção do portal oficial: https://www.industriaecomercio.go.gov.br/']}
                     />
 
                     <TimeEvent
                         type='study'
                         title='Alura'
-                        period='2023 até os dias atuais'
-                        descriptions={['Opção de trabalho 1', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2']}
+                        period='Jan. 2023 até os dias atuais'
+                        descriptions={['Formação em Next', 'Formação em Scrum', 'Formação em TypeScript',]}
                     />
 
                     <TimeEvent
                         type='work'
-                        title='Alura'
-                        period='2023 até os dias atuais'
-                        descriptions={['Opção de trabalho 1', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2', 'Opção de trabalho 2']}
+                        title='Integra Engenharia de Sistemas'
+                        period='Nov. 2021 até Ago. 2023'
+                        descriptions={['Técnico em Implantação de Sistemas',
+                            'Fornecia os treinamentos necessários aos clientes que contratavam o sistema ERP desenvolvido na empresa.',
+                            'Entender as necessidades dos clientes era o maior desafio.',
+                            'Manipulação de banco de dados Firebird.']}
+                    />
+
+                    <TimeEvent
+                        type='study'
+                        title='DevMedia'
+                        period='Jan. 2022 até os dias atuais'
+                        descriptions={['Formação em React.',
+                            'Formação em JavaScript.', 'Formação em Lógica e Algorítmos.',
+                            'Formação em HTML.',
+                            'Formação em CSS',]}
                     />
 
                 </div>
