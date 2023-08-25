@@ -27,7 +27,7 @@ const allProjects = [
             'Para que este projeto funcione faça download do frontend e do backend e siga as orientações que eu deixei no README.'],
         repo: 'https://github.com/bruno-arruda-dev/todo-list-frontend',
         image: './images/allProjects/todolist-backend.png',
-        stacks: ['react', 'javascript', 'html', 'css']
+        stacks: ['node', 'mysql', 'javascript']
     },
     {
         name: "Find GitHub",

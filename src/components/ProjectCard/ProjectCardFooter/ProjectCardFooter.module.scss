@@ -47,7 +47,7 @@
             padding: 0 .5rem;
             font-size: .7rem;
             border-radius: $default-radius;
-            font-weight: 500;
+            font-weight: bold;
             text-transform: capitalize;
             border: 1px solid #ffffff;
             background-color: $st-detail;
@@ -56,6 +56,7 @@
 
         .typescript {
             background-color: #007acc;
+            color: #003253;
         }
 
         .next {
@@ -64,14 +65,37 @@
 
         .sass {
             background-color: #cf649a;
+            color: #7b0e44;
         }
 
         .html {
             background-color: #e34c26;
+            color: #5b1706;
         }
 
         .css {
             background-color: #264de4;
+            color: #0b1f2d;
+        }
+
+        .react {
+            background-color: #0d6d8c;
+            color: #003253;
+        }
+
+        .javascript {
+            background-color: #efd81d;
+            color: #5b1706;
+        }
+
+        .node {
+            background-color: #3f873f;
+            color: #032603;
+        }
+
+        .mysql {
+            background-color: #f29111;
+            color: #5b1706;
         }
     }
 
