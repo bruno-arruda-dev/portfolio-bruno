@@ -2,7 +2,7 @@ import styles from '@/styles/Contact.module.scss';
 import Layout from "@/components/Layout/Layout";
 import EmailForm from '@/components/EmailForm/EmailForm';
 import { TypeAnimation } from 'react-type-animation';
-import SocialMediaButtons from '@/components/LeftMainPage/HireButtons/SocialMediaButtons/SocialMediaButtons';
+import SocialMediaButtons from '@/components/SocialMediaButtons/SocialMediaButtons';
 
 const Contact = () => {
     return (

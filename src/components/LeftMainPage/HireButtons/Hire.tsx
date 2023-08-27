@@ -1,5 +1,5 @@
 import styles from '@/components/LeftMainPage/HireButtons/Hire.module.scss';
-import SocialMediaButtons from './SocialMediaButtons/SocialMediaButtons';
+import SocialMediaButtons from '../../SocialMediaButtons/SocialMediaButtons';
 
 const Hire = () => {
 

@@ -1,4 +1,4 @@
-import styles from '@/components/LeftMainPage/HireButtons/SocialMediaButtons/SocialMediaButtons.module.scss';
+import styles from '@/components/SocialMediaButtons/SocialMediaButtons.module.scss';
 import { BsWhatsapp } from 'react-icons/bs';
 import { FiLinkedin, FiGithub } from 'react-icons/fi';
 import { BsPersonVcard } from 'react-icons/bs';

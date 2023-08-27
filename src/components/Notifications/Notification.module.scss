@@ -1,6 +1,7 @@
 @import '@/styles/Global.module.scss';
 
-.notification {
+.notification,
+.isNotVisible {
     max-width: 600px;
     width: 0;
     height: 0;
@@ -9,40 +10,39 @@
     top: 100px;
     left: 50%;
     transform: translate(-50%);
-    padding: 1rem;
+    padding: .5rem;
     font-size: 1rem;
     font-weight: bold;
     z-index: 999;
     border-radius: $default-radius;
+    animation: notification 5.1s ease; //Levemente mais rápido que o setTimeout no componente que chama a notificação
 
     div {
+        animation: progressBar 5.1s ease;
         position: fixed;
-        width: 100%;
-        height: 4px;
+        height: 100%;
         bottom: 0;
         right: 0;
     }
 }
 
 .notification_success {
+    display: block;
     background-color: #53bc58;
     color: rgb(0, 88, 0);
-    animation: notification 5s ease;
 
     div {
-        background-color: green;
-        animation: progressBar 5s ease;
+        background-color: #0080005c;
     }
 }
 
 .notification_fail {
+    display: block;
     background-color: #ff8f8f;
     color: #730000;
-    animation: notification 5s ease;
 
     div {
-        background-color: #730000;
-        animation: progressBar 5s ease;
+        background-color: #7300005c;
     }
 }
 

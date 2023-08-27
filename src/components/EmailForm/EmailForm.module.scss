@@ -32,6 +32,8 @@
       input[type=text],
       select,
       textarea {
+        color: $dark-text;
+        font-weight: normal;
         position: relative;
         width: 100%;
         padding: 12px;

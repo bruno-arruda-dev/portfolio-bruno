@@ -1,4 +1,4 @@
-import styles from '@/components/EmailForm/Notification/Notification.module.scss';
+import styles from '@/components/Notifications/Notification.module.scss';
 import INotificationProps from '@/types/NotificationProps';
 
 const Notification = ({type, text}: INotificationProps) => {

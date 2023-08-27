@@ -1,6 +1,6 @@
 import { useState, ChangeEvent, FormEvent } from 'react';
 import styles from '@/components/EmailForm/EmailForm.module.scss';
-import Notification from '@/components/EmailForm/Notification/Notification';
+import Notification from '@/components/Notifications/Notification';
 
 interface Campos {
     nome: string;
@@ -26,25 +26,31 @@ const EmailForm = () => {
     }
 
     function handleSubmit(event: FormEvent<HTMLFormElement>) {
+        event.preventDefault(); // Impede a recarga da página
 
         if (campos.email === "" || campos.mensagem === "" || campos.nome === "") {
             event.preventDefault();
             setIsVisible('fail');
         } else {
             setIsVisible('success');
+            setCampos({
+                nome: '',
+                email: '',
+                mensagem: '',
+            });
         }
 
         setTimeout(() => {
             setIsVisible('isNotVisible');
             console.log('Componente de notificação desmontado.')
-        }, 6000);
+        }, 5 * 1000);
     }
 
     return (
         <>
 
-            {isVisible === 'fail' && <Notification type='fail' text='Email não foi enviado.' />}
-            {isVisible === 'success' && <Notification type='success' text='Email enviado com sucesso!' />}
+            {isVisible === 'success' && <Notification type='success' text='Email enviado com sucesso.' />}
+            {isVisible === 'fail' && <Notification type='fail' text='Email não foi enviado. Verifique os campos!' />}
 
             <div className={styles.emailForm}>
                 <form className={styles.formContainer} onSubmit={handleSubmit}>
