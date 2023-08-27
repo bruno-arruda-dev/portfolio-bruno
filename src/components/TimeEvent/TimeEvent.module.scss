@@ -8,9 +8,7 @@
 
     p {
         margin: .5rem 0;
-        font-weight: bold;
-        font-size: 0.8rem;
-        color: rgb(114, 114, 114);
+        font-size: 0.7rem;
     }
 
     .studyInfo {
@@ -24,21 +22,20 @@
         border-radius: 50px;
         
         ul {
+            margin-left: 10%;
             text-align: left
         }
     }
     
     .iconContainer {
-        // background-color: $st-detail;
-        // border-radius: 50%;
         @extend .centralize;
-        font-size: 2.5rem;
+        font-size: 2rem;
         width: 50px;
         height: fit-content;
         z-index: 1;
 
         svg {
-            filter: drop-shadow(0    0 10px $st-detail);
+            filter: drop-shadow(0 0 3px $st-detail);
             animation: moveIcon 8s ease-in-out infinite;
         }
     }
@@ -52,6 +49,10 @@
         padding: 2rem;
         background-color: #ffffff0e;
         border-radius: 50px;
+
+        ul {
+            margin-left: 10%;
+        }
     }
 
 }
