@@ -48,19 +48,29 @@ const EmailForm = () => {
 
             <div className={styles.emailForm}>
                 <form className={styles.formContainer} onSubmit={handleSubmit}>
-                    <label htmlFor="email">Telefone ou email</label>
-                    <input type="text" id="email" name="email" placeholder="Qual é o seu telefone ou email?" onChange={handleInputChange} />
 
-                    <label htmlFor="nome">Nome</label>
-                    <input type="text" id="nome" name="nome" placeholder="...e o seu nome?" onChange={handleInputChange} />
+                    <div className={styles.inputContainer}>
+                        <label htmlFor="email">Telefone ou email</label>
+                        <input type="text" id="email" name="email" placeholder="Qual é o seu telefone ou email?" onChange={handleInputChange} />
+                        <div className={styles.line} />
+                    </div>
 
-                    <label htmlFor="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem" placeholder="Deixe sua mensagem!" className="textArea" onChange={handleInputChange}></textarea>
+                    <div className={styles.inputContainer}>
+                        <label htmlFor="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="...e o seu nome?" onChange={handleInputChange} />
+                        <div className={styles.line} />
+                    </div>
+
+                    <div className={styles.inputContainer}>
+                        <label htmlFor="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Deixe sua mensagem!" className="textArea" onChange={handleInputChange}></textarea>
+                        <div className={styles.line} />
+                    </div>
 
                     <input type="submit" value="Enviar" onClick={() => handleSubmit} />
                 </form>
             </div>
-            
+
         </>
     )
 }

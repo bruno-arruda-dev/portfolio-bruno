@@ -1,31 +1,66 @@
 @import '@/styles/Global.module.scss';
 
 .emailForm {
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  width: 50%;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  color: $dark-text;
+  border-radius: $default-radius;
+  z-index: 1;
 
   .formContainer {
-    padding: 0 auto;
+    border-radius: $default-radius;
+    background-color: $dark-bg;
     display: flex;
     flex-direction: column;
-
-    color: $dark-text;
-    width: 100%;
+    width: 98%;
+    height: 98%;
     max-width: 600px;
+    padding: 10px;
+    z-index: 3;
 
-    input[type=text],
-    select,
-    textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      margin-top: 6px;
+    .inputContainer {
+      height: fit-content;
+      padding: 0;
+      position: relative;
       margin-bottom: 16px;
-      resize: vertical;
+
+      input[type=text],
+      select,
+      textarea {
+        position: relative;
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: $default-radius;
+        box-sizing: border-box;
+        margin-top: 6px;
+        resize: vertical;
+        background-color: rgba(0, 0, 0, 0);
+        outline: none;
+
+        &:focus ~ .line {
+          width: 100%;
+        }
+      }
+
+      .line {
+        width: 0;
+        height: 4px;
+        background-color: $st-detail;
+        border-radius: $default-radius;
+        position: absolute;
+        bottom: 0;
+        transition: all .5s ease-in-out;
+      }
+
+      &:hover .line {
+        width: 100%;
+      }
     }
 
     input[type=submit] {
@@ -43,10 +78,50 @@
       background-color: $st-detail;
     }
 
-    .container {
-      border-radius: 5px;
-      background-color: #f2f2f2;
-      padding: 20px;
+  }
+
+  &::after {
+    background: linear-gradient(180deg, rgba(76, 174, 255, 1) 62%, rgba(76, 174, 255, 0) 100%);
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100px;
+    z-index: 2;
+    animation: rotate 5s linear infinite;
+    /* Use a mesma animação para ambos */
+    transform-origin: bottom;
+  }
+
+  &::before {
+    background: linear-gradient(180deg, rgba(76, 174, 255, 1) 62%, rgba(76, 174, 255, 0) 100%);
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100px;
+    z-index: 2;
+    animation: inverseRotate 5s linear infinite;
+    transform-origin: bottom;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg) translate(-50%);
+    }
+
+    100% {
+      transform: rotate(360deg) translate(-50%);
+    }
+  }
+
+  @keyframes inverseRotate {
+    0% {
+      transform: rotate(0deg) translate(50%) scaleY(-1);
+      ;
+    }
+
+    100% {
+      transform: rotate(360deg) translate(50%) scaleY(-1);
+      ;
     }
   }
 }

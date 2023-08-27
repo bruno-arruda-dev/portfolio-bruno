@@ -9,6 +9,8 @@ $light-text: $dark-bg;
 
 // Detail colors
 $st-detail: #4caeff;
+$about-timeline-color: #ffffff6a;
+$text-box: #ffffff0e;
 
 // Gradient
 $gradient-bg: linear-gradient(90deg, $dark-bg 0%, #235883 50%, $dark-bg 100%);
@@ -34,12 +36,8 @@ $gradient-bg: linear-gradient(90deg, $dark-bg 0%, #235883 50%, $dark-bg 100%);
 }
 
 $default-radius: 10px;
-
 $navbar-height: 10vh;
-
 $about-timeline-width: 2px;
-$about-timeline-color: #ffffff6a;
-
 $bg-animation: 10s infinite;
 
 @keyframes bgAnimate {
