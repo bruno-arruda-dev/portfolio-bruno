@@ -1,6 +1,7 @@
 import { useState, ChangeEvent, FormEvent } from 'react';
 import styles from '@/components/EmailForm/EmailForm.module.scss';
 import Notification from '@/components/Notifications/Notification';
+import axios from 'axios';
 
 interface Campos {
     nome: string;
@@ -9,6 +10,8 @@ interface Campos {
 }
 
 const EmailForm = () => {
+    const LOCAL_URL: string = 'http://localhost:3000/sendmail'
+    // const URL: string = 'https://sendmail-vert.vercel.app/sendmail';
     const [isVisible, setIsVisible] = useState('isNotVisible');
 
     const [campos, setCampos] = useState<Campos>({
@@ -25,19 +28,29 @@ const EmailForm = () => {
         }));
     }
 
-    function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    async function handleSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault(); // Impede a recarga da página
 
         if (campos.email === "" || campos.mensagem === "" || campos.nome === "") {
             event.preventDefault();
             setIsVisible('fail');
         } else {
-            setIsVisible('success');
-            setCampos({
-                nome: '',
-                email: '',
-                mensagem: '',
-            });
+            try {
+                const response = await axios.post(LOCAL_URL , {
+                    name: campos.nome,
+                    contact: campos.email,
+                    message: campos.mensagem,
+                });
+
+                if (response.status === 200) {
+                    setIsVisible('success');
+                } else {
+                    setIsVisible('fail');
+                }
+            } catch (error) {
+                console.error('Erro ao enviar requisição:', error);
+                setIsVisible('fail');
+            }
         }
 
         setTimeout(() => {
@@ -48,14 +61,12 @@ const EmailForm = () => {
 
     return (
         <>
-
             {isVisible === 'success' && <Notification type='success' text='Email enviado com sucesso.' />}
             {isVisible === 'fail' && <Notification type='fail' text='Email não foi enviado. Verifique os campos!' />}
 
             <div className={styles.emailForm}>
                 <form className={styles.formContainer} onSubmit={handleSubmit}>
-
-                    <div className={styles.inputContainer}>
+				                    <div className={styles.inputContainer}>
                         <label htmlFor="email">Telefone ou email</label>
                         <input type="text" id="email" name="email" placeholder="Qual é o seu telefone ou email?" onChange={handleInputChange} />
                         <div className={styles.line} />
@@ -76,9 +87,8 @@ const EmailForm = () => {
                     <input type="submit" value="Enviar" onClick={() => handleSubmit} />
                 </form>
             </div>
-
         </>
-    )
-}
+    );
+};
 
 export default EmailForm;
