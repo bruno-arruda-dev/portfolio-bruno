@@ -10,8 +10,7 @@ interface Campos {
 }
 
 const EmailForm = () => {
-    const LOCAL_URL: string = 'http://localhost:3000/sendmail'
-    // const URL: string = 'https://sendmail-vert.vercel.app/sendmail';
+    const URL: string = 'https://sendmail-kappa.vercel.app/sendmail';
     const [isVisible, setIsVisible] = useState('isNotVisible');
 
     const [campos, setCampos] = useState<Campos>({
@@ -36,7 +35,7 @@ const EmailForm = () => {
             setIsVisible('fail');
         } else {
             try {
-                const response = await axios.post(LOCAL_URL , {
+                const response = await axios.post(URL , {
                     name: campos.nome,
                     contact: campos.email,
                     message: campos.mensagem,
