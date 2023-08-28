@@ -1,5 +1,18 @@
 const allProjects = [
     {
+        name: "SendMail",
+        descriptions: [
+            'API para disparo de emails.',
+            'Implementei em meu portfólio, ná pagina de contacto, a possibilidade de digitar no formulário e entrar em contato comigo, sem precisar me adicionar ao whatsapp ou algo assim. Tentei deixar o mais fácil quanto for possível ao usuário entrar em contato comigo.',
+            'Então esta solução nasceu. Eu já tenho alguma noção em typescript, estudei sobre Nodemailer, assisti alguns vídeos e tutoriais e deu bom! O projeto nasceu e foi implantado ao portfólio.',
+            'Outro ponto legal é que agora posso dizer que meu portfólio é um projeto fullstack.',
+            'Aprendi muito com esse projeto. Pratiquei arquitetura de software, pratiquei typescript e que quebra upei de graça na Vercel. Só vantagens!'
+        ],
+        image: './images/allProjects/sendMail.png',
+        repo: 'https://github.com/bruno-arruda-dev/sendMail',
+        stacks: ['node', 'express', 'nodemail']
+    },
+    {
         name: "Este portfólio",
         descriptions: [
             'A necessidade de atualizar meu antigo portfólio resultou no desenvolvimento deste, o qual serviu para verificar minha evoluçao como programador quando comparado ao anterior.',
