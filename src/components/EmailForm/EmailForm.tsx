@@ -35,7 +35,7 @@ const EmailForm = () => {
             setIsVisible('fail');
         } else {
             try {
-                const response = await axios.post(URL , {
+                const response = await axios.post(URL, {
                     name: campos.nome,
                     contact: campos.email,
                     message: campos.mensagem,
@@ -65,11 +65,6 @@ const EmailForm = () => {
 
             <div className={styles.emailForm}>
                 <form className={styles.formContainer} onSubmit={handleSubmit}>
-				                    <div className={styles.inputContainer}>
-                        <label htmlFor="email">Telefone ou email</label>
-                        <input type="text" id="email" name="email" placeholder="Qual é o seu telefone ou email?" onChange={handleInputChange} />
-                        <div className={styles.line} />
-                    </div>
 
                     <div className={styles.inputContainer}>
                         <label htmlFor="nome">Nome</label>
@@ -77,6 +72,12 @@ const EmailForm = () => {
                         <div className={styles.line} />
                     </div>
 
+                    <div className={styles.inputContainer}>
+                        <label htmlFor="email">Telefone ou email</label>
+                        <input type="text" id="email" name="email" placeholder="Qual é o seu telefone ou email?" onChange={handleInputChange} />
+                        <div className={styles.line} />
+                    </div>
+                    
                     <div className={styles.inputContainer}>
                         <label htmlFor="mensagem">Mensagem</label>
                         <textarea id="mensagem" name="mensagem" placeholder="Deixe sua mensagem!" className="textArea" onChange={handleInputChange}></textarea>
