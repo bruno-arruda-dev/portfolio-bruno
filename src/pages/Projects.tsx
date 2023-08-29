@@ -5,12 +5,12 @@ import ProjectCard from '@/components/ProjectCard/ProjectCard';
 
 const Projects = () => {
 
-    return(
+    return (
         <Layout title='Bruno Arruda: Projetos'>
             <main className={styles.projects}>
                 {
                     allProjects.map((project) => (
-                        <ProjectCard 
+                        <ProjectCard
                             image={project.image}
                             name={project.name}
                             descriptions={project.descriptions}
