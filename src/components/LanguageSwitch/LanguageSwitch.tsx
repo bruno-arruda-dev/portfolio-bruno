@@ -1,14 +1,20 @@
-import {useState} from 'react';
+import {useState, useContext} from 'react';
 import styles from '@/components/LanguageSwitch/LanguageSwitch.module.scss';
+import { LangContext } from '@/context/LangContext';
 
-const LanguageSwitch = () => {
-    const [lang, setLang] = useState('brazil')
+interface LanguageSwitch {
+    isChecked?: string,
+}
+
+const LanguageSwitch = ({isChecked}: LanguageSwitch) => {
+    const {lang, handleSwitchLang} = useContext(LangContext)
+
     const handleChangeLanguage = () => {
-        lang === 'brazil' ? setLang('eua') : setLang('brazil');
+        handleSwitchLang();
     }
 
     return (
-        <div onClick={handleChangeLanguage} className={`${styles['languageSwitch']} ${styles[lang]}`} />
+        <div onClick={handleChangeLanguage} className={`${styles['languageSwitch']} ${styles[lang]} ${isChecked && styles[isChecked]}`} />
     );
 };
 

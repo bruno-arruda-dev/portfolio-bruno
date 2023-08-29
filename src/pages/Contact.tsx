@@ -1,19 +1,31 @@
+import {useState, useEffect, useContext} from 'react';
 import styles from '@/styles/Contact.module.scss';
 import Layout from "@/components/Layout/Layout";
 import EmailForm from '@/components/EmailForm/EmailForm';
 import { TypeAnimation } from 'react-type-animation';
 import SocialMediaButtons from '@/components/SocialMediaButtons/SocialMediaButtons';
+import LANGS from '@/locales/allLang';
+import { LangContext } from '@/context/LangContext';
 
 const Contact = () => {
+    const [animationKey, setAnimationKey] = useState(0);
+    const {lang} = useContext(LangContext);
+    const l = LANGS[lang];
+
+    useEffect(() => {
+        setAnimationKey(animationKey + 1);
+    }, [lang]);
+
     return (
-        <Layout title='Bruno Arruda: Me contrate'>
+        <Layout title={l.page_hireme_title}>
             <main className={styles.contact}>
 
                 <div className={styles.contactContainer}>
                     <div className={styles.hireMessageContainer}>
                         <TypeAnimation
+                        key={animationKey}
                             sequence={[
-                                'Se você tem críticas, sugestões, quer me contratar ou trocar uma idéia, por favor, entre em contato!\n\nMuito Obrigado!', 500,
+                                l.writer_contact, 500,
                             ]}
                             wrapper="p"
                             speed={80}

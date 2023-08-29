@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+import { useState, useContext } from 'react';
 import styles from '@/components/Navbar/Buttons/Buttons.module.scss';
 import Button from './Button/Button';
+import LanguageSwitch from '@/components/LanguageSwitch/LanguageSwitch';
+import LANGS from '@/locales/allLang';
+import { LangContext } from '@/context/LangContext';
 
 const Buttons = () => {
-    const [inputChecked, setInputChecked] = useState(false)
+    const {lang} = useContext(LangContext);
+    const l = LANGS[lang];
+    const [inputChecked, setInputChecked] = useState(false);
     const [isChecked, setIsChecked] = useState('isNotChecked');
 
     const handleCheckboxChange = () => {
         isChecked === 'isChecked' ? setIsChecked('isNotChecked') : setIsChecked('isChecked');
-        setInputChecked(!inputChecked)
+        setInputChecked(!inputChecked);
     };
 
     return (
@@ -23,10 +28,12 @@ const Buttons = () => {
             </div>
 
             <nav className={`${styles.buttons} ${styles[isChecked]}`}>
-                <Button text='Trajetória' href='/About' />
-                <Button text='Projetos' href='/Projects' />
-                <Button text='Contato' href='/Contact' />
+                <Button text={l.btn_path} href='/About' />
+                <Button text={l.btn_project} href='/Projects' />
+                <Button text={l.btn_contact} href='/Contact' />
             </nav>
+
+            <LanguageSwitch isChecked={isChecked}/>
         </>
     );
 };

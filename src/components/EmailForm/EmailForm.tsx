@@ -1,7 +1,10 @@
+import { useContext } from 'react';
 import { useState, ChangeEvent, FormEvent } from 'react';
 import styles from '@/components/EmailForm/EmailForm.module.scss';
 import Notification from '@/components/Notifications/Notification';
 import axios from 'axios';
+import LANGS from '@/locales/allLang';
+import { LangContext } from '@/context/LangContext';
 
 interface Campos {
     nome: string;
@@ -10,6 +13,8 @@ interface Campos {
 }
 
 const EmailForm = () => {
+    const {lang} = useContext(LangContext);
+    const l = LANGS[lang];
     const URL: string = 'https://sendmail-kappa.vercel.app/sendmail';
     const [isVisible, setIsVisible] = useState('isNotVisible');
 
@@ -67,24 +72,24 @@ const EmailForm = () => {
                 <form className={styles.formContainer} onSubmit={handleSubmit}>
 
                     <div className={styles.inputContainer}>
-                        <label htmlFor="nome">Nome</label>
-                        <input type="text" id="nome" name="nome" placeholder="...e o seu nome?" onChange={handleInputChange} />
+                        <label htmlFor="nome">{l.email_form_input_name}</label>
+                        <input type="text" id="nome" name="nome" placeholder={l.email_form_placeholder_name} onChange={handleInputChange} />
                         <div className={styles.line} />
                     </div>
 
                     <div className={styles.inputContainer}>
-                        <label htmlFor="email">Telefone ou email</label>
-                        <input type="text" id="email" name="email" placeholder="Qual é o seu telefone ou email?" onChange={handleInputChange} />
+                        <label htmlFor="email">{l.email_form_input_contact}</label>
+                        <input type="text" id="email" name="email" placeholder={l.email_form_input_contact} onChange={handleInputChange} />
                         <div className={styles.line} />
                     </div>
                     
                     <div className={styles.inputContainer}>
-                        <label htmlFor="mensagem">Mensagem</label>
-                        <textarea id="mensagem" name="mensagem" placeholder="Deixe sua mensagem!" className="textArea" onChange={handleInputChange}></textarea>
+                        <label htmlFor="mensagem">{l.email_form_input_message}</label>
+                        <textarea id="mensagem" name="mensagem" placeholder={l.email_form_placeholder_message} className="textArea" onChange={handleInputChange}></textarea>
                         <div className={styles.line} />
                     </div>
 
-                    <input type="submit" value="Enviar" onClick={() => handleSubmit} />
+                    <input type="submit" value={l.btn_send} onClick={() => handleSubmit} />
                 </form>
             </div>
         </>

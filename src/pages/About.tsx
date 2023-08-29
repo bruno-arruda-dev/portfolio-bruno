@@ -1,10 +1,16 @@
+import {useContext} from 'react';
 import styles from '@/styles/About.module.scss';
 import Layout from "@/components/Layout/Layout";
 import TimeEvent from '@/components/TimeEvent/TimeEvent';
+import LANGS from '@/locales/allLang';
+import { LangContext } from '@/context/LangContext';
 
 const About = () => {
+    const {lang} = useContext(LangContext);
+    const l = LANGS[lang];
+
     return (
-        <Layout title='Bruno Arruda: Sobre mim'>
+        <Layout title={l.page_about_title}>
             <main className={styles.about}>
                 <div className={styles.timeline_container}>
 
@@ -12,44 +18,45 @@ const About = () => {
 
                     <TimeEvent
                         type='study'
-                        title='Universidade Paulista - UNIP'
-                        period='2020 até os dias atuais'
-                        descriptions={['Análise e Desenvolvimento de Sistemas.',
-                            'Formaçao prevista para Dez. 2023.']}
+                        title={l.path_1_title}
+                        period={l.path_1_date}
+                        descriptions={[l.path_1_li_1,
+                            l.path_1_li_2]}
                     />
 
                     <TimeEvent
                         type='work'
-                        title='Secretaria de Estado de Indústria, Comércio e Serviços'
-                        period='2023 até os dias atuais'
-                        descriptions={['Desenvolvedor Frontend', 'Chefia de Gabinete', 'Colaboro para a manutenção do portal oficial: industriaecomercio.go.gov.br/']}
+                        title={l.path_2_title}
+                        period={l.path_2_date}
+                        descriptions={[l.path_2_li_1, l.path_2_li_2, l.path_2_li_3]}
                     />
 
                     <TimeEvent
                         type='study'
-                        title='Alura'
-                        period='Jan. 2023 até os dias atuais'
-                        descriptions={['Formação em Next', 'Formação em Scrum', 'Formação em TypeScript',]}
+                        title={l.path_3_title}
+                        period={l.path_3_date}
+                        descriptions={[l.path_3_li_1, l.path_3_li_2, l.path_3_li_3,]}
                     />
 
                     <TimeEvent
                         type='work'
-                        title='Integra Engenharia de Sistemas'
-                        period='Nov. 2021 até Ago. 2023'
-                        descriptions={['Técnico em Implantação de Sistemas',
-                            'Fornecia os treinamentos necessários aos clientes que contratavam o sistema ERP desenvolvido na empresa.',
-                            'Entender as necessidades dos clientes era o maior desafio.',
-                            'Manipulação de banco de dados Firebird.']}
+                        title={l.path_4_title}
+                        period={l.path_4_date}
+                        descriptions={[l.path_4_li_1,
+                            l.path_4_li_2,
+                            l.path_4_li_3,
+                            l.path_4_li_4]}
                     />
 
                     <TimeEvent
                         type='study'
-                        title='DevMedia'
-                        period='Jan. 2022 até os dias atuais'
-                        descriptions={['Formação em React.',
-                            'Formação em JavaScript.', 'Formação em Lógica e Algorítmos.',
-                            'Formação em HTML.',
-                            'Formação em CSS',]}
+                        title={l.path_5_title}
+                        period={l.path_5_date}
+                        descriptions={[l.path_5_li_1,
+                            l.path_5_li_2, 
+                            l.path_5_li_3,
+                            l.path_5_li_4,
+                            l.path_5_li_5,]}
                     />
 
                 </div>

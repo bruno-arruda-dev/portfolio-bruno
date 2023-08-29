@@ -1,15 +1,20 @@
+import { useContext } from 'react';
 import styles from '@/styles/Projects.module.scss';
 import Layout from "@/components/Layout/Layout";
-import allProjects from '@/helpers/allProjects';
+import ALL_PROJECTS from '@/locales/allProjects';
+import LANG from '@/locales/allLang';
 import ProjectCard from '@/components/ProjectCard/ProjectCard';
+import { LangContext } from '@/context/LangContext';
 
 const Projects = () => {
+    const {lang} = useContext(LangContext);
+    const l = ALL_PROJECTS[lang];
 
     return (
-        <Layout title='Bruno Arruda: Projetos'>
+        <Layout title={LANG[lang].page_projects_title}>
             <main className={styles.projects}>
                 {
-                    allProjects.map((project) => (
+                    l.map((project) => (
                         <ProjectCard
                             image={project.image}
                             name={project.name}
