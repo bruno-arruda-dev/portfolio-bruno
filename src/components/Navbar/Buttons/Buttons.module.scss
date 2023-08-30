@@ -4,21 +4,24 @@
     display: none;
 }
 
-.buttons {
+.buttons_isChecked ,
+.buttons_isNotChecked {
     @extend .centralize;
+    display: flex;
+    flex-direction: row;
 }
 
 @media (max-width: 650px) {
-    .sandwitchContainer {
-        cursor: pointer;
+
+    .sandwitchContainer_isNotChecked {
         display: block;
-        position: absolute;
-        top: 50%;
+        cursor: pointer;
+        position: fixed;
         right: 10px;
-        transform: translateY(-50%);
         width: fit-content;
         height: fit-content;
-        z-index: 998;
+        animation: showSandwitch 3s;
+        z-index: 999;
 
         .trace {
             cursor: pointer;
@@ -29,12 +32,64 @@
             border-radius: $default-radius;
         }
 
-        input:checked~.buttons {
-            background-color: red;
-        }
     }
 
-    .buttons {
+    .sandwitchContainer_isChecked {
+        display: block;
+        cursor: pointer;
+        position: fixed;
+        left: 10px;
+        transition: all .2s linear;
+        width: fit-content;
+        height: fit-content;
+        animation: showSandwitch 3s;
+        z-index: 999;
+
+        .trace {
+            cursor: pointer;
+            background-color: white;
+            width: 35px;
+            height: 3px;
+            margin: 5px;
+            border-radius: $default-radius;
+        }
+
+        .top,
+        .mid,
+        .bottom {
+            transition: all 3s ease-in-out;
+        }
+
+        .top {
+            transform: rotate(45deg) translateY(300%);
+        }
+
+        .mid {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        .bottom {
+            transform: rotate(-45deg) translateY(-300%);
+        }
+
+    }
+
+    .buttons_isChecked {
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 998;
+        background-color: $dark-bg;
+        transition: all .5s ease;
+        animation:  openSandwitch .5s linear;
+    }
+
+    .buttons_isNotChecked {
+        display: none;
         flex-direction: column;
         height: 100vh;
         width: 0;
@@ -45,11 +100,7 @@
         z-index: 998;
         background-color: $dark-bg;
         transition: all .5s ease;
-
-        &.isChecked {
-            width: 100%;
-            animation:  openSandwitch .5s ease;
-        }
+        animation:  closeSandwitch .5s linear;
     }
 }
 
@@ -57,8 +108,27 @@
     from {
         width: 0;
     }
-
     to {
         width: 100%;
+    }
+}
+
+@keyframes closeSandwitch {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+
+@keyframes showSandwitch {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
     }
 }

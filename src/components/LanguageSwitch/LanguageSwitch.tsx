@@ -12,7 +12,10 @@ const LanguageSwitch = ({isChecked, handleChecked}: LanguageSwitch) => {
 
     const handleChangeLanguage = () => {
         handleSwitchLang();
-        handleChecked();
+
+        setTimeout(()=> {
+            handleChecked();
+        }, 1000)
     }
 
     return (
