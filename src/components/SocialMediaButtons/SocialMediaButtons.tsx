@@ -9,7 +9,7 @@ const SocialMediaButtons = () => {
         <div className={styles.socialMediaButtons}>
             <a
                 className={styles.social} target='_blank' rel='noopener noreferer'
-                href='/helpers/cv/CV-Bruno.pdf'
+                href='/helpers/cv/Curriculum.pdf'
             >
                 <BsPersonVcard />
             </a>
