@@ -27,7 +27,7 @@
     }
 
     50% {
-        filter: drop-shadow(3px 3px 3px $st-detail);
+        filter: drop-shadow(-20px 3px 20px $st-detail);
         
     }
     
@@ -42,7 +42,7 @@
     }
 
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-15px);
         
     }
     
