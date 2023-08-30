@@ -61,7 +61,7 @@
         }
 
         .top {
-            transform: rotate(45deg) translateY(300%);
+            transform: rotate(45deg) translateY(11px);
         }
 
         .mid {
@@ -69,7 +69,7 @@
             opacity: 0;
         }
         .bottom {
-            transform: rotate(-45deg) translateY(-300%);
+            transform: rotate(-45deg) translateY(-11px);
         }
 
     }
@@ -84,8 +84,8 @@
         right: 0;
         z-index: 998;
         background-color: $dark-bg;
-        transition: all .5s ease;
-        animation:  openSandwitch .5s linear;
+        transition: all .2s ease;
+        animation:  openSandwitch .05s linear;
     }
 
     .buttons_isNotChecked {
@@ -95,11 +95,11 @@
         overflow: hidden;
         position: absolute;
         top: 0;
-        right: 0;
+        left: 0;
         z-index: 998;
         background-color: $dark-bg;
-        transition: all .5s ease;
-        animation:  closeSandwitch .5s linear;
+        transition: all .2s ease;
+        animation:  openSandwitch .05s linear reverse;
     }
 }
 
@@ -109,15 +109,6 @@
     }
     to {
         width: 100%;
-    }
-}
-
-@keyframes closeSandwitch {
-    from {
-        width: 100%;
-    }
-    to {
-        width: 0;
     }
 }
 

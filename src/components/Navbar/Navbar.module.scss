@@ -7,10 +7,16 @@
     justify-content: space-between;
     min-height: 30px;
     height: $navbar-height;
-    padding: .5rem 50px;
+    padding: 0 50px;
     background: $gradient-bg;
     animation: bgAnimate $bg-animation;
     color: $dark-text;
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        padding: 0 5px;
+    }
 }
 
 @media (min-width: 1600px) {
