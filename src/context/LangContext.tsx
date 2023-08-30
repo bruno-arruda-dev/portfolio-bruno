@@ -8,7 +8,7 @@ export const LangContext = createContext<ILangContextProps>({
 })
 
 export const LangProvider = ({children}: {children: React.ReactNode;}): JSX.Element => {
-const [lang, setLang] = useState('en')
+const [lang, setLang] = useState('pt')
 
 const handleSwitchLang = () => {
     lang === 'pt' ? setLang('en') : setLang('pt');

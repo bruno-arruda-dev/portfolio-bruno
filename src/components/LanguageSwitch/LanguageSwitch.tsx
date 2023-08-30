@@ -4,13 +4,15 @@ import { LangContext } from '@/context/LangContext';
 
 interface LanguageSwitch {
     isChecked?: string,
+    handleChecked: () => void,
 }
 
-const LanguageSwitch = ({isChecked}: LanguageSwitch) => {
+const LanguageSwitch = ({isChecked, handleChecked}: LanguageSwitch) => {
     const {lang, handleSwitchLang} = useContext(LangContext)
 
     const handleChangeLanguage = () => {
         handleSwitchLang();
+        handleChecked();
     }
 
     return (

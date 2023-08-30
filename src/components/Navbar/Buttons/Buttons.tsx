@@ -33,7 +33,7 @@ const Buttons = () => {
                 <Button text={l.btn_contact} href='/Contact' />
             </nav>
 
-            <LanguageSwitch isChecked={isChecked}/>
+            <LanguageSwitch isChecked={isChecked} handleChecked={handleCheckboxChange} />
         </>
     );
 };
