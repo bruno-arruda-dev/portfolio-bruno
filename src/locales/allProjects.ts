@@ -10,6 +10,17 @@ type Project = {
 const ALL_PROJECTS: Record<string, Project[]> = {
     pt: [
         {
+            name: "Photography Portfolio",
+            descriptions: [
+                'Portfólio simples sobre fotografia.',
+                'Este é o meu primeiro projeto freelance que me trouxe um retorno financeiro. Estou muito feliz e espero que muitos outros venham!',
+                'Obviamente, o cliente enviou suas próprias imagens e textos, sugeriu uma paleta com cores diferentes e o projeto em produção ficou sutilmente diferente.'
+            ],
+            image: './images/allProjects/photography-portfolio.png',
+            homepage: 'https://photography-portfolio-blue-five.vercel.app/',
+            stacks: ['next', 'react', 'typescript', 'gsap']
+        },
+        {
             name: "SendMail",
             descriptions: [
                 'API para disparo de emails.',
