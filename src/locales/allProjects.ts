@@ -18,6 +18,7 @@ const ALL_PROJECTS: Record<string, Project[]> = {
             ],
             image: './images/allProjects/photography-portfolio.png',
             homepage: 'https://photography-portfolio-blue-five.vercel.app/',
+            repo: 'https://github.com/bruno-arruda-dev/photography-portfolio',
             stacks: ['next', 'react', 'typescript', 'gsap']
         },
         {
@@ -155,6 +156,7 @@ const ALL_PROJECTS: Record<string, Project[]> = {
             ],
             image: './images/allProjects/photography-portfolio.png',
             homepage: 'https://photography-portfolio-blue-five.vercel.app/',
+            repo: 'https://github.com/bruno-arruda-dev/photography-portfolio',
             stacks: ['next', 'react', 'typescript', 'gsap']
         },
         {
