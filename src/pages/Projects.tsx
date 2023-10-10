@@ -25,6 +25,9 @@ const Projects = () => {
                         />
                     ))
                 }
+
+                <div className={styles.spacer}/>
+                
             </main>
         </Layout>
     )

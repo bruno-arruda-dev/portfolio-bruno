@@ -1,6 +1,8 @@
 @import '@/styles/Global.module.scss';
 
 .projectCard {
+    opacity: 0;
+    transform: translateY(100px);
     display: flex;
     flex-direction: column;
     align-items: center;

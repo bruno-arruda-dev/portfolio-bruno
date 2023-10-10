@@ -61,7 +61,7 @@ const About = () => {
 
                 </div>
 
-                <div className={styles.spacer}></div>
+                <div className={styles.spacer}/>
 
             </main>
         </Layout>
