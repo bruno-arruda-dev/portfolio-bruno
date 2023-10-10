@@ -60,6 +60,9 @@ const About = () => {
                     />
 
                 </div>
+
+                <div className={styles.spacer}></div>
+
             </main>
         </Layout>
     )
