@@ -10,6 +10,7 @@
     animation: bgAnimate $bg-animation;
     color: $dark-text;
     padding-top: 5rem;
+    overflow: hidden;
     
     .timeline_container {
         width: 100%;

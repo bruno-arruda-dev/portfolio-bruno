@@ -1,6 +1,8 @@
 @import '@/styles/Global.module.scss';
 
 .eventContainer {
+    transform: translateY(200px);
+    opacity: 0;
     @extend .centralize;
     width: 100%;
     margin-bottom: 1rem;
