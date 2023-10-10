@@ -147,6 +147,17 @@ const ALL_PROJECTS: Record<string, Project[]> = {
     ],
     en: [
         {
+            name: "Photography Portfolio",
+            descriptions: [
+                'Simple photography portfolio.',
+                'This is my first freelance project that brought me financial returns. I am very happy and hope that many more will come!',
+                'Of course, the client provided their own images and texts, suggested a palette with different colors, and the final project in production turned out subtly different.'
+            ],
+            image: './images/allProjects/photography-portfolio.png',
+            homepage: 'https://photography-portfolio-blue-five.vercel.app/',
+            stacks: ['next', 'react', 'typescript', 'gsap']
+        },
+        {
             name: "SendMail",
             descriptions: [
                 'API for sending emails',
