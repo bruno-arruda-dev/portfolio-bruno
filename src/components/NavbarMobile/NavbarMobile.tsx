@@ -18,10 +18,11 @@ const NavbarMobile = () => {
     return (
         <>
             <header className={`${styles['navbarMobile']}`}>
+
                 <div className={`${styles['sandwitchContainer']}`} onClick={handleShowMobileMenu}>
-                    <div className={`${styles['trace']} ${styles['top']}`} />
-                    <div className={`${styles['trace']} ${styles['mid']}`} />
-                    <div className={`${styles['trace']} ${styles['bottom']}`} />
+                    <div className={`${styles['trace']} ${styles['top']} ${styles[mobileMenu]}`} />
+                    <div className={`${styles['trace']} ${styles['mid']} ${styles[mobileMenu]}`} />
+                    <div className={`${styles['trace']} ${styles['bottom']} ${styles[mobileMenu]}`} />
                 </div>
 
                 <LanguageSwitch />
