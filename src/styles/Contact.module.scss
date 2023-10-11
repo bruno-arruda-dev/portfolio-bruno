@@ -33,7 +33,7 @@
 
 @media (max-width: 650px) {
     .contact {
-        padding: 1rem;
+        padding: $navbar-height 1rem 1rem 1rem;
         justify-content: flex-start;
         flex-direction: column;
 
