@@ -42,7 +42,7 @@ const ALL_PROJECTS: Record<string, Project[]> = {
             image: './images/allProjects/portfolio.png',
             repo: 'https://github.com/bruno-arruda-dev/portfolio-bruno',
             homepage: 'https://portfolio-bruno-kappa.vercel.app/',
-            stacks: ['next', 'react', 'typescript', 'sass', 'html']
+            stacks: ['next', 'gsap', 'react', 'typescript', 'sass', 'html']
         },
         {
             name: "ToDo List - Frontend",
@@ -180,7 +180,7 @@ const ALL_PROJECTS: Record<string, Project[]> = {
             image: './images/allProjects/portfolio.png',
             repo: 'https://github.com/bruno-arruda-dev/portfolio-bruno',
             homepage: 'https://portfolio-bruno-kappa.vercel.app/',
-            stacks: ['next', 'react', 'typescript', 'sass', 'html']
+            stacks: ['next', 'gsap', 'react', 'typescript', 'sass', 'html']
         },
         {
             name: "ToDo List - Frontend",
