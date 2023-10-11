@@ -1,7 +1,7 @@
 import styles from '@/components/SocialMediaButtons/SocialMediaButtons.module.scss';
-import { BsWhatsapp } from 'react-icons/bs';
+import { BsWhatsapp, BsPersonVcard } from 'react-icons/bs';
 import { FiLinkedin, FiGithub } from 'react-icons/fi';
-import { BsPersonVcard } from 'react-icons/bs';
+import { MdFilePresent } from 'react-icons/md';
 
 const SocialMediaButtons = () => {
 
@@ -11,7 +11,7 @@ const SocialMediaButtons = () => {
                 className={`${styles['social']} curricullum`} target='_blank' rel='noopener noreferer'
                 href='/helpers/cv/Curriculum.pdf'
             >
-                <BsPersonVcard />
+                <MdFilePresent />
             </a>
             <a
                 className={`${styles['social']} linkedin`} target='_blank' rel='noopener noreferer'
