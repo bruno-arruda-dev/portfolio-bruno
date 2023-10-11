@@ -3,10 +3,12 @@
 .index {
     @extend .centralize;
     width: 100%;
-    height: calc(100vh - $navbar-height);
+    height: 100vh;
+    padding-top: $navbar-height;
     min-height: 555.3px;
     background: $gradient-bg;
     animation: bgAnimate $bg-animation;
+    overflow: hidden;
 }
 
 @media (max-width: 850px) {

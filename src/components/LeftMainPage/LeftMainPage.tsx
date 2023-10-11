@@ -1,14 +1,18 @@
-import {useState, useEffect, useContext} from 'react';
+import {useState, useEffect, useLayoutEffect, useRef, useContext} from 'react';
 import styles from '@/components/LeftMainPage/LeftMainPage.module.scss';
 import { TypeAnimation } from 'react-type-animation';
 import Hire from './HireButtons/Hire';
 import LANGS from '@/locales/allLang';
 import { LangContext } from '@/context/LangContext';
+import {gsap} from 'gsap';
 
 const LeftMainPage = () => {
     const [animationKey, setAnimationKey] = useState(0);
     const {lang} = useContext(LangContext);
     const l = LANGS[lang];
+    const thisTitle = useRef(null)
+
+
     function calcularIdade(dataNascimento: Date): number {
         const hoje = new Date();
         const idade = hoje.getFullYear() - dataNascimento.getFullYear();
@@ -32,13 +36,17 @@ const LeftMainPage = () => {
     const dataNascimento = new Date('1989-02-16');
     const idade = calcularIdade(dataNascimento);
 
+    useLayoutEffect(() => {
+        gsap.from(thisTitle.current, { scale: 0, duration: 1, ease: 'back'})
+    }, [])
+
 
     return (
         <div className={styles.left_main_page}>
 
             <div className={styles.content}>
 
-                <h1>{`${l.greeting} ${idade}`}</h1>
+                <h1 ref={thisTitle}>{`${l.greeting} ${idade}`}</h1>
 
                 <TypeAnimation
                     key={animationKey}

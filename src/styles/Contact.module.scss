@@ -7,7 +7,8 @@
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
-    min-height: calc(100vh - $navbar-height);
+    min-height: 100vh;
+    padding-top: $navbar-height;
     background: $gradient-bg;
     animation: bgAnimate $bg-animation;
 
