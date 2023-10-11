@@ -1,0 +1,60 @@
+@import '@/styles/Global.module.scss';
+
+.navbarMobile {
+    position: absolute;
+    width: 100%;
+    height: $navbar-height;
+
+    .sandwitchContainer {
+        z-index: 999;
+        cursor: pointer;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        transform: translateY(-50%);
+        width: 35px;
+        height: 35px;
+
+        .trace {
+            background-color: white;
+            border-radius: $default-radius;
+            width: 100%;
+            height: 3px;
+        }
+
+        .mid {
+            width: 80%;
+            margin: 5px 0;
+        }
+    }
+
+    .mobileMenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 998;
+        position: fixed;
+        left: 0;
+        height: 100vh;
+        width: 0;
+        transition: all .5s ease-in-out;
+        background-color: $transparent-dark-bg;
+        backdrop-filter: blur(15px);
+        overflow: hidden;
+    }
+
+    .mobileMenu.exposed {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 651px) {
+    .navbarMobile {
+        display: none;
+    }
+}

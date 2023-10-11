@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import ProjectModal from '@/components/ProjectModal/ProjectModal';
 import Navbar from '../Navbar/Navbar';
 import Head from 'next/head';
+import NavbarMobile from '../NavbarMobile/NavbarMobile';
 
 interface LayoutProps {
   title: string,
@@ -19,6 +20,7 @@ const Layout: React.FC<LayoutProps> = ({ title, children }) => {
 
       <ProjectModal />
       <Navbar />
+      <NavbarMobile />
       {children}
 
     </>

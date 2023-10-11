@@ -1,20 +1,28 @@
-import {useState, useContext} from 'react';
+import {useState, useContext, useEffect} from 'react';
 import styles from '@/components/LanguageSwitch/LanguageSwitch.module.scss';
 import { LangContext } from '@/context/LangContext';
 
-interface LanguageSwitch {
-    isChecked?: string,
-    handleChecked: () => void,
-}
+const LanguageSwitch = () => {
+    const {lang, handleSwitchLang} = useContext(LangContext);
 
-const LanguageSwitch = ({isChecked, handleChecked}: LanguageSwitch) => {
-    const {lang, handleSwitchLang} = useContext(LangContext)
+    const [animationKey, setAnimationKey] = useState(0);
+    const [inputChecked, setInputChecked] = useState(false);
+    const [isChecked, setIsChecked] = useState('isNotChecked');
+
+    const handleCheckboxChange = () => {
+        isChecked === 'isChecked' ? setIsChecked('isNotChecked') : setIsChecked('isChecked');
+        setInputChecked(!inputChecked);
+    };
+
+    useEffect(() => {
+        setAnimationKey(animationKey + 1);
+    }, [isChecked]);
 
     const handleChangeLanguage = () => {
         handleSwitchLang();
 
         setTimeout(()=> {
-            handleChecked();
+            handleCheckboxChange();
         }, 1000)
     }
 
