@@ -1,15 +1,20 @@
+import {useContext} from 'react';
 import styles from '@/components/SocialMediaButtons/SocialMediaButtons.module.scss';
-import { BsWhatsapp, BsPersonVcard } from 'react-icons/bs';
+import { BsWhatsapp } from 'react-icons/bs';
 import { FiLinkedin, FiGithub } from 'react-icons/fi';
 import { MdFilePresent } from 'react-icons/md';
+import { LangContext } from '@/context/LangContext';
 
 const SocialMediaButtons = () => {
+    const {lang} = useContext(LangContext);
+    const pt_cv = '/helpers/cv/BrunoArruda-2023.pdf';
+    const en_cv = '/helpers/cv/BrunoArruda-2023-EN.pdf';
 
     return (
         <div className={styles.socialMediaButtons}>
             <a
                 className={`${styles['social']} curricullum`} target='_blank' rel='noopener noreferer'
-                href='/helpers/cv/Curriculum.pdf'
+                href={lang == 'pt' ? pt_cv : en_cv}
             >
                 <MdFilePresent />
             </a>
