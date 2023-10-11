@@ -1,15 +1,14 @@
-import { useEffect, useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 import LanguageSwitch from '../LanguageSwitch/LanguageSwitch';
 import styles from './NavbarMobile.module.scss';
 import Button from '../Navbar/Buttons/Button/Button';
 import LANGS from '@/locales/allLang';
 import { LangContext } from '@/context/LangContext';
-import Hire from '../LeftMainPage/HireButtons/Hire';
+import SocialMediaButtons from '../SocialMediaButtons/SocialMediaButtons';
 
 const NavbarMobile = () => {
     const { lang } = useContext(LangContext);
     const l = LANGS[lang];
-    const [inputChecked, setInputChecked] = useState(false);
     const [mobileMenu, setMobileMenu] = useState('hidden');
 
     const handleShowMobileMenu = () => {
@@ -30,12 +29,13 @@ const NavbarMobile = () => {
                 <div className={`${styles['mobileMenu']} ${styles[mobileMenu]}`}>
 
                     <div className={styles.mobileButtons}>
+                        <div onClick={handleShowMobileMenu}><Button text='Home' href='/' /></div>
                         <div onClick={handleShowMobileMenu}><Button text={l.btn_path} href='/About' /></div>
                         <div onClick={handleShowMobileMenu}><Button text={l.btn_project} href='/Projects' /></div>
                         <div onClick={handleShowMobileMenu}><Button text={l.btn_contact} href='/Contact' /></div>
                     </div>
                     
-                    <Hire />
+                    <SocialMediaButtons />
 
                 </div>
 

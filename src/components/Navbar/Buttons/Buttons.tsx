@@ -6,10 +6,8 @@ import LANGS from '@/locales/allLang';
 import { LangContext } from '@/context/LangContext';
 
 const Buttons = () => {
-    const [animationKey, setAnimationKey] = useState(0);
     const {lang} = useContext(LangContext);
     const l = LANGS[lang];
-    const [inputChecked, setInputChecked] = useState(false);
 
     return (
         <>
@@ -20,6 +18,7 @@ const Buttons = () => {
             </nav>
 
             <LanguageSwitch />
+            
         </>
     );
 };
