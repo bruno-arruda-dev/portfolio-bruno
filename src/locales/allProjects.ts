@@ -155,7 +155,7 @@ const ALL_PROJECTS: Record<string, Project[]> = {
                 'Of course, the client provided their own images and texts, suggested a palette with different colors, and the final project in production turned out subtly different.'
             ],
             image: './images/allProjects/photography-portfolio.png',
-            homepage: 'https://photography-portfolio-blue-five.vercel.app/',
+            homepage: 'https://photography-portfolio-gray.vercel.app/',
             repo: 'https://github.com/bruno-arruda-dev/photography-portfolio',
             stacks: ['next', 'react', 'typescript', 'gsap']
         },
