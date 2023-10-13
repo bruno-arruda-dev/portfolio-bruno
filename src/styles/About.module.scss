@@ -10,26 +10,11 @@
     animation: bgAnimate $bg-animation;
     color: $dark-text;
     padding-top: calc($navbar-height * 2);
-    
-    // .timeline_container {
-    //     width: 100%;
-
-    //     .timeline {
-    //         border-radius: 0 0 50px 50px;
-    //         top: -$navbar-height;
-    //         left: 50%;
-    //         transform: translateX(-50%);
-    //         height:calc(500vh + $navbar-height);
-    //         width: $about-timeline-width;
-    //         position: absolute;
-    //         background-color: $about-timeline-color;
-    //     }
-    // }
 
     .spacer {
         display: inline-block;
         width: 100%;
-        height: 400px;
+        height: 40vh;
     }
 }
 

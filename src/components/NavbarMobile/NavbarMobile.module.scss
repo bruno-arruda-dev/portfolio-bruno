@@ -24,21 +24,20 @@
             border-radius: $default-radius;
             width: 100%;
             height: 3px;
-            // transition: all 2s ease-in-out;
         }
 
         .top {
-            transition: all 2s ease-in-out;
+            transition: all .2s ease-in-out;
         }
         
         .mid {
             width: 80%;
             margin: 5px 0;
-            transition: background-color .2s ease, transform 2s ease-in-out;
+            transition: opacity .2s ease, transform .2s ease-in-out;
         }
         
         .bottom {
-            transition: all 2s ease-in-out;
+            transition: all .2s ease-in-out;
         }
 
         .top.exposed {
@@ -46,8 +45,8 @@
         }
 
         .mid.exposed {
-            background-color: red;
-            transform: translateX(-100px);
+            transform: translateX(-100px); 
+            opacity: 0;
         }
 
         .bottom.exposed {
