@@ -27,7 +27,9 @@ const LanguageSwitch = () => {
     }
 
     return (
-        <div onClick={handleChangeLanguage} className={`${styles['languageSwitch']} ${styles[lang]} ${isChecked && styles[isChecked]}`} />
+        <div className={styles.languageSwitch} onClick={handleChangeLanguage}>
+            <div className={`${styles['languageFlag']} ${styles[lang]} ${isChecked && styles[isChecked]}`} />
+        </div>
     );
 };
 

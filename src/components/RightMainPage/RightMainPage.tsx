@@ -8,7 +8,8 @@ const RightMainPage = () => {
     useLayoutEffect(() => {
         
         // gsap.set(thisImageContainer.current, {scale: 0.7});
-        gsap.timeline().from(thisImageContainer.current, {duration: 0.5, delay:2, opacity: 0, yPercent: 100, ease: 'back'});
+        gsap.timeline()
+        .from(thisImageContainer.current, {duration: 0.5, delay:2, opacity: 0, yPercent: 100, ease: 'back'});
 
     }, [])
 

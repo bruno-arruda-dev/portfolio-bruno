@@ -2,29 +2,37 @@
 
 .languageSwitch {
     cursor: pointer;
+    width: 40px;
+    height: 20px;
+    position: absolute;
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    @extend .container-image;
-    transition: all .5s ease-in-out;
-    opacity: 0;
-    z-index: 999;
-}
-
-.pt {
-    background-image: url('/images/brazil-flag.png');
-    opacity: 1;
-    animation: switchFlag ease-in-out 1s;
-}
-
-.en {
-    background-image: url('/images/united-states-flag.png');
-    animation: switchFlag ease-in-out 1s;
-    opacity: 1;
+    margin: auto 0;
+    background-color: $about-timeline-color;
+    border-radius: 50px;
+    
+    .languageFlag {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        @extend .container-image;
+        transition: all .5s ease-in-out;
+        opacity: 0;
+        z-index: 999;
+    }
+    
+    .languageFlag.pt {
+        background-image: url('/images/brazil-flag.png');
+        opacity: 1;
+    }
+    
+    .languageFlag.en {
+        transform: translateX(100%);
+        background-image: url('/images/united-states-flag.png');
+        opacity: 1;
+    }
 }
 
 @media (max-width: 650px) {
