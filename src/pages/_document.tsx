@@ -1,6 +1,7 @@
 import React from 'react';
 import { Html, Head, Main, NextScript } from 'next/document'
 import Document, { DocumentContext } from 'next/document'
+import Analytics from '@/components/Analytics/Analytics';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -20,6 +21,7 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <Analytics />
         </body>
       </Html>
     )
