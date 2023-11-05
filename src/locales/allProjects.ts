@@ -1,14 +1,35 @@
-type Project = { 
-    name: string; 
-    descriptions: string[]; 
-    image: string; 
-    repo?: string; 
-    homepage?: string; 
-    stacks: string[]; 
+type Project = {
+    name: string;
+    descriptions: string[];
+    image: string;
+    repo?: string;
+    homepage?: string;
+    stacks: string[];
 };
 
 const ALL_PROJECTS: Record<string, Project[]> = {
     pt: [
+        {
+            name: "Cadastro de clientes - Frontend",
+            descriptions: [
+                'Projeto simples para cadastro de clientes.',
+                'Projetinho CRUD bacana, o qual me ajudou muito a fortalecer minhas skills para me tornar um profissional fullstack.'
+            ],
+            image: './images/allProjects/users-registration.png',
+            homepage: 'https://users-registration-frontend.vercel.app/',
+            repo: 'https://github.com/bruno-arruda-dev/users-registration-frontend',
+            stacks: ['next', 'react', 'typescript', 'sass']
+        },
+        {
+            name: "Cadastro de clientes - Backend",
+            descriptions: [
+                'Minha primeira experiência com MongoDB.',
+                'Agora que já me sinto mais confortável trabalhando com frontend, está na hora de me aprofundar mais nos paradigmas backend. Esse CRUD foi muito legal e o MongoDB chamou muito a minha atenção.'
+            ],
+            image: './images/allProjects/users-registration-backend.png',
+            repo: 'https://github.com/bruno-arruda-dev/users-registration-backend',
+            stacks: ['node', 'mongodb', 'typescript']
+        },
         {
             name: "Photography Portfolio",
             descriptions: [
@@ -147,6 +168,27 @@ const ALL_PROJECTS: Record<string, Project[]> = {
         }
     ],
     en: [
+        {
+            name: "Costumer Registration - Frontend",
+            descriptions: [
+                "Simple project for client registration.",
+                "Cool CRUD project that helped me strengthen my skills to become a full-stack professional."
+            ],
+            image: "./images/allProjects/users-registration.png",
+            homepage: "https://users-registration-frontend.vercel.app/",
+            repo: "https://github.com/bruno-arruda-dev/users-registration-frontend",
+            stacks: ["next", "react", "typescript", "sass"]
+        },
+        {
+            name: "Costumer Registration - Backend",
+            descriptions: [
+                "My first experience with MongoDB.",
+                "Now that I feel more comfortable working with frontend, it's time to delve deeper into backend paradigms. This CRUD was really fun, and MongoDB caught my attention."
+            ],
+            image: "./images/allProjects/users-registration-backend.png",
+            repo: "https://github.com/bruno-arruda-dev/users-registration-backend",
+            stacks: ["node", "mongodb", "typescript"]
+        },
         {
             name: "Photography Portfolio",
             descriptions: [
