@@ -20,8 +20,7 @@ const About = () => {
                         type='study'
                         title={l.path_1_title}
                         period={l.path_1_date}
-                        descriptions={[l.path_1_li_1,
-                            l.path_1_li_2]}
+                        descriptions={[l.path_1_li_1]}
                     />
 
                     <TimeEvent
