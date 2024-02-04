@@ -7,8 +7,8 @@ import { LangContext } from '@/context/LangContext';
 
 const SocialMediaButtons = () => {
     const {lang} = useContext(LangContext);
-    const pt_cv = '/helpers/cv/BrunoArruda-2023.pdf';
-    const en_cv = '/helpers/cv/BrunoArruda-2023-EN.pdf';
+    const pt_cv = '/helpers/cv/CV-Bruno-2024.pdf';
+    const en_cv = '/helpers/cv/CV-Bruno-2024-EN.pdf';
 
     return (
         <div className={styles.socialMediaButtons}>
