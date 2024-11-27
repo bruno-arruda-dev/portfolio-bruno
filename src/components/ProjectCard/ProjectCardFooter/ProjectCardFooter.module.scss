@@ -15,20 +15,20 @@
         border-radius: 0 0 $default-radius $default-radius;
         width: 80%;
         height: 50px;
-    
+
         .active svg {
             width: 30px;
             height: 30px;
             fill: $dark-bg;
             cursor: pointer;
             transition: all .2s ease-out;
-    
+
             &:hover {
                 transform: scale(1.1);
                 fill: $st-detail;
             }
         }
-    
+
         .disabled svg {
             width: 30px;
             height: 30px;
@@ -42,7 +42,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        
+
         .stack {
             padding: 0 .5rem;
             font-size: .7rem;
@@ -96,6 +96,11 @@
         .mysql {
             background-color: #f29111;
             color: #5b1706;
+        }
+
+        .swagger {
+            background-color: #85ea2d;
+            color: #173647;
         }
     }
 

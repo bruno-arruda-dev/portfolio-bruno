@@ -4,7 +4,7 @@ import { IProjectCardProps } from '@/types/ProjectCardProps';
 import ProjectCardFooter from './ProjectCardFooter/ProjectCardFooter';
 import { ProjectModalContext } from '@/context/ProjectModalContext';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';  
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const ProjectCard = ({ image, name, descriptions, repo, homepage, stacks }: IProjectCardProps) => {
     const { handleUpdateModalContent } = useContext(ProjectModalContext);
@@ -32,7 +32,7 @@ const ProjectCard = ({ image, name, descriptions, repo, homepage, stacks }: IPro
 
     }, [])
 
-    const sendToProjectModal = (event: MouseEvent<HTMLDivElement>) => { // Defina o tipo de evento
+    const sendToProjectModal = (event: MouseEvent<HTMLDivElement>) => {
         event.stopPropagation();
         console.log(`Modal atual: ${name}`);
         handleUpdateModalContent(name, descriptions, repo, homepage, image, stacks);
@@ -42,12 +42,12 @@ const ProjectCard = ({ image, name, descriptions, repo, homepage, stacks }: IPro
         <div className={styles.projectCard} onClick={sendToProjectModal} ref={thisProject}>
 
             <div className={styles.img} style={{ backgroundImage: `url('${image}')` }} />
-            
+
             <h3>{name}</h3>
             <div className={styles.textContainer}>
                 {
                     descriptions.map((description, index) => (
-                        <p key={index}>{description}</p> // Adicione a key para cada <p>
+                        <p key={index}>{description}</p>
                     ))
                 }
             </div>

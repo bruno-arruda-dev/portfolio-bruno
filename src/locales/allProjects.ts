@@ -10,6 +10,28 @@ type Project = {
 const ALL_PROJECTS: Record<string, Project[]> = {
     pt: [
         {
+            name: "Finance - Frontend",
+            descriptions: [
+                'Sistema de gestão financeira',
+                'Um sistema de gestão financeira completo, simples e intuitivo, com recursos de compartilhamento de ambientes entre usuários, nos quais podem ser lançadas receitas ou despesas. O desenvolvimento ainda está em fase inicial, mas recursos de cadastro de usuários e atualização de cadastro estão funcionais. Clique no ícone de casinha para se cadastrar'
+            ],
+            image: './images/allProjects/finance.png',
+            homepage: 'https://beta-fin.vercel.app/',
+            repo: 'https://github.com/bruno-arruda-dev/finance-frontend',
+            stacks: ['vite', 'ant design', 'typescript', 'tailwind']
+        },
+        {
+            name: "Finance - Backend",
+            descriptions: [
+                'Sistema de gestão financeira',
+                'Backend do projeto Finance, construído com Node, usa banco de dados MySql e todas as validações passam pelo poderoso Zod. Clique na home para ver a documentação interativa com swagger.'
+            ],
+            image: './images/allProjects/finance-backend.png',
+            homepage: 'https://finance-backend-7fxw.onrender.com/docs',
+            repo: 'https://github.com/bruno-arruda-dev/finance-backend',
+            stacks: ['node', 'typescript', 'mysql', 'zod', 'swagger']
+        },
+        {
             name: "Cadastro de clientes - Frontend",
             descriptions: [
                 'Projeto simples para cadastro de clientes.',
@@ -168,6 +190,28 @@ const ALL_PROJECTS: Record<string, Project[]> = {
         }
     ],
     en: [
+        {
+            name: "Finance - Frontend",
+            descriptions: [
+                'Financial management system.',
+                'A complete, simple, and intuitive financial management system with features for sharing environments between users, where income or expenses can be recorded. The development is still in its early stages, but user registration and profile update features are functional. Click on the home icon to sign up.'
+            ],
+            image: './images/allProjects/finance.png',
+            homepage: 'https://beta-fin.vercel.app/',
+            repo: 'https://github.com/bruno-arruda-dev/finance-frontend',
+            stacks: ['vite', 'ant design', 'typescript', 'tailwind']
+        },
+        {
+            name: "Finance - Backend",
+            descriptions: [
+                'Financial management system.',
+                'Backend of the Finance project, built with Node.js, uses a MySQL database, and all validations are powered by the robust Zod. Click on the home icon to see the interactive documentation with Swagger.'
+            ],
+            image: './images/allProjects/finance-backend.png',
+            homepage: 'https://finance-backend-7fxw.onrender.com/docs',
+            repo: 'https://github.com/bruno-arruda-dev/finance-backend',
+            stacks: ['node', 'typescript', 'mysql', 'zod', 'swagger']
+        },
         {
             name: "Costumer Registration - Frontend",
             descriptions: [

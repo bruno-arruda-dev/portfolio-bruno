@@ -6,7 +6,7 @@ import { ImHome } from 'react-icons/im';
 
 const ProjectCardFooter = ({ repo, homepage, stacks }: IProjectCardFooterProps) => {
 
-    const handleLinkClick = (event: MouseEvent<HTMLAnchorElement>) => { // Defina o tipo de evento
+    const handleLinkClick = (event: MouseEvent<HTMLAnchorElement>) => {
         event.stopPropagation();
     }
 
