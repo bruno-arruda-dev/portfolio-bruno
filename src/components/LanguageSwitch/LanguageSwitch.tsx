@@ -1,9 +1,10 @@
-import {useState, useContext, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import styles from '@/components/LanguageSwitch/LanguageSwitch.module.scss';
-import { LangContext } from '@/context/LangContext';
+import { useRouter } from 'next/router';
 
 const LanguageSwitch = () => {
-    const {lang, handleSwitchLang} = useContext(LangContext);
+    const router = useRouter();
+    const lang = router.locale || 'pt';
 
     const [animationKey, setAnimationKey] = useState(0);
     const [inputChecked, setInputChecked] = useState(false);
@@ -19,7 +20,8 @@ const LanguageSwitch = () => {
     }, [isChecked]);
 
     const handleChangeLanguage = () => {
-        handleSwitchLang();
+        const nextLocale = lang === 'pt' ? 'en' : 'pt';
+        router.push({ pathname: router.pathname, query: router.query }, router.asPath, { locale: nextLocale });
 
         setTimeout(()=> {
             handleCheckboxChange();

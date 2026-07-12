@@ -1,14 +1,15 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import LanguageSwitch from '../LanguageSwitch/LanguageSwitch';
 import styles from './NavbarMobile.module.scss';
 import Button from '../Navbar/Buttons/Button/Button';
-import LANGS from '@/locales/allLang';
-import { LangContext } from '@/context/LangContext';
 import SocialMediaButtons from '../SocialMediaButtons/SocialMediaButtons';
+import { useTranslation } from 'react-i18next';
+import { useRouter } from 'next/router';
 
 const NavbarMobile = () => {
-    const { lang } = useContext(LangContext);
-    const l = LANGS[lang];
+    const { t } = useTranslation('common');
+    const router = useRouter();
+    const lang = router.locale || 'pt';
     const [mobileMenu, setMobileMenu] = useState('hidden');
     const [activeSection, setActiveSection] = useState('home');
 
@@ -61,9 +62,9 @@ const NavbarMobile = () => {
 
                     <div className={styles.mobileButtons}>
                         <div onClick={handleShowMobileMenu}><Button text='Home' href='#home' active={activeSection === 'home'} /></div>
-                        <div onClick={handleShowMobileMenu}><Button text={l.btn_path} href='#about' active={activeSection === 'about'} /></div>
-                        <div onClick={handleShowMobileMenu}><Button text={l.btn_project} href='#projects' active={activeSection === 'projects'} /></div>
-                        <div onClick={handleShowMobileMenu}><Button text={l.btn_contact} href='#contact' active={activeSection === 'contact'} /></div>
+                        <div onClick={handleShowMobileMenu}><Button text={t('btn_path')} href='#about' active={activeSection === 'about'} /></div>
+                        <div onClick={handleShowMobileMenu}><Button text={t('btn_project')} href='#projects' active={activeSection === 'projects'} /></div>
+                        <div onClick={handleShowMobileMenu}><Button text={t('btn_contact')} href='#contact' active={activeSection === 'contact'} /></div>
                     </div>
                     
                     <SocialMediaButtons />

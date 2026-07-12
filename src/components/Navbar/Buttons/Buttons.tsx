@@ -1,13 +1,11 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import styles from '@/components/Navbar/Buttons/Buttons.module.scss';
 import Button from './Button/Button';
 import LanguageSwitch from '@/components/LanguageSwitch/LanguageSwitch';
-import LANGS from '@/locales/allLang';
-import { LangContext } from '@/context/LangContext';
+import { useTranslation } from 'react-i18next';
 
 const Buttons = () => {
-    const {lang} = useContext(LangContext);
-    const l = LANGS[lang];
+    const { t } = useTranslation('common');
     const [activeSection, setActiveSection] = useState('home');
 
     useEffect(() => {
@@ -42,9 +40,9 @@ const Buttons = () => {
     return (
         <>
             <nav className={`${styles['buttons']}`}>
-                <Button text={l.btn_path} href='#about' active={activeSection === 'about'} />
-                <Button text={l.btn_project} href='#projects' active={activeSection === 'projects'} />
-                <Button text={l.btn_contact} href='#contact' active={activeSection === 'contact'} />
+                <Button text={t('btn_path')} href='#about' active={activeSection === 'about'} />
+                <Button text={t('btn_project')} href='#projects' active={activeSection === 'projects'} />
+                <Button text={t('btn_contact')} href='#contact' active={activeSection === 'contact'} />
             </nav>
 
             <LanguageSwitch />

@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import Layout from '@/components/Layout/Layout';
 import LeftMainPage from '@/components/LeftMainPage/LeftMainPage';
 import RightMainPage from '@/components/RightMainPage/RightMainPage';
@@ -6,13 +5,9 @@ import AboutSection from '@/components/AboutSection/AboutSection';
 import ProjectsSection from '@/components/ProjectsSection/ProjectsSection';
 import ContactSection from '@/components/ContactSection/ContactSection';
 import styles from '@/styles/index.module.scss';
-import LANG from '@/locales/allLang';
-import { LangContext } from '@/context/LangContext';
+import { serverSideTranslations } from 'next-i18next/pages/serverSideTranslations';
 
 const index = () => {
-    const {lang} = useContext(LangContext);
-    const l = LANG[lang];
-
     return (
         <Layout title="Bruno Arruda | Dev Portfolio">
             <div className={styles.singlePageWrapper}>
@@ -29,6 +24,14 @@ const index = () => {
             </div>
         </Layout>
     )
+}
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'projects'])),
+    },
+  };
 }
 
 export default index;

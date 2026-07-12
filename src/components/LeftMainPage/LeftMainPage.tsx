@@ -1,15 +1,16 @@
-import {useState, useEffect, useLayoutEffect, useRef, useContext} from 'react';
+import {useState, useEffect, useLayoutEffect, useRef} from 'react';
 import styles from '@/components/LeftMainPage/LeftMainPage.module.scss';
 import { TypeAnimation } from 'react-type-animation';
 import Hire from './HireButtons/Hire';
-import LANGS from '@/locales/allLang';
-import { LangContext } from '@/context/LangContext';
+import { useTranslation } from 'react-i18next';
+import { useRouter } from 'next/router';
 import {gsap} from 'gsap';
 
 const LeftMainPage = () => {
     const [animationKey, setAnimationKey] = useState(0);
-    const {lang} = useContext(LangContext);
-    const l = LANGS[lang];
+    const { t } = useTranslation('common');
+    const router = useRouter();
+    const lang = router.locale || 'pt';
     const thisTitle = useRef(null)
 
 
@@ -46,16 +47,16 @@ const LeftMainPage = () => {
 
             <div className={styles.content}>
 
-                <h1 ref={thisTitle}>{`${l.greeting} ${idade}`}</h1>
+                <h1 ref={thisTitle}>{`${t('greeting')} ${idade}`}</h1>
 
                 <TypeAnimation
                     key={animationKey}
                     className={styles.writer}
                     sequence={[
-                        l.writer_focus, 1500,
-                        l.writer_resilience, 1500,
-                        l.writer_discipline, 1500,
-                        l.writer_is_possible
+                        t('writer_focus'), 1500,
+                        t('writer_resilience'), 1500,
+                        t('writer_discipline'), 1500,
+                        t('writer_is_possible')
                     ]}
                     wrapper="p"
                     speed={80}

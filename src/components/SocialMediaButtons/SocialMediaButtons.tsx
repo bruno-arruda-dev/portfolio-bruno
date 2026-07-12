@@ -1,12 +1,12 @@
-import {useContext} from 'react';
+import { useRouter } from 'next/router';
 import styles from '@/components/SocialMediaButtons/SocialMediaButtons.module.scss';
 import { BsWhatsapp } from 'react-icons/bs';
 import { FiLinkedin, FiGithub } from 'react-icons/fi';
 import { MdFilePresent } from 'react-icons/md';
-import { LangContext } from '@/context/LangContext';
 
 const SocialMediaButtons = () => {
-    const {lang} = useContext(LangContext);
+    const router = useRouter();
+    const lang = router.locale || 'pt';
     const pt_cv = '/helpers/cv/CV-Bruno-2024.pdf';
     const en_cv = '/helpers/cv/CV-Bruno-2024-EN.pdf';
 

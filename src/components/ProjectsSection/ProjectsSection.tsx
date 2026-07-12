@@ -1,19 +1,17 @@
-import { useContext } from 'react';
 import styles from '@/styles/Projects.module.scss';
-import ALL_PROJECTS from '@/locales/allProjects';
-import LANG from '@/locales/allLang';
 import ProjectCard from '@/components/ProjectCard/ProjectCard';
-import { LangContext } from '@/context/LangContext';
+import { useTranslation } from 'react-i18next';
 
 const ProjectsSection = () => {
-    const { lang } = useContext(LangContext);
-    const l = ALL_PROJECTS[lang];
+    const { t } = useTranslation('projects');
+    const projects = t('projects', { returnObjects: true });
+    const projectsList = Array.isArray(projects) ? projects : [];
 
     return (
         <section id="projects" className={styles.projects}>
-            <h2 className={styles.sectionTitle}>{LANG[lang].page_projects_title}</h2>
+            <h2 className={styles.sectionTitle}>{t('page_projects_title', { ns: 'common' })}</h2>
             {
-                l.map((project, index) => (
+                projectsList.map((project, index) => (
                     <ProjectCard
                         key={index}
                         image={project.image}

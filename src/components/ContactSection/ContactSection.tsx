@@ -1,15 +1,16 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import styles from '@/styles/Contact.module.scss';
 import EmailForm from '@/components/EmailForm/EmailForm';
 import { TypeAnimation } from 'react-type-animation';
 import SocialMediaButtons from '@/components/SocialMediaButtons/SocialMediaButtons';
-import LANGS from '@/locales/allLang';
-import { LangContext } from '@/context/LangContext';
+import { useTranslation } from 'react-i18next';
+import { useRouter } from 'next/router';
 
 const ContactSection = () => {
     const [animationKey, setAnimationKey] = useState(0);
-    const { lang } = useContext(LangContext);
-    const l = LANGS[lang];
+    const { t } = useTranslation('common');
+    const router = useRouter();
+    const lang = router.locale || 'pt';
 
     useEffect(() => {
         setAnimationKey((prev) => prev + 1);
@@ -17,14 +18,14 @@ const ContactSection = () => {
 
     return (
         <section id="contact" className={styles.contact}>
-            <h2 className={styles.sectionTitle}>{l.page_hireme_title}</h2>
+            <h2 className={styles.sectionTitle}>{t('page_hireme_title')}</h2>
 
             <div className={styles.contactContainer}>
                 <div className={styles.hireMessageContainer}>
                     <TypeAnimation
                         key={animationKey}
                         sequence={[
-                            l.writer_contact, 500,
+                            t('writer_contact'), 500,
                         ]}
                         wrapper="p"
                         speed={80}

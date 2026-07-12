@@ -2,14 +2,14 @@
 import { ProjectModalProvider } from '@/context/ProjectModalContext';
 import '../styles/Global.css';
 import { ComponentType } from 'react'
-import { LangProvider } from '@/context/LangContext';
+import { appWithTranslation } from 'next-i18next/pages';
 
-export default function App({ Component, pageProps }: { Component: ComponentType, pageProps: any }) {
+function App({ Component, pageProps }: { Component: ComponentType, pageProps: any }) {
   return (
-    <LangProvider>
-      <ProjectModalProvider>
-        <Component {...pageProps} />
-      </ProjectModalProvider>
-    </LangProvider>
+    <ProjectModalProvider>
+      <Component {...pageProps} />
+    </ProjectModalProvider>
   );
 }
+
+export default appWithTranslation(App);
