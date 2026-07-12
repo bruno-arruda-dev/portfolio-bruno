@@ -40,11 +40,15 @@
 @media (max-width: 850px) {
     .left_main_page {
         width: 100%;
-        height: 50%;
+        height: auto;
+        min-height: fit-content;
 
         .content {
+            margin-top: 0;
+            height: 290px;
+            gap: 1rem;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
         }
     }
 }
@@ -54,6 +58,7 @@
 
         .content {
             text-align: left;
+            height: 260px;
 
             h1 {
                 font-size: 2rem;
@@ -70,6 +75,7 @@
     .left_main_page {
 
         .content {
+            height: 260px;
 
             h1 {
                 font-size: 1.5rem;

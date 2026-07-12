@@ -8,7 +8,7 @@
     justify-content: center;
     flex-wrap: wrap;
     min-height: 100vh;
-    padding-top: calc($navbar-height * 1.5);
+    padding-top: 4rem;
 
     .sectionTitle {
         width: 100%;
@@ -58,6 +58,7 @@
         padding: $navbar-height 1rem 1rem 1rem;
         justify-content: flex-start;
         flex-direction: column;
+        min-height: auto;
 
         .contactContainer {
             width: 100%;

@@ -38,7 +38,7 @@ const TimeEvent = ({ type, title, period, descriptions }: ITimeEventProps) => {
                 <p>{period}</p>
                 <ul>
                     {descriptions?.map((description, index)=>(
-                        <li>{description}</li>
+                        <li key={index}>{description}</li>
                     ))}
                 </ul>
             </div>
@@ -50,7 +50,7 @@ const TimeEvent = ({ type, title, period, descriptions }: ITimeEventProps) => {
                 <p>{period}</p>
                 <ul>
                     {descriptions?.map((description, index)=>(
-                        <li>{description}</li>
+                        <li key={index}>{description}</li>
                     ))}
                 </ul>
             </div>

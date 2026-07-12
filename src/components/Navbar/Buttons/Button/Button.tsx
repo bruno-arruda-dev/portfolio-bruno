@@ -1,4 +1,4 @@
-import {useRef, useLayoutEffect} from 'react';
+import {useRef, useEffect} from 'react';
 import Link from 'next/link';
 import styles from '@/components/Navbar/Buttons/Button/Button.module.scss';
 import {gsap} from 'gsap';
@@ -12,7 +12,7 @@ interface IButtonProps {
 const Button = ({ href, text, active }: IButtonProps) => {
     const thisButton = useRef(null);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         gsap.from(thisButton.current, {delay: 1.5, duration: .5, opacity: 0, xPercent: 200, ease: 'back'})
     }, [])
 

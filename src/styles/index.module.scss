@@ -24,7 +24,16 @@
 }
 
 @media (max-width: 850px) {
+    .heroSection {
+        height: 100vh;
+        height: 100dvh;
+        min-height: 568px;
+    }
     .index {
         flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding-top: calc($navbar-height + 0.5rem);
+        padding-bottom: 0.5rem;
     }
 }
