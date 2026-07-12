@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import LanguageSwitch from '../LanguageSwitch/LanguageSwitch';
 import styles from './NavbarMobile.module.scss';
 import Button from '../Navbar/Buttons/Button/Button';
@@ -10,6 +10,36 @@ const NavbarMobile = () => {
     const { lang } = useContext(LangContext);
     const l = LANGS[lang];
     const [mobileMenu, setMobileMenu] = useState('hidden');
+    const [activeSection, setActiveSection] = useState('home');
+
+    useEffect(() => {
+        const sections = ['home', 'about', 'projects', 'contact'];
+        const observers = sections.map((id) => {
+            const el = document.getElementById(id);
+            if (!el) return null;
+
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(id);
+                    }
+                },
+                {
+                    rootMargin: '-30% 0px -60% 0px',
+                }
+            );
+            observer.observe(el);
+            return { observer, el };
+        });
+
+        return () => {
+            observers.forEach((obs) => {
+                if (obs) {
+                    obs.observer.unobserve(obs.el);
+                }
+            });
+        };
+    }, []);
 
     const handleShowMobileMenu = () => {
         mobileMenu === 'hidden' ? setMobileMenu('exposed') : setMobileMenu('hidden');
@@ -30,10 +60,10 @@ const NavbarMobile = () => {
                 <div className={`${styles['mobileMenu']} ${styles[mobileMenu]}`}>
 
                     <div className={styles.mobileButtons}>
-                        <div onClick={handleShowMobileMenu}><Button text='Home' href='/' /></div>
-                        <div onClick={handleShowMobileMenu}><Button text={l.btn_path} href='/About' /></div>
-                        <div onClick={handleShowMobileMenu}><Button text={l.btn_project} href='/Projects' /></div>
-                        <div onClick={handleShowMobileMenu}><Button text={l.btn_contact} href='/Contact' /></div>
+                        <div onClick={handleShowMobileMenu}><Button text='Home' href='#home' active={activeSection === 'home'} /></div>
+                        <div onClick={handleShowMobileMenu}><Button text={l.btn_path} href='#about' active={activeSection === 'about'} /></div>
+                        <div onClick={handleShowMobileMenu}><Button text={l.btn_project} href='#projects' active={activeSection === 'projects'} /></div>
+                        <div onClick={handleShowMobileMenu}><Button text={l.btn_contact} href='#contact' active={activeSection === 'contact'} /></div>
                     </div>
                     
                     <SocialMediaButtons />

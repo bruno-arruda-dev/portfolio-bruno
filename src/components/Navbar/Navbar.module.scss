@@ -2,15 +2,16 @@
 
 .navbar {
     overflow: hidden;
-    position: absolute;
+    position: fixed;
+    z-index: 100;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: $navbar-height;
     padding: 0 50px;
-    // background: $gradient-bg;
-    // animation: bgAnimate $bg-animation;
+    background-color: rgba(7, 27, 55, 0.4);
+    backdrop-filter: blur(10px);
     color: $dark-text;
 }
 

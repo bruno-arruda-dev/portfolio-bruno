@@ -72,33 +72,33 @@
             }
         }
 
-        &:hover {
+        &.active, &:hover {
             color: $st-detail;
         }
 
-        &:hover .left .trace {
+        &.active .left .trace, &:hover .left .trace {
             width: 100%;
         }
 
-        &:hover .left .top_trace {
+        &.active .left .top_trace, &:hover .left .top_trace {
             transform: translateY(20%);
             transform: rotate(45deg);
             opacity: 1;
         }
 
-        &:hover .left .bot_trace {
+        &.active .left .bot_trace, &:hover .left .bot_trace {
             transform: translateY(20%);
             transform: rotate(-45deg);
             opacity: 1;
         }
 
-        &:hover .right .top_trace {
+        &.active .right .top_trace, &:hover .right .top_trace {
             transform: translateY(20%);
             transform: rotate(-45deg);
             opacity: 1;
         }
 
-        &:hover .right .bot_trace {
+        &.active .right .bot_trace, &:hover .right .bot_trace {
             transform: translateY(20%);
             transform: rotate(45deg);
             opacity: 1;

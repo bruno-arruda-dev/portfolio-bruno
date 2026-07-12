@@ -1,14 +1,26 @@
 @import '@/styles/Global.module.scss';
 
+.singlePageWrapper {
+    width: 100%;
+    min-height: 100vh;
+    background: $gradient-bg;
+    background-attachment: fixed;
+    animation: bgAnimate $bg-animation;
+    overflow-x: hidden;
+}
+
+.heroSection {
+    width: 100%;
+    height: 100vh;
+    min-height: 555.3px;
+}
+
 .index {
     @extend .centralize;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     padding-top: $navbar-height;
-    min-height: 555.3px;
-    background: $gradient-bg;
-    animation: bgAnimate $bg-animation;
-    overflow: hidden;
+    background: transparent;
 }
 
 @media (max-width: 850px) {

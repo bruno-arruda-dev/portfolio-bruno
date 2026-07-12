@@ -6,9 +6,10 @@ import {gsap} from 'gsap';
 interface IButtonProps {
     href: string;
     text: string;
+    active?: boolean;
 }
 
-const Button = ({ href, text }: IButtonProps) => {
+const Button = ({ href, text, active }: IButtonProps) => {
     const thisButton = useRef(null);
 
     useLayoutEffect(() => {
@@ -18,7 +19,7 @@ const Button = ({ href, text }: IButtonProps) => {
     return (
         <div className={styles.button} ref={thisButton}>
 
-        <Link href={href} className={styles.button}>
+        <Link href={href} className={`${styles.button} ${active ? styles.active : ''}`}>
                 <div className={`${styles['trace_container']} ${styles['left']}`}>
                     <div className={`${styles['trace']} ${styles['top_trace']}`} />
                     <div className={`${styles['trace']} ${styles['bot_trace']}`} />

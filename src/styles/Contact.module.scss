@@ -8,9 +8,31 @@
     justify-content: center;
     flex-wrap: wrap;
     min-height: 100vh;
-    padding-top: $navbar-height;
-    background: $gradient-bg;
-    animation: bgAnimate $bg-animation;
+    padding-top: calc($navbar-height * 1.5);
+
+    .sectionTitle {
+        width: 100%;
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+        color: $dark-text;
+        margin-bottom: 3rem;
+        position: relative;
+        display: inline-block;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 4px;
+            border-radius: 50px;
+            background: linear-gradient(90deg, transparent, $st-detail 50%, transparent);
+            box-shadow: 0 0 8px $st-detail;
+        }
+    }
 
     .contactContainer {
         width: 50%;

@@ -1,9 +1,12 @@
 @import '@/styles/Global.module.scss';
 
 .navbarMobile {
-    position: absolute;
+    position: fixed;
+    z-index: 100;
     width: 100%;
     height: $navbar-height;
+    background-color: rgba(7, 27, 55, 0.4);
+    backdrop-filter: blur(10px);
 
     .sandwitchContainer {
         z-index: 999;

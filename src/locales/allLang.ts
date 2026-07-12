@@ -1,9 +1,9 @@
 const LANGS: Record<string, { [key: string]: string }> = {
     pt: {
-        page_mainPage_title: 'Bruno Arruda: Bem vindo ao meu portfólio',
-        page_projects_title: 'Bruno Arruda: Projetos',
-        page_hireme_title: 'Bruno Arruda: Me Contrate',
-        page_about_title: 'Bruno Arruda: Sobre Mim',
+        page_mainPage_title: 'Bem vindo ao meu portfólio',
+        page_projects_title: 'Projetos',
+        page_hireme_title: 'Fale comigo',
+        page_about_title: 'Sobre Mim',
         btn_path: 'Experiência',
         btn_project: 'Projetos',
         btn_contact: 'Contato',
@@ -53,10 +53,10 @@ const LANGS: Record<string, { [key: string]: string }> = {
 
     },
     en: {
-        page_mainPage_title: 'Bruno Arruda: Wellcome to my portfolio',
-        page_projects_title: 'Bruno Arruda: Projects',
-        page_hireme_title: 'Bruno Arruda: Hire me',
-        page_about_title: 'Bruno Arruda: About me',
+        page_mainPage_title: 'Welcome to my portfolio',
+        page_projects_title: 'Projects',
+        page_hireme_title: 'Contact me',
+        page_about_title: 'About me',
         btn_path: 'Experience',
         btn_project: 'Projects',
         btn_contact: 'Contact',
