@@ -1,11 +1,11 @@
-import { useLayoutEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import styles from '@/components/RightMainPage/RightMainPage.module.scss';
 import {gsap} from 'gsap';
 
 const RightMainPage = () => {
     const thisImageContainer = useRef(null);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         
         // gsap.set(thisImageContainer.current, {scale: 0.7});
         gsap.timeline()

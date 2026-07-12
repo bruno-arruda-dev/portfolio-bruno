@@ -1,4 +1,4 @@
-import {useState, useEffect, useLayoutEffect, useRef} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import styles from '@/components/LeftMainPage/LeftMainPage.module.scss';
 import { TypeAnimation } from 'react-type-animation';
 import Hire from './HireButtons/Hire';
@@ -37,7 +37,7 @@ const LeftMainPage = () => {
     const dataNascimento = new Date('1989-02-16');
     const idade = calcularIdade(dataNascimento);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         gsap.from(thisTitle.current, { scale: 0, duration: 1, ease: 'back'})
     }, [])
 

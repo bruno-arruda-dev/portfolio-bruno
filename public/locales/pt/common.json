@@ -7,6 +7,7 @@
   "btn_project": "Projetos",
   "btn_contact": "Contato",
   "btn_send": "Enviar",
+  "btn_sending": "Enviando...",
   "greeting": "Olá, meu nome é Bruno,",
   "writer_focus": "Sou desenvolvedor web com experiência em tecnologias como Next.js, Vite, React, TypeScript, Sass, Tailwind, Styled-Components e Node.js, com proficiência em ferramentas como React-Hook-Form, Ant Design, Zod e Yup.\nAcredito que com foco...",
   "writer_resilience": "Sou desenvolvedor web com experiência em tecnologias como Next.js, Vite, React, TypeScript, Sass, Tailwind, Styled-Components e Node.js, com proficiência em ferramentas como React-Hook-Form, Ant Design, Zod e Yup.\nAcredito que com resiliência...",
@@ -50,5 +51,6 @@
   "email_form_placeholder_contact": "...e o seu telefone ou email?",
   "email_form_placeholder_message": "Deixe sua mensagem",
   "email_send_success": "Email enviado com sucesso.",
-  "email_send_fail": "Email não foi enviado. Verifique os campos!"
+  "email_send_fail": "Email não foi enviado. Verifique os campos!",
+  "meta_description": "Portfólio de Bruno Arruda - Desenvolvedor Web especializado em Next.js, React, TypeScript e Node.js."
 }

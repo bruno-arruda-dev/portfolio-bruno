@@ -1,4 +1,4 @@
-import { useContext, MouseEvent, useRef, useLayoutEffect } from 'react'; // Importe o MouseEvent
+import { useContext, MouseEvent, useRef, useEffect } from 'react'; // Importe o MouseEvent
 import styles from '@/components/ProjectCard/ProjectCard.module.scss';
 import { IProjectCardProps } from '@/types/ProjectCardProps';
 import ProjectCardFooter from './ProjectCardFooter/ProjectCardFooter';
@@ -10,7 +10,7 @@ const ProjectCard = ({ image, name, descriptions, repo, homepage, stacks }: IPro
     const { handleUpdateModalContent } = useContext(ProjectModalContext);
     const thisProject = useRef(null);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
 
         gsap.registerPlugin(ScrollTrigger);
         gsap.to(thisProject.current, {

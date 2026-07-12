@@ -14,6 +14,7 @@ const EmailForm = () => {
     const { t } = useTranslation('common');
     const URL: string = 'https://sendmail-kappa.vercel.app/sendmail';
     const [isVisible, setIsVisible] = useState('isNotVisible');
+    const [isSending, setIsSending] = useState(false);
 
     const [campos, setCampos] = useState<Campos>({
         nome: '',
@@ -33,9 +34,9 @@ const EmailForm = () => {
         event.preventDefault(); // Impede a recarga da página
 
         if (campos.email === "" || campos.mensagem === "" || campos.nome === "") {
-            event.preventDefault();
             setIsVisible('fail');
         } else {
+            setIsSending(true);
             try {
                 const response = await axios.post(URL, {
                     name: campos.nome,
@@ -51,6 +52,8 @@ const EmailForm = () => {
             } catch (error) {
                 console.error('Erro ao enviar requisição:', error);
                 setIsVisible('fail');
+            } finally {
+                setIsSending(false);
             }
         }
 
@@ -70,23 +73,23 @@ const EmailForm = () => {
 
                     <div className={styles.inputContainer}>
                         <label htmlFor="nome">{t('email_form_input_name')}</label>
-                        <input type="text" id="nome" name="nome" placeholder={t('email_form_placeholder_name')} onChange={handleInputChange} />
+                        <input type="text" id="nome" name="nome" placeholder={t('email_form_placeholder_name')} onChange={handleInputChange} disabled={isSending} />
                         <div className={styles.line} />
                     </div>
 
                     <div className={styles.inputContainer}>
                         <label htmlFor="email">{t('email_form_input_contact')}</label>
-                        <input type="text" id="email" name="email" placeholder={t('email_form_placeholder_contact')} onChange={handleInputChange} />
+                        <input type="text" id="email" name="email" placeholder={t('email_form_placeholder_contact')} onChange={handleInputChange} disabled={isSending} />
                         <div className={styles.line} />
                     </div>
                     
                     <div className={styles.inputContainer}>
                         <label htmlFor="mensagem">{t('email_form_input_message')}</label>
-                        <textarea id="mensagem" name="mensagem" placeholder={t('email_form_placeholder_message')} className="textArea" onChange={handleInputChange}></textarea>
+                        <textarea id="mensagem" name="mensagem" placeholder={t('email_form_placeholder_message')} className="textArea" onChange={handleInputChange} disabled={isSending}></textarea>
                         <div className={styles.line} />
                     </div>
 
-                    <input type="submit" value={t('btn_send')} onClick={() => handleSubmit} />
+                    <input type="submit" value={isSending ? t('btn_sending') : t('btn_send')} disabled={isSending} style={{ cursor: isSending ? 'not-allowed' : 'pointer', opacity: isSending ? 0.7 : 1 }} />
                 </form>
             </div>
         </>

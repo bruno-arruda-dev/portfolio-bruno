@@ -2,14 +2,14 @@ import styles from '@/components/TimeEvent/TimeEvent.module.scss';
 import { ITimeEventProps } from '@/types/TimeEventProps';
 import { GiWhiteBook } from 'react-icons/gi';
 import { BsFillHouseGearFill } from 'react-icons/bs';
-import { useLayoutEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const TimeEvent = ({ type, title, period, descriptions }: ITimeEventProps) => {
     const thisEvent = useRef(null);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
 
         gsap.registerPlugin(ScrollTrigger);
         gsap.to(thisEvent.current, {

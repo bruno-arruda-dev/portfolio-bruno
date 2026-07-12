@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import styles from '@/components/LeftMainPage/HireButtons/Hire.module.scss';
 import SocialMediaButtons from '../../SocialMediaButtons/SocialMediaButtons';
 import { useTranslation } from 'react-i18next';
@@ -8,7 +8,7 @@ const Hire = () => {
     const { t } = useTranslation('common');
     const thisHire = useRef(null);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         gsap.timeline()
             .from(thisHire.current, { delay: 2, scale: 0, duration: 2, ease: 'back' })
             .from('.curricullum', { scale: 0, duration: .3, ease: 'back' })
