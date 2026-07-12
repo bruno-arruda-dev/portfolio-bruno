@@ -61,16 +61,26 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 3.5rem;
         z-index: 998;
         position: fixed;
         left: 0;
+        top: 0;
         height: 100vh;
         width: 0;
         transition: all .5s ease-in-out;
-        background-color: $transparent-dark-bg;
-        backdrop-filter: blur(15px);
+        background-color: rgba(7, 27, 55, 0.98);
+        backdrop-filter: blur(20px);
         overflow: hidden;
+
+        .mobileButtons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            width: 100%;
+        }
     }
 
     .mobileMenu.exposed {

@@ -42,6 +42,17 @@ const NavbarMobile = () => {
         };
     }, []);
 
+    useEffect(() => {
+        if (mobileMenu === 'exposed') {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [mobileMenu]);
+
     const handleShowMobileMenu = () => {
         mobileMenu === 'hidden' ? setMobileMenu('exposed') : setMobileMenu('hidden');
     }
