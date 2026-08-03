@@ -1,6 +1,14 @@
 {
   "projects": [
     {
+      "name": "Automated Billing System (NDA)",
+      "descriptions": [
+        "Full-stack multi-tenant platform for billing schedule automation, multi-channel dispatches (AWS SES & WhatsApp Bot), AWS SQS FIFO queues, and real-time tracking."
+      ],
+      "markdownFile": "/docs/projects/automated-billing-system.md",
+      "stacks": ["nestjs", "next", "react", "typescript", "postgresql", "redis", "docker"]
+    },
+    {
       "name": "Finance - Frontend",
       "descriptions": [
         "Financial management system.",

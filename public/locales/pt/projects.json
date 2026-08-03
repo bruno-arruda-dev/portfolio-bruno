@@ -1,6 +1,14 @@
 {
   "projects": [
     {
+      "name": "Sistema de Automação de Cobranças (NDA)",
+      "descriptions": [
+        "Plataforma fullstack multi-tenant para automação de régua de cobrança, disparo multicanal (E-mail SES e WhatsApp Bot), filas AWS SQS FIFO e tracking em tempo real."
+      ],
+      "markdownFile": "/docs/projects/sistema-automacao-cobrancas.md",
+      "stacks": ["nestjs", "next", "react", "typescript", "postgresql", "redis", "docker"]
+    },
+    {
       "name": "Finance - Frontend",
       "descriptions": [
         "Sistema de gestão financeira",
