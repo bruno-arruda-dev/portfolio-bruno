@@ -1,37 +1,39 @@
 @import '@/styles/Global.module.scss';
 
 .projectCardFooter {
-    padding-top: 1rem;
+    padding: 0.3rem 0.5rem 0.6rem 0.5rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 0.3rem;
 
     .actions {
         display: flex;
         align-items: center;
-        justify-content: space-around;
-        border-radius: 0 0 $default-radius $default-radius;
-        width: 80%;
-        height: 50px;
+        justify-content: center;
+        gap: 1.5rem;
+        width: 100%;
+        height: 32px;
+        margin-bottom: 0.1rem;
 
         .active svg {
-            width: 30px;
-            height: 30px;
+            width: 26px;
+            height: 26px;
             fill: $dark-bg;
             cursor: pointer;
             transition: all .2s ease-out;
 
             &:hover {
-                transform: scale(1.1);
+                transform: scale(1.15);
                 fill: $st-detail;
             }
         }
 
         .disabled svg {
-            width: 30px;
-            height: 30px;
+            width: 26px;
+            height: 26px;
             fill: #8e8e8e;
         }
     }
@@ -39,69 +41,47 @@
     .stacks {
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap; // Prevent pills from overflowing outside the card!
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 0.3rem;
+        padding: 0 0.3rem;
+        max-height: 56px;
+        overflow: hidden;
 
         .stack {
-            padding: 0 .5rem;
-            font-size: .7rem;
-            border-radius: $default-radius;
-            font-weight: bold;
+            padding: 0.18rem 0.55rem;
+            font-size: 0.68rem;
+            border-radius: 12px;
+            font-weight: 600;
             text-transform: capitalize;
-            border: 1px solid #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.3);
             background-color: $st-detail;
-            color: $dark-text;
+            color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
-        .typescript {
-            background-color: #007acc;
-            color: #003253;
-        }
-
-        .next {
-            background-color: #000000;
-        }
-
-        .sass {
-            background-color: #cf649a;
-            color: #7b0e44;
-        }
-
-        .html {
-            background-color: #e34c26;
-            color: #5b1706;
-        }
-
-        .css {
-            background-color: #264de4;
-            color: #0b1f2d;
-        }
-
-        .react {
-            background-color: #0d6d8c;
-            color: #003253;
-        }
-
-        .javascript {
-            background-color: #efd81d;
-            color: #5b1706;
-        }
-
-        .node {
-            background-color: #3f873f;
-            color: #032603;
-        }
-
-        .mysql {
-            background-color: #f29111;
-            color: #5b1706;
-        }
-
-        .swagger {
-            background-color: #85ea2d;
-            color: #173647;
-        }
+        .typescript { background-color: #007acc; color: #ffffff; }
+        .next { background-color: #000000; color: #ffffff; }
+        .sass { background-color: #cf649a; color: #ffffff; }
+        .html { background-color: #e34c26; color: #ffffff; }
+        .css { background-color: #264de4; color: #ffffff; }
+        .react { background-color: #0088cc; color: #ffffff; }
+        .javascript { background-color: #f7df1e; color: #000000; }
+        .node { background-color: #339933; color: #ffffff; }
+        .mysql { background-color: #00758f; color: #ffffff; }
+        .swagger { background-color: #85ea2d; color: #000000; }
+        .markdown { background-color: #0057c1; color: #ffffff; }
+        .postgresql, .postgres { background-color: #336791; color: #ffffff; }
+        .docker { background-color: #2496ed; color: #ffffff; }
+        .tailwind { background-color: #06b6d4; color: #ffffff; }
+        .vite { background-color: #646cff; color: #ffffff; }
+        .mongodb { background-color: #47a248; color: #ffffff; }
+        .express { background-color: #303030; color: #ffffff; }
+        .zod { background-color: #3e67ad; color: #ffffff; }
+        .gsap { background-color: #88ce02; color: #000000; }
+        .nestjs { background-color: #ea2845; color: #ffffff; }
+        .redis { background-color: #d82c20; color: #ffffff; }
+        .ant, .antdesign { background-color: #1890ff; color: #ffffff; }
     }
-
 }

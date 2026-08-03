@@ -10,39 +10,54 @@ const ProjectCardFooter = ({ repo, homepage, stacks }: IProjectCardFooterProps) 
         event.stopPropagation();
     }
 
+    const hasStacks = stacks && stacks.length > 0;
+    const hasActions = Boolean(repo || homepage);
+
+    if (!hasStacks && !hasActions) {
+        return null;
+    }
+
     return (
         <div className={styles.projectCardFooter}>
 
-            <div className={styles.stacks}>
-                {
-                    stacks?.map((stack, index) => (
-                        <div key={index} className={`${styles['stack']} ${styles[stack]}`}>
-                            {stack}
-                        </div>
-                    ))
-                }
-            </div>
+            {hasActions && (
+                <div className={styles.actions}>
+                    {repo && (
+                        <a
+                            className={styles['active']}
+                            href={repo}
+                            onClick={handleLinkClick}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
+                            <FaGithubAlt />
+                        </a>
+                    )}
+                    {homepage && (
+                        <a
+                            className={styles['active']}
+                            href={homepage}
+                            onClick={handleLinkClick}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
+                            <ImHome />
+                        </a>
+                    )}
+                </div>
+            )}
 
-            <div className={styles.actions}>
-                <a
-                    className={repo ? `${styles['active']}` : `${styles['disabled']}`}
-                    href={repo}
-                    onClick={handleLinkClick}
-                    target='_blank'
-                    rel='noopener noreferer'
-                >
-                    <FaGithubAlt />
-                </a>
-                <a
-                    className={homepage ? `${styles['active']}` : `${styles['disabled']}`}
-                    href={homepage}
-                    onClick={handleLinkClick}
-                    target='_blank'
-                    rel='noopener noreferer'
-                >
-                    <ImHome />
-                </a>
-            </div>
+            {hasStacks && (
+                <div className={styles.stacks}>
+                    {
+                        stacks?.map((stack, index) => (
+                            <div key={index} className={`${styles['stack']} ${styles[stack]}`}>
+                                {stack}
+                            </div>
+                        ))
+                    }
+                </div>
+            )}
 
         </div>
     )

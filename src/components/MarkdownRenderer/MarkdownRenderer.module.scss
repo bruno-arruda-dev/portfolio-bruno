@@ -1,0 +1,124 @@
+@import '@/styles/Global.module.scss';
+
+.markdownWrapper {
+  color: $light-text; /* #071b37 */
+  font-family: inherit;
+  line-height: 1.7;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #030f24;
+    margin-top: 1.2rem;
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid rgba(7, 27, 55, 0.15);
+    padding-bottom: 0.4rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    border-bottom: 1px solid rgba(7, 27, 55, 0.12);
+    padding-bottom: 0.3rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    margin-bottom: 0.8rem;
+    color: #1e293b;
+    text-align: justify;
+  }
+
+  ul, ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    
+    li {
+      margin-bottom: 0.4rem;
+      color: #1e293b;
+    }
+  }
+
+  blockquote {
+    border-left: 4px solid #0057c1;
+    background: rgba(0, 87, 193, 0.08);
+    padding: 0.6rem 1rem;
+    margin: 1rem 0;
+    border-radius: 0 6px 6px 0;
+    font-style: italic;
+    color: #071b37;
+
+    p {
+      margin: 0;
+      color: #071b37;
+    }
+  }
+
+  pre {
+    background: #071b37;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1rem 0;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+
+    code {
+      background: transparent;
+      padding: 0;
+      color: #4caeff;
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: 0.88rem;
+    }
+  }
+
+  code {
+    background: rgba(7, 27, 55, 0.1);
+    color: #0057c1;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.88rem;
+    font-weight: 600;
+  }
+
+  a {
+    color: #0057c1;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  strong {
+    color: #030f24;
+    font-weight: 700;
+  }
+
+  em {
+    font-style: italic;
+    color: #334155;
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background: rgba(7, 27, 55, 0.15);
+    margin: 1.5rem 0;
+  }
+}
+
+.loading {
+  color: #4b5563;
+  font-style: italic;
+  padding: 1rem 0;
+}

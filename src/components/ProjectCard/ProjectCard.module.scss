@@ -10,47 +10,109 @@
     border-radius: $default-radius;
     margin: 1rem;
     width: 300px;
-    height: 350px;
+    height: 380px;
     background-color: $light-bg;
     color: $light-text;
     cursor: pointer;
-    transition: all .2s ease-out;
-    box-shadow: 0 0 1px 1px $light-bg;
+    transition: all .25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    &:hover {
+        transform: translateY(-4px) scale(1.015);
+        box-shadow: 0 8px 25px rgba(0, 87, 193, 0.25);
+    }
     
     .img {
         border-radius: $default-radius $default-radius 0 0;
         width: 100%;
-        height: 50%;
-        @extend .container-image;
+        height: 180px;
+        min-height: 180px;
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+
+    .noImgHeader {
+        width: 100%;
+        height: 180px;
+        min-height: 180px;
+        background: linear-gradient(135deg, #071b37 0%, #004ba8 50%, #0057c1 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        gap: 0.6rem;
+        border-radius: $default-radius $default-radius 0 0;
+
+        .headerIcon {
+            font-size: 3rem;
+            color: #4caeff;
+            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
+        }
+
+        .headerBadge {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.25rem 0.8rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-transform: uppercase;
+        }
     }
     
+    .cardContent {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        justify-content: flex-start;
+        padding: 0.4rem 0.6rem;
+    }
+
     h3 {
-        font-weight: bold;
-        margin: .5rem;
+        font-weight: 700;
+        font-size: 1.05rem;
+        margin: 0.3rem 0;
+        text-align: center;
+        color: #030f24;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-height: 1.25;
     }
     
     .textContainer {
-        overflow: hidden;
-        white-space: nowrap;
-        width: 300px;
-        height: 30px;
+        width: 100%;
+        margin-top: 0.25rem;
+        padding: 0 0.4rem;
         
         p {
+            font-size: 0.84rem;
+            color: #334155;
+            margin: 0;
+            text-align: center;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
-            margin: 0 .5rem;
-            text-align: left;
+            line-height: 1.35;
         }
-    }
-
-
-    &:hover {
-        transform: scale(1.005);
     }
 }
 
 @media (max-width: 662px) {
     .projectCard {
         width: 90%;
+        max-width: 340px;
     }
 }

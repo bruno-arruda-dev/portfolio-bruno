@@ -20,6 +20,8 @@ const ProjectsSection = () => {
                         repo={project.repo}
                         homepage={project.homepage}
                         stacks={project.stacks}
+                        markdownFile={project.markdownFile}
+                        markdownContent={project.markdownContent}
                     />
                 ))
             }
