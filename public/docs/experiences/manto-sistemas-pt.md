@@ -1,0 +1,2 @@
+- **Desenvolvedor Web**
+- Programador web focado em desenvolver utilizando tecnologias como **ViteJS**, **TypeScript**, **Styled-Components**, **Zod**, **Yup**, consumo de APIs REST, **Ant Design** e outras.

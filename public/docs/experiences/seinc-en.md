@@ -1,0 +1,3 @@
+- **Frontend Developer**
+- **Chief of Staff**
+- Contribution to the maintenance of the official portal: [industriaecomercio.go.gov.br](https://industriaecomercio.go.gov.br)

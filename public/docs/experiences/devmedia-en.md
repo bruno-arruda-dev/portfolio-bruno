@@ -1,0 +1,4 @@
+- Training in **React**
+- Training in **JavaScript**
+- Training in **Programming Logic and Algorithms**
+- Training in **HTML5** & **CSS3**

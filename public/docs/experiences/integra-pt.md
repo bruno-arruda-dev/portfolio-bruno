@@ -1,0 +1,4 @@
+- **Técnico em Implantação de Sistemas**
+- Treinamento e suporte especializado a clientes contratantes do sistema ERP da empresa.
+- Diagnóstico e entendimento avançado das necessidades operacionais do cliente.
+- Manipulação e suporte a banco de dados **Firebird**.

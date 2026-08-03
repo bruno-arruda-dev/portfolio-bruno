@@ -1,0 +1,3 @@
+- Training in **Next.js**
+- Training in **Scrum**
+- Training in **TypeScript**

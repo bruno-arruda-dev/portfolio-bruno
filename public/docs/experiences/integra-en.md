@@ -1,0 +1,4 @@
+- **Systems Implementation Technician**
+- Provided necessary training and support to customers using the company's ERP system.
+- Customer needs assessment and operational workflow analysis.
+- Database manipulation using **Firebird**.

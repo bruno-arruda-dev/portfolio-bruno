@@ -1,0 +1,2 @@
+- **Web Developer**
+- Web developer focused on building applications using technologies such as **ViteJS**, **TypeScript**, **Styled-Components**, **Zod**, **Yup**, REST API consumption, **Ant Design**, and others.

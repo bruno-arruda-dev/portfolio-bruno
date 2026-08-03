@@ -1,0 +1,4 @@
+- Formação em **React**
+- Formação em **JavaScript**
+- Formação em **Lógica de Programação e Algoritmos**
+- Formação em **HTML5** & **CSS3**

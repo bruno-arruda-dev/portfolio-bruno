@@ -1,0 +1,3 @@
+- **Desenvolvedor Web**
+- **Chefia de Gabinete**
+- Colaboração na manutenção do portal oficial: [industriaecomercio.go.gov.br](https://industriaecomercio.go.gov.br)

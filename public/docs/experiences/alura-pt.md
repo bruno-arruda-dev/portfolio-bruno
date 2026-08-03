@@ -1,0 +1,3 @@
+- Formação em **Next.js**
+- Formação em **Scrum**
+- Formação em **TypeScript**
