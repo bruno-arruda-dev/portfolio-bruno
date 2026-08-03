@@ -1,2 +1,4 @@
-- **Desenvolvedor Web**
-- Programador web focado em desenvolver utilizando tecnologias como **ViteJS**, **TypeScript**, **Styled-Components**, **Zod**, **Yup**, consumo de APIs REST, **Ant Design** e outras.
+- **Desenvolvedor Frontend**
+- Desenvolvi interfaces e funcionalidades complexas para aplicações web de grande porte utilizando **React**, **Vite**, **TypeScript** e **Tailwind CSS**, garantindo alta performance de renderização.
+- Construí componentes reutilizáveis alinhados ao Design System interno, implementando lógicas avançadas de gerenciamento de estado global e validação de formulários sob demanda do time de UX/UI.
+- Colaborei na integração de APIs RESTful e consumo de endpoints backend, otimizando o fluxo de dados no client-side.

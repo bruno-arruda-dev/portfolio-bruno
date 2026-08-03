@@ -7,7 +7,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import MarkdownRenderer from '../MarkdownRenderer/MarkdownRenderer';
 
-const TimeEvent = ({ type, title, period, descriptions, markdownFile, markdownContent }: ITimeEventProps) => {
+const TimeEvent = ({ index = 0, type, title, period, descriptions, markdownFile, markdownContent }: ITimeEventProps) => {
     const thisEvent = useRef(null);
 
     useEffect(() => {
@@ -32,6 +32,7 @@ const TimeEvent = ({ type, title, period, descriptions, markdownFile, markdownCo
     }, [])
 
     const hasMarkdown = Boolean(markdownFile || markdownContent);
+    const isLeft = index % 2 === 0;
 
     const renderDetails = () => (
         <>
@@ -41,8 +42,8 @@ const TimeEvent = ({ type, title, period, descriptions, markdownFile, markdownCo
                 <MarkdownRenderer markdownFile={markdownFile} markdownContent={markdownContent} />
             ) : (
                 <ul>
-                    {descriptions?.map((description, index) => (
-                        <li key={index}>{description}</li>
+                    {descriptions?.map((description, itemIndex) => (
+                        <li key={itemIndex}>{description}</li>
                     ))}
                 </ul>
             )}
@@ -50,14 +51,17 @@ const TimeEvent = ({ type, title, period, descriptions, markdownFile, markdownCo
     );
 
     return (
-        <div className={`${styles['eventContainer']} ${styles['eventContainer_' + type]}`} ref={thisEvent}>
-            <div className={styles.studyInfo}>
+        <div 
+            className={`${styles['eventContainer']} ${styles[isLeft ? 'eventContainer_left' : 'eventContainer_right']}`} 
+            ref={thisEvent}
+        >
+            <div className={styles.leftInfo}>
                 {renderDetails()}
             </div>
             <div className={styles.iconContainer}>
                 {type === 'study' ? <GiWhiteBook /> : <BsFillHouseGearFill />} 
             </div>
-            <div className={styles.workInfo}>
+            <div className={styles.rightInfo}>
                 {renderDetails()}
             </div>
         </div>

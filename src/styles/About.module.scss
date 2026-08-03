@@ -32,6 +32,15 @@
         }
     }
 
+    .timeline_container {
+        position: relative;
+        width: 100%;
+
+        .timeline {
+            display: none;
+        }
+    }
+
     .spacer {
         display: inline-block;
         width: 100%;
@@ -41,14 +50,9 @@
 
 @media  (max-width: 720px) {
     .about {
-        
         .timeline_container {
-
             .timeline {
-                left: 33px;
-                top: $navbar-height;
-                transform: none;
-                height: calc(100% - $navbar-height);
+                display: none;
             }
         }
     }

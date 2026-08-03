@@ -1,2 +1,4 @@
-- **Web Developer**
-- Web developer focused on building applications using technologies such as **ViteJS**, **TypeScript**, **Styled-Components**, **Zod**, **Yup**, REST API consumption, **Ant Design**, and others.
+- **Frontend Developer**
+- Developed complex interfaces and features for large-scale web applications using **React**, **Vite**, **TypeScript**, and **Tailwind CSS**, ensuring high rendering performance.
+- Built reusable components aligned with the internal Design System, implementing advanced global state management logic and form validation on demand from the UX/UI team.
+- Collaborated on RESTful API integration and backend endpoint consumption, optimizing client-side data flow.

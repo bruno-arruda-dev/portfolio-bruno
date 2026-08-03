@@ -26,6 +26,7 @@ const AboutSection = () => {
                 {experiencesList.map((exp, index) => (
                     <TimeEvent
                         key={index}
+                        index={index}
                         type={exp.type}
                         title={exp.title}
                         period={exp.period}

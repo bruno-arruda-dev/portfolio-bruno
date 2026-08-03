@@ -13,19 +13,19 @@
         font-size: 0.7rem;
     }
 
-    .studyInfo {
+    .leftInfo {
         overflow: hidden;
         width: 45%;
         max-width: 600px;
         height: fit-content;
         text-align: right;
         padding: 2rem;
-        background-color: #ffffff0e;
+        background-color: $text-box;
         border-radius: 50px;
         
         ul {
             margin-left: 10%;
-            text-align: left
+            text-align: left;
         }
     }
     
@@ -42,7 +42,7 @@
         }
     }
     
-    .workInfo {
+    .rightInfo {
         overflow: hidden;
         display: inline-block;
         width: 45%;
@@ -59,18 +59,16 @@
 
 }
 
-// Wheen container is for study
-.eventContainer_study {
-
-    .workInfo {
+// Left side event container
+.eventContainer_left {
+    .rightInfo {
         visibility: hidden;
     }
 }
 
-// Wheen container is for work
-.eventContainer_work {
-    
-    .studyInfo {
+// Right side event container
+.eventContainer_right {
+    .leftInfo {
         visibility: hidden;
     }
 }
@@ -80,17 +78,34 @@
         justify-content: flex-start;
         padding: .5rem 1rem .5rem .5rem;
 
-        .studyInfo {
-            display: none;
-        }
-
         .iconContainer {
             width: 50px;
         }
+    }
 
-        .workInfo {
+    .eventContainer_left {
+        .leftInfo {
+            display: block;
             visibility: visible;
             width: 100%;
+            text-align: left;
+        }
+
+        .rightInfo {
+            display: none;
+        }
+    }
+
+    .eventContainer_right {
+        .leftInfo {
+            display: none;
+        }
+
+        .rightInfo {
+            display: block;
+            visibility: visible;
+            width: 100%;
+            text-align: left;
         }
     }
 }

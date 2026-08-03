@@ -17,10 +17,17 @@
   "experiences": [
     {
       "type": "work",
+      "title": "Anbetec Tecnologia",
+      "period": "From Feb. 2025 to the present day",
+      "markdownFile": "/docs/experiences/anbetec-tecnologia-en.md",
+      "markdownContent": "- **Fullstack Developer**\n- Designed and developed end-to-end CobreMais, a multi-tenant billing automation engine for the MyBanks platform, structured in a microservices architecture with NestJS, Next.js 16 (App Router), and PostgreSQL.\n- Architected the asynchronous dispatch pipeline with AWS SQS FIFO and multichannel processing (Email via AWS SES and WhatsApp), guaranteeing tenant isolation, idempotency, and charge deduplication via Redis and TypeORM.\n- Developed the management interface and public payment route using Next.js and MUI X DataGrid Premium, integrating secure links with JWT tokens and real-time customer interaction tracking (cm_tracking).\n- Led the standardization of company forms and frontend architecture, creating a centralized reusable component library and strict validation with Zod and React Hook Form, increasing team productivity."
+    },
+    {
+      "type": "work",
       "title": "Manto Sistemas",
-      "period": "2024 to the present day",
+      "period": "From Jun. 2024 to Feb. 2025",
       "markdownFile": "/docs/experiences/manto-sistemas-en.md",
-      "markdownContent": "- **Web Developer**\n- Web developer focused on building applications using technologies such as **ViteJS**, **TypeScript**, **Styled-Components**, **Zod**, **Yup**, REST API consumption, **Ant Design**, and others."
+      "markdownContent": "- **Frontend Developer**\n- Developed complex interfaces and features for large-scale web applications using **React**, **Vite**, **TypeScript**, and **Tailwind CSS**, ensuring high rendering performance.\n- Built reusable components aligned with the internal Design System, implementing advanced global state management logic and form validation on demand from the UX/UI team.\n- Collaborated on RESTful API integration and backend endpoint consumption, optimizing client-side data flow."
     },
     {
       "type": "study",

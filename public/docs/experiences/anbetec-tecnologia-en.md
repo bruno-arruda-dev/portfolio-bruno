@@ -1,0 +1,5 @@
+- **Fullstack Developer**
+- Designed and developed end-to-end billing automation engine for the MyBanks platform, structured in a microservices architecture with NestJS, Next.js 16 (App Router), and PostgreSQL.
+- Architected the asynchronous dispatch pipeline with AWS SQS FIFO and multichannel processing (Email via AWS SES and WhatsApp), guaranteeing tenant isolation, idempotency, and charge deduplication via Redis and TypeORM.
+- Developed the management interface and public payment route using Next.js and MUI X DataGrid Premium, integrating secure links with JWT tokens and real-time customer interaction tracking (cm_tracking).
+- Led the standardization of company forms and frontend architecture, creating a centralized reusable component library and strict validation with Zod and React Hook Form, increasing team productivity.

@@ -17,10 +17,17 @@
   "experiences": [
     {
       "type": "work",
+      "title": "Anbetec Tecnologia",
+      "period": "Fev. 2025 até os dias atuais",
+      "markdownFile": "/docs/experiences/anbetec-tecnologia-pt.md",
+      "markdownContent": "- **Fullstack Developer**\n- Projetei e desenvolvi de ponta a ponta o CobreMais, motor de automação de cobranças multi-tenant para a plataforma MyBanks, estruturado em arquitetura de microsserviços com NestJS, Next.js 16 (App Router) e PostgreSQL.\n- Arquitetou o pipeline assíncrono de disparo com AWS SQS FIFO e processamento multicanal (E-mail via AWS SES e WhatsApp), garantindo isolamento por tenant, idempotência e desduplicação de cobranças via Redis e TypeORM.\n- Desenvolvi a interface de gestão e a rota pública de pagamentos em Next.js e MUI X DataGrid Premium, integrando links seguros com tokens JWT e rastreamento de interações do cliente em tempo real (cm_tracking).\n- Liderou a padronização de formulários e arquitetura frontend da empresa, criando uma biblioteca centralizada de componentes reutilizáveis e validação estrita com Zod e React Hook Form, aumentando a produtividade dos times."
+    },
+    {
+      "type": "work",
       "title": "Manto Sistemas",
-      "period": "2024 até os dias atuais",
+      "period": "Jun. 2024 até Fev. 2025",
       "markdownFile": "/docs/experiences/manto-sistemas-pt.md",
-      "markdownContent": "- **Desenvolvedor Web**\n- Programador web focado em desenvolver utilizando tecnologias como **ViteJS**, **TypeScript**, **Styled-Components**, **Zod**, **Yup**, consumo de APIs REST, **Ant Design** e outras."
+      "markdownContent": "- **Desenvolvedor Frontend**\n- Desenvolvi interfaces e funcionalidades complexas para aplicações web de grande porte utilizando **React**, **Vite**, **TypeScript** e **Tailwind CSS**, garantindo alta performance de renderização.\n- Construí componentes reutilizáveis alinhados ao Design System interno, implementando lógicas avançadas de gerenciamento de estado global e validação de formulários sob demanda do time de UX/UI.\n- Colaborei na integração de APIs RESTful e consumo de endpoints backend, otimizando o fluxo de dados no client-side."
     },
     {
       "type": "study",
