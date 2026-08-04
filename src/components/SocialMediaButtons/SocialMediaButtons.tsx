@@ -7,8 +7,8 @@ import { MdFilePresent } from 'react-icons/md';
 const SocialMediaButtons = () => {
     const router = useRouter();
     const lang = router.locale || 'pt';
-    const pt_cv = '/helpers/cv/CV-Bruno-2024.pdf';
-    const en_cv = '/helpers/cv/CV-Bruno-2024-EN.pdf';
+    const pt_cv = '/helpers/cv/bruno_arruda_cv_fullstack_pleno.pdf';
+    const en_cv = '/helpers/cv/bruno_arruda_cv_fullstack_pleno_en.pdf';
 
     return (
         <div className={styles.socialMediaButtons}>
