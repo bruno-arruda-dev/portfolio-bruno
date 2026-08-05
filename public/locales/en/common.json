@@ -9,10 +9,8 @@
   "btn_send": "Send",
   "btn_sending": "Sending...",
   "greeting": "Hello, my name is Bruno,",
-  "writer_focus": "I am a web developer with experience in technologies such as Next.js, Vite, React, TypeScript, Sass, Tailwind, Styled-Components, and Node.js, with proficiency in tools like React-Hook-Form, Ant Design, Zod, and Yup.\nI believe that with focus…",
-  "writer_resilience": "I am a web developer with experience in technologies such as Next.js, Vite, React, TypeScript, Sass, Tailwind, Styled-Components, and Node.js, with proficiency in tools like React-Hook-Form, Ant Design, Zod, and Yup.\nI believe that with resilience…",
-  "writer_discipline": "I am a web developer with experience in technologies such as Next.js, Vite, React, TypeScript, Sass, Tailwind, Styled-Components, and Node.js, with proficiency in tools like React-Hook-Form, Ant Design, Zod, and Yup.\nI believe that with discipline…",
-  "writer_is_possible": "I am a web developer with experience in technologies such as Next.js, Vite, React, TypeScript, Sass, Tailwind, Styled-Components, and Node.js, with proficiency in tools like React-Hook-Form, Ant Design, Zod, and Yup.\nI believe it is possible to program big changes in people’s lives\n\nGoiânia, Brazil",
+  "writer_description": "Fullstack Developer specializing in transforming complex business challenges into fast, secure, and scalable web applications.\n\nIn practice, I build everything from intuitive modern portals to background automation engines that connect enterprise systems, ensuring high availability, data security, and seamless workflows.\n\nGoiânia, Brazil",
+  "writer_focus": "Fullstack Developer specializing in transforming complex business challenges into fast, secure, and scalable web applications.\n\nIn practice, I build everything from intuitive modern portals to background automation engines that connect enterprise systems, ensuring high availability, data security, and seamless workflows.\n\nGoiânia, Brazil",
   "writer_contact": "If you have criticisms, suggestions, want to hire me or exchange an idea, please get in touch!\n\nThank you!",
   "experiences": [
     {

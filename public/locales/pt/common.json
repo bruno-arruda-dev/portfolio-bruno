@@ -9,10 +9,8 @@
   "btn_send": "Enviar",
   "btn_sending": "Enviando...",
   "greeting": "Olá, meu nome é Bruno,",
-  "writer_focus": "Sou desenvolvedor web com experiência em tecnologias como Next.js, Vite, React, TypeScript, Sass, Tailwind, Styled-Components e Node.js, com proficiência em ferramentas como React-Hook-Form, Ant Design, Zod e Yup.\nAcredito que com foco...",
-  "writer_resilience": "Sou desenvolvedor web com experiência em tecnologias como Next.js, Vite, React, TypeScript, Sass, Tailwind, Styled-Components e Node.js, com proficiência em ferramentas como React-Hook-Form, Ant Design, Zod e Yup.\nAcredito que com resiliência...",
-  "writer_discipline": "Sou desenvolvedor web com experiência em tecnologias como Next.js, Vite, React, TypeScript, Sass, Tailwind, Styled-Components e Node.js, com proficiência em ferramentas como React-Hook-Form, Ant Design, Zod e Yup.\nAcredito que com disciplina...",
-  "writer_is_possible": "Sou desenvolvedor web com experiência em tecnologias como Next.js, Vite, React, TypeScript, Sass, Tailwind, Styled-Components e Node.js, com proficiência em ferramentas como React-Hook-Form, Ant Design, Zod e Yup.\nAcredito que é possível programar grandes mudanças na vida das pessoas...\n\nGoiânia, Brasil",
+  "writer_description": "Desenvolvedor Fullstack especializado em transformar desafios complexos de negócios em aplicações web rápidas, seguras e escaláveis.\n\nNa prática, construo desde portais modernos e intuitivos até motores de automação que conectam sistemas corporativos em segundo plano, garantindo alta disponibilidade, segurança de dados e processos sem falhas.\n\nGoiânia, Brasil",
+  "writer_focus": "Desenvolvedor Fullstack especializado em transformar desafios complexos de negócios em aplicações web rápidas, seguras e escaláveis.\n\nNa prática, construo desde portais modernos e intuitivos até motores de automação que conectam sistemas corporativos em segundo plano, garantindo alta disponibilidade, segurança de dados e processos sem falhas.\n\nGoiânia, Brasil",
   "writer_contact": "Se você tem críticas, sugestões, quer me contratar ou trocar uma idéia, por favor, entre em contato!\n\nMuito Obrigado!",
   "experiences": [
     {

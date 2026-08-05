@@ -53,13 +53,10 @@ const LeftMainPage = () => {
                     key={animationKey}
                     className={styles.writer}
                     sequence={[
-                        t('writer_focus'), 1500,
-                        t('writer_resilience'), 1500,
-                        t('writer_discipline'), 1500,
-                        t('writer_is_possible')
+                        t('writer_description')
                     ]}
                     wrapper="p"
-                    speed={80}
+                    speed={95}
                     style={{whiteSpace: 'pre-line', display: 'block' }}
                     repeat={0}
                     cursor={true}
