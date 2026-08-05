@@ -1,5 +1,5 @@
 - **Fullstack Developer**
-- Projetei e desenvolvi de ponta a ponta o motor de automação de cobranças para a plataforma principal, estruturado em arquitetura de microsserviços com NestJS, Next.js e PostgreSQL.
+- Projetei e desenvolvi de ponta a ponta o motor de automação de cobranças multi-tenant para a plataforma corporativa, estruturado em arquitetura de microsserviços com NestJS, Next.js e PostgreSQL.
 - Arquitetei o pipeline assíncrono de disparo com AWS SQS FIFO e processamento multicanal (E-mail via AWS SES e WhatsApp), garantindo isolamento por tenant, idempotência e desduplicação de cobranças via Redis e TypeORM.
-- Desenvolvi a interface de gestão e a rota pública de pagamentos em Next.js e MUI X DataGrid Premium, integrando links seguros com tokens JWT e rastreamento de interações do cliente em tempo real (cm_tracking).
+- Desenvolvi a interface de gestão e a rota pública de pagamentos em Next.js e MUI X DataGrid Premium, integrando links seguros com tokens JWT e rastreamento de interações do cliente em tempo real.
 - Liderei a padronização de formulários e arquitetura frontend da empresa, criando uma biblioteca centralizada de componentes reutilizáveis e validação estrita com Zod e React Hook Form, aumentando a produtividade dos times.
