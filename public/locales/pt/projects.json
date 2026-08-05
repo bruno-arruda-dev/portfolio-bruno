@@ -1,12 +1,70 @@
 {
   "projects": [
     {
+      "name": "Assistente Financeiro de IA & Categorização Automática (NDA)",
+      "descriptions": [
+        "Solução de IA com Chat conversacional em tempo real para diagnóstico financeiro (DRE, DFC, Liquidez) e motor assíncrono para categorização automática de movimentações via LLM."
+      ],
+      "markdownFile": "/docs/projects/assistente-financeiro-ia.md",
+      "stacks": [
+        "nestjs",
+        "next",
+        "react",
+        "typescript",
+        "postgresql",
+        "typeorm",
+        "zustand",
+        "tailwind"
+      ]
+    },
+    {
       "name": "Sistema de Automação de Cobranças (NDA)",
       "descriptions": [
         "Plataforma fullstack multi-tenant para automação de régua de cobrança, disparo multicanal (E-mail SES e WhatsApp Bot), filas AWS SQS FIFO e tracking em tempo real."
       ],
       "markdownFile": "/docs/projects/sistema-automacao-cobrancas.md",
-      "stacks": ["nestjs", "next", "react", "typescript", "postgresql", "redis", "docker"]
+      "stacks": [
+        "nestjs",
+        "next",
+        "react",
+        "typescript",
+        "postgresql",
+        "redis",
+        "docker"
+      ]
+    },
+    {
+      "name": "Conciliação de Cartões, Repasses e Baixas Automáticas (NDA)",
+      "descriptions": [
+        "Motor de conciliação financeira de repasses adquirentes e títulos do ERP em milissegundos via CTEs PostgreSQL, matriz de divergências/tolerância e baixas no ERP via AWS SQS FIFO."
+      ],
+      "markdownFile": "/docs/projects/conciliacao-cartoes-repasses.md",
+      "stacks": [
+        "nestjs",
+        "next",
+        "react",
+        "typescript",
+        "postgresql",
+        "typeorm",
+        "react-query",
+        "aws-sqs"
+      ]
+    },
+    {
+      "name": "Arquitetura Multi-Tenant Dinâmica por Schema (NDA)",
+      "descriptions": [
+        "Arquitetura de isolamento multi-tenant por schemas PostgreSQL (customer_<id>) e propagação de contexto assíncrono transparente via Node.js AsyncLocalStorage e TypeORM 0.3."
+      ],
+      "markdownFile": "/docs/projects/arquitetura-multi-tenant-postgresql.md",
+      "stacks": [
+        "nestjs",
+        "node",
+        "typescript",
+        "postgresql",
+        "typeorm",
+        "aws-cognito",
+        "express"
+      ]
     },
     {
       "name": "Finance - Frontend",
@@ -17,7 +75,12 @@
       "image": "./images/allProjects/finance.png",
       "homepage": "https://beta-fin.vercel.app/",
       "repo": "https://github.com/bruno-arruda-dev/finance-frontend",
-      "stacks": ["vite", "ant design", "typescript", "tailwind"]
+      "stacks": [
+        "vite",
+        "ant design",
+        "typescript",
+        "tailwind"
+      ]
     },
     {
       "name": "Finance - Backend",
@@ -28,7 +91,13 @@
       "image": "./images/allProjects/finance-backend.png",
       "homepage": "https://finance-backend-7fxw.onrender.com/docs",
       "repo": "https://github.com/bruno-arruda-dev/finance-backend",
-      "stacks": ["node", "typescript", "mysql", "zod", "swagger"]
+      "stacks": [
+        "node",
+        "typescript",
+        "mysql",
+        "zod",
+        "swagger"
+      ]
     },
     {
       "name": "Cadastro de clientes - Frontend",
@@ -39,7 +108,12 @@
       "image": "./images/allProjects/users-registration.png",
       "homepage": "https://users-registration-frontend.vercel.app/",
       "repo": "https://github.com/bruno-arruda-dev/users-registration-frontend",
-      "stacks": ["next", "react", "typescript", "sass"]
+      "stacks": [
+        "next",
+        "react",
+        "typescript",
+        "sass"
+      ]
     },
     {
       "name": "Cadastro de clientes - Backend",
@@ -49,7 +123,11 @@
       ],
       "image": "./images/allProjects/users-registration-backend.png",
       "repo": "https://github.com/bruno-arruda-dev/users-registration-backend",
-      "stacks": ["node", "mongodb", "typescript"]
+      "stacks": [
+        "node",
+        "mongodb",
+        "typescript"
+      ]
     },
     {
       "name": "Photography Portfolio",
@@ -61,7 +139,12 @@
       "image": "./images/allProjects/photography-portfolio.png",
       "homepage": "https://photography-portfolio-gray.vercel.app/",
       "repo": "https://github.com/bruno-arruda-dev/photography-portfolio",
-      "stacks": ["next", "react", "typescript", "gsap"]
+      "stacks": [
+        "next",
+        "react",
+        "typescript",
+        "gsap"
+      ]
     },
     {
       "name": "SendMail",
@@ -74,7 +157,11 @@
       ],
       "image": "./images/allProjects/sendMail.png",
       "repo": "https://github.com/bruno-arruda-dev/sendMail",
-      "stacks": ["node", "express", "nodemail"]
+      "stacks": [
+        "node",
+        "express",
+        "nodemail"
+      ]
     },
     {
       "name": "Este portfólio",
@@ -85,7 +172,14 @@
       "image": "./images/allProjects/portfolio.png",
       "repo": "https://github.com/bruno-arruda-dev/portfolio-bruno",
       "homepage": "https://portfolio-bruno-kappa.vercel.app/",
-      "stacks": ["next", "gsap", "react", "typescript", "sass", "html"]
+      "stacks": [
+        "next",
+        "gsap",
+        "react",
+        "typescript",
+        "sass",
+        "html"
+      ]
     },
     {
       "name": "ToDo List - Frontend",
@@ -97,7 +191,12 @@
       ],
       "repo": "https://github.com/bruno-arruda-dev/todo-list-frontend",
       "image": "./images/allProjects/todolist.png",
-      "stacks": ["react", "javascript", "html", "css"]
+      "stacks": [
+        "react",
+        "javascript",
+        "html",
+        "css"
+      ]
     },
     {
       "name": "ToDo List - Backend",
@@ -109,7 +208,11 @@
       ],
       "repo": "https://github.com/bruno-arruda-dev/todo-list-frontend",
       "image": "./images/allProjects/todolist-backend.png",
-      "stacks": ["node", "mysql", "javascript"]
+      "stacks": [
+        "node",
+        "mysql",
+        "javascript"
+      ]
     },
     {
       "name": "Find GitHub",
@@ -121,7 +224,13 @@
       "repo": "https://github.com/bruno-arruda-dev/find_github",
       "homepage": "https://find-github-zeta.vercel.app/",
       "image": "./images/allProjects/findGithub.png",
-      "stacks": ["vite", "react", "typescript", "sass", "html"]
+      "stacks": [
+        "vite",
+        "react",
+        "typescript",
+        "sass",
+        "html"
+      ]
     },
     {
       "name": "Pokedex",
@@ -133,7 +242,13 @@
       "repo": "https://github.com/bruno-arruda-dev/PokedexV2",
       "homepage": "https://bruno-arruda-dev.github.io/PokedexV2/",
       "image": "./images/allProjects/pokedex.png",
-      "stacks": ["vite", "react", "javascript", "html", "css"]
+      "stacks": [
+        "vite",
+        "react",
+        "javascript",
+        "html",
+        "css"
+      ]
     },
     {
       "name": "GPTI",
@@ -146,7 +261,13 @@
       "repo": "https://github.com/bruno-arruda-dev/gpti-frontend",
       "homepage": "gpti-chi.vercel.app",
       "image": "./images/allProjects/gpti.png",
-      "stacks": ["vite", "react", "javascript", "html", "sass"]
+      "stacks": [
+        "vite",
+        "react",
+        "javascript",
+        "html",
+        "sass"
+      ]
     },
     {
       "name": "Sorveteria",
@@ -157,7 +278,12 @@
       "repo": "https://github.com/bruno-arruda-dev/sorveteria",
       "homepage": "https://sorveteria-olive.vercel.app/",
       "image": "./images/allProjects/sorveteria.png",
-      "stacks": ["react", "javascript", "html", "css"]
+      "stacks": [
+        "react",
+        "javascript",
+        "html",
+        "css"
+      ]
     },
     {
       "name": "Meu primeiro portfólio",
@@ -169,7 +295,12 @@
       "repo": "https://github.com/bruno-arruda-dev/Bruno-Arruda",
       "homepage": "https://bruno-arruda-dev.github.io/Bruno-Arruda/",
       "image": "./images/allProjects/primeiro-portfolio.png",
-      "stacks": ["react", "javascript", "html", "css"]
+      "stacks": [
+        "react",
+        "javascript",
+        "html",
+        "css"
+      ]
     },
     {
       "name": "Loja de Óculos",
@@ -180,7 +311,12 @@
       "repo": "https://github.com/bruno-arruda-dev/loja-de-oculos",
       "homepage": "https://oculos-chi.vercel.app/",
       "image": "./images/allProjects/loja-de-oculos.png",
-      "stacks": ["react", "javascript", "html", "css"]
+      "stacks": [
+        "react",
+        "javascript",
+        "html",
+        "css"
+      ]
     },
     {
       "name": "Agência de Branding",
@@ -191,7 +327,12 @@
       "repo": "https://github.com/bruno-arruda-dev/agencia-branding",
       "homepage": "https://agencia-branding-one.vercel.app/",
       "image": "./images/allProjects/agencia-de-branding.png",
-      "stacks": ["react", "javascript", "html", "css"]
+      "stacks": [
+        "react",
+        "javascript",
+        "html",
+        "css"
+      ]
     },
     {
       "name": "Barbearia",
@@ -202,7 +343,12 @@
       "repo": "https://github.com/bruno-arruda-dev/barbearia",
       "homepage": "https://barbearia-roan-eight.vercel.app/",
       "image": "./images/allProjects/barbearia.png",
-      "stacks": ["react", "javascript", "html", "css"]
+      "stacks": [
+        "react",
+        "javascript",
+        "html",
+        "css"
+      ]
     }
   ]
 }
