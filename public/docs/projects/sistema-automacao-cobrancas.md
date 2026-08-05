@@ -1,5 +1,3 @@
-# 🔒 Sistema de Automação de Cobranças & Notificações (NDA)
-
 > **Nota de Confidencialidade**: Projeto corporativo desenvolvido para automação em escala. O código-fonte e nomes comerciais estão omitidos por questões contratuais (NDA).
 
 ---

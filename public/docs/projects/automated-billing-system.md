@@ -1,5 +1,3 @@
-# 🔒 Automated Billing & Notification System (NDA)
-
 > **Confidentiality Notice**: Enterprise project developed for high-scale automation. Source code and commercial product names are omitted due to non-disclosure agreements (NDA).
 
 ---
